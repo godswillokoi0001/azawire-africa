@@ -1,0 +1,23 @@
+@import "tailwindcss/base";
+@import "tailwindcss/components";
+@import "tailwindcss/utilities";
+
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap');
+
+@font-face {
+    font-family: 'Clash Display';
+    src: url('/src/assets/fonts/ClashDisplay/ClashDisplay-Regular.woff2') format('woff2'),
+         url('/src/assets/fonts/ClashDisplay/ClashDisplay-Regular.woff') format('woff');
+    font-weight: 400; /* Adjust weight */
+    font-style: normal;
+  }
+  
+  .scrollbar-hide {
+     -ms-overflow-style: none; /* IE and Edge */
+     scrollbar-width: none; /* Firefox */
+   }
+   
+   .scrollbar-hide::-webkit-scrollbar {
+     display: none; /* Chrome, Safari, and Opera */
+   }
+   
