@@ -3,8 +3,8 @@ import { Link } from "react-router-dom";
 
 const Navbar = () => {
   return (
-    <nav className="w-full fixed top-0 z-50">
-      <div className="max-w-7xl mx-auto flex items-center justify-between px-4 py-3">
+    <nav className="w-full fixed top-0 z-40">
+      <div className="max-w-7xl mx-auto flex items-center justify-between px-4 py-3 ">
         {/* Left Side - Logo */}
         <div className="max-h-16 flex items-center space-x-4 border rounded-full border-accent p-3">
           <Link

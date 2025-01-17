@@ -1,14 +1,29 @@
-import NavigationBar from "../components/NavigationBar";
+import BusinessHero from "../components/BusinessHero";
+import FeaturesSection from "../components/FeaturesSection";
+import NavigationBar2 from "../components/NavigationBar2";
 
 const Business = () => {
   return (
     <div>
-      <NavigationBar />;
-      <div className="min-h-screen flex items-center justify-center bg-gray-50">
-        <h1 className="text-4xl font-poppins font-bold text-primary">
-          Business Page
-        </h1>
+      <header className="overflow-hidden">
+        <BusinessHero />
+        <NavigationBar2 />
+        
+      </header>
+
+      <div className="max-w-screen-xl mx-auto text-white px-4 py-16 absolute inset-x-0 top-[34rem]">
+        <div className="bg-accent shadow-xl rounded-[1.5rem] flex flex-col md:flex-row items-center justify-between md:pt-12 md:px-24">
+          <div className="flex flex-col items-center">
+            <h1 className="text-center text-black text-3xl lg:text-[3rem] font-medium mb-14 font-clash tracking-tighter leading-[3rem]">
+              Manage All Your Payments <br /> Whether Fiat or Crypto{" "}
+            </h1>
+            <img src="/images/Dashboard Image.png" alt="" className="" />
+          </div>
+        </div>
       </div>
+
+      <FeaturesSection />
+      
     </div>
   );
 };
