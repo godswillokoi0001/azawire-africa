@@ -6,18 +6,22 @@ import Business from "./pages/Business";
 import Blog from "./pages/Blog";
 import About from "./pages/About";
 import FAQ from "./pages/FAQ";
+import BlogSection from "./components/BlogSection";
+import BlogDetails from "./components/BlogDetails";
 
 
 function App() {
   return (
     <Router>
       <Routes>
-        <Route path="/" element={<Personal />} /> {/* Default page */}
+        <Route path="/" element={<Personal />} />
         <Route path="/personal" element={<Personal />} />
         <Route path="/business" element={<Business />} />
         <Route path="/blog" element={<Blog />} />
         <Route path="/about" element={<About />} />
         <Route path="/faq" element={<FAQ />} />
+        <Route path="/" element={<BlogSection />} />
+        <Route path="/blog/:id" element={<BlogDetails />} />
       </Routes>
     </Router>
   );

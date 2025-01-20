@@ -40,7 +40,7 @@ const Personal = () => {
 
       <div className="bg-gradient-to-r from-[#f9feff] to-[#e5f9ff]">
         <header className="overflow-hidden">
-          {/* Pass the function to HeroSection */}
+
           <HeroSection onWaitlistClick={openModal} />
           <NavigationBar />
         </header>

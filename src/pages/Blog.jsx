@@ -1,16 +1,26 @@
-import NavigationBar from "../components/NavigationBar";
+import React from 'react';
+import NavigationBar2 from "../components/NavigationBar2";
+import BlogHero from '../components/BlogHero';
+import BlogSection from '../components/BlogSection';
+import RelatedArticles from '../components/RelatedArticles';
+import DownloadAppSection from '../components/DownloadAppSection';
+import Footer from '../components/Footer';
 
-const Blog = () => {
+const BlogHeader = () => {
   return (
     <div>
-      <NavigationBar />
-      <div className="min-h-screen flex items-center justify-center bg-gray-50">
-        <h1 className="text-4xl font-poppins font-bold text-primary">
-          Blog Page
-        </h1>
-      </div>
+
+    <header className="bg-[#030637] text-white h-[30rem]">
+      <NavigationBar2 />
+      <BlogHero />
+    </header>
+    <BlogSection />
+    <RelatedArticles />
+    <DownloadAppSection />
+    <Footer />
     </div>
+    
   );
 };
 
-export default Blog;
+export default BlogHeader;
