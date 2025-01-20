@@ -11,6 +11,7 @@ const BlogCard = ({ id, title, categories, date, image }) => {
           style={{
             backgroundImage: `url("${image}")`,
             backgroundSize: "cover",
+            backgroundPosition: "center",
           }}
           
         ></div>
