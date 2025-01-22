@@ -2,7 +2,7 @@ import React from "react";
 
 const ValueProposition = () => {
   return (
-    <section className="px-6 py-12 md:py-16 lg:py-20 bg-lightblue">
+    <section className="px-6 py-12 md:py-16 lg:py-20 bg-lightblue overflow-hidden">
       <div className="max-w-screen-xl mx-auto px-4">
         <div className="w-full mb-10">
           <span className="text-[1.5rem] font-semibold text-secondary px-5 py-3 bg-secondary/20 rounded-lg inline-block">

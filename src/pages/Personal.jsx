@@ -34,13 +34,12 @@ const Personal = () => {
   }, [hasModalShown]);
 
   return (
-    <div>
+    <div className="w-full overflow-hidden">
       {/* Modal Component */}
       <Modal isOpen={isModalOpen} onClose={closeModal} className="z-50" />
 
       <div className="bg-gradient-to-r from-[#f9feff] to-[#e5f9ff]">
         <header className="overflow-hidden">
-
           <HeroSection onWaitlistClick={openModal} />
           <NavigationBar />
         </header>

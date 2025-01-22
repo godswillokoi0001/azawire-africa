@@ -7,7 +7,7 @@ import NavigationBar2 from "../components/NavigationBar2";
 
 const Business = () => {
   return (
-    <div>
+    <div className="w-full overflow-hidden">
       <header className="overflow-hidden">
         <BusinessHero />
         <NavigationBar2 />
