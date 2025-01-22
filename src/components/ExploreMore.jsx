@@ -8,10 +8,10 @@ const ExploreMore = () => {
         data-aos="fade-up"
         data-aos-duration="1000"
       >
-        <div className="bg-white p-8 sm:p-12 rounded-3xl w-full">
+        <div className="bg-white md:p-8 p-4 sm:p-12 rounded-3xl w-full">
           {/* Heading and Button */}
           <div className="mb-12">
-            <h2 className="mb-6 font-medium font-poppins text-4xl text-variant leading-[3rem] tracking-tight">
+            <h2 className="mb-6 font-medium font-poppins md:text-4xl text-[1.4rem] text-variant md:leading-[3rem] tracking-tight">
               Build your portfolio from a single app, <br />
               designed for the forward-thinking investor.
             </h2>
@@ -29,7 +29,7 @@ const ExploreMore = () => {
           >
             {/* Individual Card */}
             <div
-              className="flex flex-col space-y-3 bg-black p-6 rounded-xl text-white"
+              className="flex flex-col space-y-3 bg-black md:p-6 p-4 rounded-xl text-white"
               data-aos="zoom-in"
               data-aos-delay="400"
             >
@@ -37,13 +37,13 @@ const ExploreMore = () => {
                 <img
                   src="/images/icons/Icons (1).svg"
                   alt="For Individuals"
-                  className="mb-4 w-14"
+                  className="mb-4 w-12"
                 />
                 <h3 className="mb-4 font-clash text-[1.4rem] text-lg">
                   For Individuals
                 </h3>
               </div>
-              <p className="font-poppins text-sm leading-relaxed">
+              <p className="font-poppins md:text-sm text-[0.8rem] leading-relaxed">
                 Maximize earnings, minimize fees, and grow your financial
                 portfolio with stablecoin-backed accounts offering personal
                 wallet management, secure savings, and instant, low-cost global
@@ -53,7 +53,7 @@ const ExploreMore = () => {
 
             {/* Business Card */}
             <div
-              className="flex flex-col space-y-3 border-gray-200 bg-white p-6 border rounded-xl"
+              className="flex flex-col space-y-3 border-gray-200 bg-white md:p-6 p-4 border rounded-xl"
               data-aos="zoom-in"
               data-aos-delay="600"
             >
@@ -61,13 +61,13 @@ const ExploreMore = () => {
                 <img
                   src="/images/icons/Icons (2).svg"
                   alt="For Businesses"
-                  className="mb-4 w-14"
+                  className="mb-4 w-12"
                 />
                 <h3 className="mb-4 font-clash text-[1.4rem] text-lg text-variant">
                   For Businesses
                 </h3>
               </div>
-              <p className="font-poppins text-gray-700 text-sm leading-relaxed">
+              <p className="font-poppins text-gray-700 md:text-sm text-[0.8rem] leading-relaxed">
                 Empower your business with Azawire’s scalable, cost-effective
                 payment solutions, featuring cross-border payments,
                 multi-currency support for seamless transactions, and scalable

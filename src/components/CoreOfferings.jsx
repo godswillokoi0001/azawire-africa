@@ -60,10 +60,10 @@ const CoreOfferings = ({ title, offerings }) => {
                 className="md:min-w-[450px] min-w-[310px] md:max-h-full max-h-96 bg-white shadow-md rounded-[24px] px-6 pt-4 flex flex-col justify-between"
                 style={{ backgroundColor: offer.bgColor }}
               >
-                <div className="flex flex-col items-center justify-between h-full">
+                <div className="flex flex-col items-center justify-between h-full w-full">
                 
-                <h3 className="font-medium mt-4 text-accent md:text-4xl text-3xl md:px-20 px-8 mb-3 text-center tracking-tight ">{offer.title}</h3>
-                <p className=" mt-2 text-accent md:text-3x1 text-sm text-center">{offer.description}</p>
+                <h3 className="font-medium mt-4  text-accent md:text-4xl text-3xl md:px-24 px-8 mb-3 text-center tracking-tight ">{offer.title}</h3>
+                <p className="mt-2 text-accent text-[1.1rem] text-center">{offer.description}</p>
                   <img
                     src={offer.icon}
                     alt={offer.title}

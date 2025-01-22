@@ -3,8 +3,8 @@ import React from "react";
 const HeroSection = ({ onWaitlistClick }) => {
   return (
     <section className="relative bg-gradient-to-r pt-8 md:pt-24">
-      <div className="flex md:flex-row flex-col-reverse justify-between items-center mx-auto px-4 sm:px-6 lg:px-8 max-w-screen-xl">
-        {/* Left Content */}
+      <div className="max-w-screen-xl flex md:flex-row flex-col-reverse justify-between items-center mx-auto px-4 sm:px-6 lg:px-8 ">
+
         <div className="space-y-4 md:w-1/2 text-left">
           <h1 className="font-poppins font-semibold text-3xl sm:text-4xl md:text-5xl leading-tight tracking-tighter">
             Bank Without Borders with Azawire's Web3 Solution

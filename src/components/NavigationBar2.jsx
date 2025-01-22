@@ -1,15 +1,18 @@
 import React, { useState } from "react";
-import { Link } from "react-router-dom";
+import { Link, useLocation } from "react-router-dom";
 import { FiMenu, FiX } from "react-icons/fi";
 
 const NavigationBar2 = () => {
-  const [isMenuOpen, setIsMenuOpen] = useState(false)
+  const [isMenuOpen, setIsMenuOpen] = useState(false);
   const toggleMenu = () => {
     setIsMenuOpen(!isMenuOpen);
   };
 
+  const location = useLocation();
+  const isActive = (path) => location.pathname === path;
+
   return (
-    <nav className="w-full fixed top-0 z-40 md:bg-transparent bg-white ">
+    <nav className="w-full fixed top-0 z-40 md:bg-transparent bg-white">
       <div className="max-w-7xl mx-auto flex items-center justify-between px-4 py-3">
         {/* Left Side - Logo and Navigation */}
         <div className="flex items-center space-x-4">
@@ -19,41 +22,71 @@ const NavigationBar2 = () => {
             className="text-2xl font-bold text-black flex items-center"
           >
             <img
-              src="/images/Primary Logo Black.png"
+              src="/images/icons/Primary Logo White 1.svg"
               alt="Azawire Logo"
               className="h-10 w-auto"
             />
           </Link>
 
           {/* Desktop Navigation Links */}
-          <ul className="hidden md:flex space-x-7 text-sm text-gray-700 font-clash">
+          <ul className="hidden md:flex space-x-7 text-sm text-accent font-clash">
             <li>
-              <Link to="#" className="hover:text-primary">
+              <Link
+                to="#"
+                className={`hover:text-primary ${
+                  isActive("#") ? "text-primary font-semibold" : ""
+                }`}
+              >
                 Products
               </Link>
             </li>
             <li>
-              <Link to="#" className="hover:text-primary">
+              <Link
+                to="#"
+                className={`hover:text-primary ${
+                  isActive("#") ? "text-primary font-semibold" : ""
+                }`}
+              >
                 Company
               </Link>
             </li>
             <li>
-              <Link to="/about" className="hover:text-primary">
+              <Link
+                to="/about"
+                className={`hover:text-primary ${
+                  isActive("/about") ? "text-primary font-semibold" : ""
+                }`}
+              >
                 About
               </Link>
             </li>
             <li>
-              <Link to="#" className="hover:text-primary">
+              <Link
+                to="#"
+                className={`hover:text-primary ${
+                  isActive("#") ? "text-primary font-semibold" : ""
+                }`}
+              >
                 Developers
               </Link>
             </li>
             <li>
-              <Link to="/blog" className="hover:text-primary">
+              <Link
+                to="/blog"
+                className={`hover:text-primary ${
+                  isActive("/blog") ? "text-primary font-semibold" : ""
+                }`}
+              >
                 Blog
               </Link>
             </li>
             <li>
-              <Link to="/faq" className="hover:text-primary">
+              <Link
+                to="/faq"
+                className={`hover:text-primary ${
+                  isActive("/faq") ? "text-primary font-semibold" : ""
+                }`}
+              >
                 FAQ
               </Link>
             </li>
@@ -63,13 +96,21 @@ const NavigationBar2 = () => {
           <div className="hidden md:flex space-x-3 ps-5">
             <Link
               to="/business"
-              className="bg-primary font-clash text-white py-2 px-6 rounded-full hover:bg-variant"
+              className={`${
+                isActive("/business")
+                  ? "bg-primary text-white"
+                  : "bg-transparent text-white border-white"
+              } font-clash py-2 px-6 rounded-full hover:bg-primary `}
             >
               Business
             </Link>
             <Link
               to="/"
-              className="bg-transparent font-clash border border-black text-black py-2 px-6 rounded-full hover:bg-variant hover:text-white"
+              className={`${
+                isActive("/")
+                  ? "bg-primary text-white"
+                  : "bg-transparent text-white border border-white"
+              } font-clash py-2 px-6 rounded-full`}
             >
               Personal
             </Link>
@@ -88,7 +129,7 @@ const NavigationBar2 = () => {
         <div className="hidden md:flex items-center space-x-3">
           <a
             href="#"
-            className="bg-primary font-clash text-white py-2 px-3 rounded-full flex items-center space-x-2 hover:bg-variant transition-all"
+            className="bg-primary font-clash text-white py-2 px-3 rounded-full flex items-center space-x-2 transition-all"
           >
             <span>Sign In</span>
             <img
@@ -119,32 +160,62 @@ const NavigationBar2 = () => {
         <div className="md:hidden bg-white w-full px-4 py-6 shadow-lg">
           <ul className="space-y-4">
             <li>
-              <Link to="#" className="block text-gray-700 hover:text-primary">
+              <Link
+                to="#"
+                className={`block text-gray-700 hover:text-primary ${
+                  isActive("#") ? "text-primary font-semibold" : ""
+                }`}
+              >
                 Products
               </Link>
             </li>
             <li>
-              <Link to="#" className="block text-gray-700 hover:text-primary">
+              <Link
+                to="#"
+                className={`block text-gray-700 hover:text-primary ${
+                  isActive("#") ? "text-primary font-semibold" : ""
+                }`}
+              >
                 Company
               </Link>
             </li>
             <li>
-              <Link to="/about" className="block text-gray-700 hover:text-primary">
+              <Link
+                to="/about"
+                className={`block text-gray-700 hover:text-primary ${
+                  isActive("/about") ? "text-primary font-semibold" : ""
+                }`}
+              >
                 About
               </Link>
             </li>
             <li>
-              <Link to="#" className="block text-gray-700 hover:text-primary">
+              <Link
+                to="#"
+                className={`block text-gray-700 hover:text-primary ${
+                  isActive("#") ? "text-primary font-semibold" : ""
+                }`}
+              >
                 Developers
               </Link>
             </li>
             <li>
-              <Link to="/blog" className="block text-gray-700 hover:text-primary">
+              <Link
+                to="/blog"
+                className={`block text-gray-700 hover:text-primary ${
+                  isActive("/blog") ? "text-primary font-semibold" : ""
+                }`}
+              >
                 Blog
               </Link>
             </li>
             <li>
-              <Link to="/faq" className="block text-gray-700 hover:text-primary">
+              <Link
+                to="/faq"
+                className={`block text-gray-700 hover:text-primary ${
+                  isActive("/faq") ? "text-primary font-semibold" : ""
+                }`}
+              >
                 FAQ
               </Link>
             </li>
@@ -152,13 +223,21 @@ const NavigationBar2 = () => {
           <div className="mt-6 flex flex-col space-y-4">
             <Link
               to="/business"
-              className="bg-primary font-clash text-white py-2 px-6 rounded-full text-center hover:bg-variant"
+              className={`${
+                isActive("/business")
+                  ? "bg-variant text-white"
+                  : "bg-primary text-white"
+              } font-clash py-2 px-6 rounded-full text-center hover:bg-variant`}
             >
               Business
             </Link>
             <Link
               to="/"
-              className="bg-transparent font-clash border border-black text-black py-2 px-6 rounded-full text-center hover:bg-variant hover:text-white"
+              className={`${
+                isActive("/")
+                  ? "bg-transparent text-white border border-white"
+                  : "bg-transparent border-black text-black"
+              } font-clash  py-2 px-6 rounded-full text-center hover:bg-variant hover:text-white`}
             >
               Personal
             </Link>

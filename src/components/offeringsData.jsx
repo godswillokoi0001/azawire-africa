@@ -24,7 +24,8 @@ export const offeringsData = [
     title: "Wallet Generation",
     description:
       "Lorem ipsum dolor sit amet consectetur. Donec consequat facilisi id quam turpis a mi ultricies euismod. ",
-    icon: "/images/Group 1000001744.png",
-    bgColor: "#031335",
+    icon: "/images/Group 1000001739.png",
+    bgColor: "#06D6A0",
   },
+  
 ];

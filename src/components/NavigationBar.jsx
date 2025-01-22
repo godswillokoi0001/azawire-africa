@@ -1,12 +1,15 @@
 import React, { useState } from "react";
-import { Link } from "react-router-dom";
+import { Link, useLocation } from "react-router-dom";
 import { FiMenu, FiX } from "react-icons/fi";
 
 const Navbar = () => {
-  const [isMenuOpen, setIsMenuOpen] = useState(false)
+  const [isMenuOpen, setIsMenuOpen] = useState(false);
   const toggleMenu = () => {
     setIsMenuOpen(!isMenuOpen);
   };
+
+  const location = useLocation();
+  const isActive = (path) => location.pathname === path;
 
   return (
     <nav className="w-full fixed top-0 z-40 md:bg-transparent bg-white ">
@@ -61,15 +64,24 @@ const Navbar = () => {
 
           {/* Buttons */}
           <div className="hidden md:flex space-x-3 ps-5">
+
             <Link
               to="/business"
-              className="bg-primary font-clash text-white py-2 px-6 rounded-full hover:bg-variant"
+              className={`${
+                isActive("/business")
+                  ? "bg-primary text-white"
+                  : "bg-transparent text-black border-black border hover:bg-gray-200"
+              } font-clash py-2 px-6 rounded-full `}
             >
               Business
             </Link>
             <Link
               to="/"
-              className="bg-transparent font-clash border border-black text-black py-2 px-6 rounded-full hover:bg-variant hover:text-white"
+              className={`${
+                isActive("/")
+                  ? "bg-primary text-white"
+                  : "bg-transparent text-white border-white"
+              } font-clash py-2 px-6 rounded-full hover:bg-variant `}
             >
               Personal
             </Link>
@@ -81,7 +93,11 @@ const Navbar = () => {
           className="md:hidden text-gray-700 hover:text-primary focus:outline-none"
           onClick={toggleMenu}
         >
-          {isMenuOpen ? <FiX className="h-6 w-6" /> : <FiMenu className="h-6 w-6" />}
+          {isMenuOpen ? (
+            <FiX className="h-6 w-6" />
+          ) : (
+            <FiMenu className="h-6 w-6" />
+          )}
         </button>
 
         {/* Right Side - Sign In and Language Selector */}
@@ -129,7 +145,10 @@ const Navbar = () => {
               </Link>
             </li>
             <li>
-              <Link to="/about" className="block text-gray-700 hover:text-primary">
+              <Link
+                to="/about"
+                className="block text-gray-700 hover:text-primary"
+              >
                 About
               </Link>
             </li>
@@ -139,12 +158,18 @@ const Navbar = () => {
               </Link>
             </li>
             <li>
-              <Link to="/blog" className="block text-gray-700 hover:text-primary">
+              <Link
+                to="/blog"
+                className="block text-gray-700 hover:text-primary"
+              >
                 Blog
               </Link>
             </li>
             <li>
-              <Link to="/faq" className="block text-gray-700 hover:text-primary">
+              <Link
+                to="/faq"
+                className="block text-gray-700 hover:text-primary"
+              >
                 FAQ
               </Link>
             </li>
