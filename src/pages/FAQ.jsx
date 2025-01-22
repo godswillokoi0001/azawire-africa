@@ -1,15 +1,20 @@
+import DownloadAppSection from "../components/DownloadAppSection";
+import FAQHero from "../components/FAQHero";
+import Footer from "../components/Footer";
 import NavigationBar from "../components/NavigationBar";
+import PopularQuestions from "../components/PopularQuestions";
 
 const FAQ = () => {
   return (
-    <div>
-      <NavigationBar />;
-      <div className="min-h-screen flex items-center justify-center bg-gray-50">
-        <h1 className="text-4xl font-poppins font-bold text-primary">
-          FAQ Page
-        </h1>
-      </div>
-    </div>
+    <>
+      <header className="bg-[#030637] text-white h-[38rem]">
+        <NavigationBar />
+        <FAQHero />
+      </header>
+      <PopularQuestions />
+      <DownloadAppSection />
+      <Footer />
+    </>
   );
 };
 
