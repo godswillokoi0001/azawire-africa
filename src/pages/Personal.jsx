@@ -34,23 +34,28 @@ const Personal = () => {
   }, [hasModalShown]);
 
   return (
-    <div className="mx-auto w-full overflow-hidden ">
-      <div className="">
+    <div className="w-screen overflow-x-hidden bg-gradient-to-r from-[#f9feff] to-[#e5f9ff]">
       {/* Modal Component */}
       <Modal isOpen={isModalOpen} onClose={closeModal} className="z-50" />
 
-      <div className="bg-gradient-to-r from-[#f9feff] to-[#e5f9ff] ">
-        <header className="overflow-hidden ">
-          <HeroSection onWaitlistClick={openModal} />
-          <NavigationBar />
-        </header>
+      {/* Navigation Bar and Hero Section */}
+      <header className="w-full ">
+        <NavigationBar />
+        <HeroSection onWaitlistClick={openModal} />
+      </header>
+
+      {/* Content Sections */}
+      <main className="w-full">
         <ExploreMore />
         <CoreOfferings title="Core Offerings" offerings={offeringsData} />
         <ValueProposition />
         <DownloadAppSection />
+      </main>
+
+      {/* Footer */}
+      <footer className="w-full">
         <Footer />
-      </div>
-      </div>
+      </footer>
     </div>
   );
 };
