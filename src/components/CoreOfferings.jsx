@@ -57,7 +57,7 @@ const CoreOfferings = ({ title, offerings }) => {
             {offerings.map((offer, index) => (
               <div
                 key={index}
-                className="md:min-w-[450px] min-w-[310px] md:max-h-full max-h-96 bg-white shadow-md rounded-[24px] px-6 pt-4 flex flex-col justify-between"
+                className="md:min-w-[450px] min-w-[310px] md:max-h-full max-h-96 bg-white shadow-md rounded-[24px] px-6 pt-4 flex flex-col justify-between overflow-hidden"
                 style={{ backgroundColor: offer.bgColor }}
               >
                 <div className="flex flex-col items-center justify-between h-full w-full">

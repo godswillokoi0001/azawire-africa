@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import { Link, useLocation } from "react-router-dom";
 import { FiMenu, FiX } from "react-icons/fi";
 
-const NavigationBar = () => {
+const Navbar = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const toggleMenu = () => {
     setIsMenuOpen(!isMenuOpen);
@@ -12,10 +12,10 @@ const NavigationBar = () => {
   const isActive = (path) => location.pathname === path;
 
   return (
-    <nav className="w-full fixed top-0 z-40 ">
-      <div className="container max-w-7xl mx-auto flex items-center justify-between px-4 py-3">
+    <nav className="max-w-screen-xl w-full fixed top-0 z-40 md:bg-transparent bg-white">
+      <div className="mx-auto flex items-center justify-between px-4 py-3">
         {/* Left Side - Logo and Navigation */}
-        <div className="flex items-center space-x-4 md:p-4 bg-white/60 backdrop-blur-sm border border-secondary/30 rounded-full">
+        <div className="flex items-center space-x-4 backdrop-blur-sm md:p-4 bg-white/60 rounded-full md:border border-[#e5f9ff]">
           {/* Logo */}
           <Link
             to="/"
@@ -61,35 +61,64 @@ const NavigationBar = () => {
               </Link>
             </li>
           </ul>
-                  {/* Buttons */}
-        <div className="hidden md:flex items-center space-x-3">
-          <Link
-            to="/business"
-            className={`${
-              isActive("/business")
-                ? "bg-primary text-white"
-                : "bg-transparent text-black border-black border hover:bg-gray-200"
-            } font-clash py-2 px-6 rounded-full `}
-          >
-            Business
-          </Link>
-          <Link
-            to="/"
-            className={`${
-              isActive("/")
-                ? "bg-primary text-white"
-                : "bg-transparent text-black border-black border hover:bg-gray-200"
-            } font-clash py-2 px-6 rounded-full `}
-          >
-            Personal
-          </Link>
-        </div>
+
+          {/* Buttons */}
+          <div className="hidden md:flex space-x-3 ps-5">
+            <Link
+              to="/business"
+              className={`${
+                isActive("/business")
+                  ? "bg-primary text-white"
+                  : "bg-transparent text-black border-black border hover:bg-gray-200"
+              } font-clash py-2 px-6 rounded-full`}
+            >
+              Business
+            </Link>
+            <Link
+              to="/"
+              className={`${
+                isActive("/")
+                  ? "bg-primary text-white"
+                  : "bg-transparent text-white border-white"
+              } font-clash py-2 px-6 rounded-full hover:bg-variant`}
+            >
+              Personal
+            </Link>
+          </div>
         </div>
 
+        <div className="flex items-center space-x-4 ml-auto">
+          {/* Language Selector */}
+          <div className="md:hidden relative flex items-center space-x-2 bg-white py-2 px-2 rounded-full cursor-pointer">
+            <img
+              src="/images/Frame 1000004490.png"
+              alt="Nigeria Flag"
+              className="w-7 rounded-full"
+            />
+            <button className="flex items-center space-x-1 text-gray-700 hover:text-primary transition-all">
+              <img
+                className="w-3 h-3"
+                src="/images/icons/Arrow down.svg"
+                alt="Arrow Down"
+              />
+            </button>
+          </div>
 
+          {/* Hamburger Menu Button */}
+          <button
+            className="md:hidden text-gray-700 hover:text-primary focus:outline-none"
+            onClick={toggleMenu}
+          >
+            {isMenuOpen ? (
+              <FiX className="h-6 w-6" />
+            ) : (
+              <FiMenu className="h-6 w-6" />
+            )}
+          </button>
+        </div>
 
         {/* Right Side - Sign In and Language Selector */}
-        <div className="hidden md:flex items-center space-x-3 md:p-4 bg-white/60 backdrop-blur-sm border border-secondary/30 rounded-full">
+        <div className="hidden md:flex items-center space-x-3 backdrop-blur-sm p-4 bg-white/60 rounded-full border border-[#e5f9ff]">
           <a
             href="#"
             className="bg-primary font-clash text-white py-2 px-3 rounded-full flex items-center space-x-2 hover:bg-variant transition-all"
@@ -116,18 +145,6 @@ const NavigationBar = () => {
             </button>
           </div>
         </div>
-
-        {/* Hamburger Menu Button */}
-        <button
-          className="md:hidden text-gray-700 hover:text-primary focus:outline-none"
-          onClick={toggleMenu}
-        >
-          {isMenuOpen ? (
-            <FiX className="h-6 w-6" />
-          ) : (
-            <FiMenu className="h-6 w-6" />
-          )}
-        </button>
       </div>
 
       {/* Mobile Navigation */}
@@ -197,4 +214,4 @@ const NavigationBar = () => {
   );
 };
 
-export default NavigationBar;
+export default Navbar;

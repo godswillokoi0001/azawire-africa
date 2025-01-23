@@ -2,34 +2,24 @@ import React from "react";
 
 const HeroSection = ({ onWaitlistClick }) => {
   return (
-    <section className="relative bg-gradient-to-r from-blue-50 to-blue-100 w-screen h-screen flex items-center">
-      {/* Hero Illustrations */}
-      <div className="hidden md:block">
-        <img
-          src="/images/hero elements.png"
-          alt=""
-          className="absolute w-[16rem] right-0 top-14 z-50"
-        />
-        <img
-          src="/images/Line.png"
-          alt=""
-          className="absolute w-[36rem] right-0 top-8 -z-0"
-        />
-      </div>
-
-      {/* Main Content */}
-      <div className="flex md:flex-row flex-col-reverse justify-between items-center w-screen h-full px-[5%]">
-        {/* Left Content */}
-        <div className="space-y-6 md:w-1/2 text-left">
-          <h1 className="font-poppins font-semibold text-3xl sm:text-4xl md:text-5xl leading-tight tracking-tighter max-w-[80%] md:max-w-none">
+    <section className="relative bg-gradient-to-r pt-8 md:pt-8">
+                 <div className="hidden md:inline ">
+            <img src="/images/hero elements.png" alt="" className="absolute w-[16rem] right-0 top-14 z-40"/>
+            <img src="/images/Line.png" alt="" className="absolute w-[36rem] right-0 top-8 z-20"/>
+          </div>   
+      <div className=" flex md:flex-row flex-col-reverse justify-between items-center mx-auto px-4 sm:px-6 lg:px-8 ">
+       
+        <div className="space-y-4 md:w-1/2 text-left">
+          <h1 className="font-poppins font-semibold text-3xl sm:text-4xl md:text-5xl leading-tight tracking-tighter">
             Bank Without Borders with Azawire's Web3 Solution
           </h1>
-          <p className="text-base text-gray-600 sm:text-lg md:text-xl max-w-[80%] md:max-w-none">
+          <p className="text-base text-gray-600 sm:text-lg md:text-xl">
             Effortlessly send and receive money worldwide with Azawire's secure
             and innovative Web3 banking platform.
           </p>
           <button
-            className="inline-flex justify-center items-center bg-primary hover:bg-blue-600 px-8 py-4 rounded-lg font-poppins text-sm text-white md:text-lg transition-all duration-300"
+            className="inline-flex justify-center items-center bg-primary hover:bg-blue-600 px-6 py-4 rounded-lg font-poppins text-sm text-white md:text-lg transition-all duration-300"
+            onClick={onWaitlistClick}
           >
             Join Waitlist
             <span className="pl-2">
@@ -39,11 +29,11 @@ const HeroSection = ({ onWaitlistClick }) => {
         </div>
 
         {/* Right Content */}
-        <div className="relative flex justify-center md:w-1/2 w-full h-auto">
+        <div className="relative flex justify-center md:w-1/2 w-full z-40">
           <img
             src="/images/Screenshot 2025-01-10 at 22.25.26 1.png"
             alt="3D Currency Icons"
-            className="md:w-full w-[24rem] max-w-[44rem] h-auto md:me-12 me-0 md:mt-8 mt-16"
+            className="w-[30rem] md:w-[44rem] max-w-none float-start md:me-20 md:mt-8"
           />
         </div>
       </div>
