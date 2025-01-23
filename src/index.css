@@ -21,3 +21,25 @@
      display: none; /* Chrome, Safari, and Opera */
    }
    
+   /* [class*="max-w-screen"] {
+    max-width: 100% !important;
+  } */
+
+  html, body {
+    width: 100vw;
+    overflow-x: hidden; /* Prevent horizontal scroll if needed */
+  }
+
+  /* html, body {
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    min-width: 1440px; /* Set a minimum width 
+    overflow-x: hidden;
+  } 
+/* body {
+    transform: scale(1);
+    transform-origin: top left;
+    width: 100%;
+  }
+   */

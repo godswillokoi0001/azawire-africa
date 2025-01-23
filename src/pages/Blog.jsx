@@ -8,7 +8,7 @@ import Footer from '../components/Footer';
 
 const BlogHeader = () => {
   return (
-    <div>
+    <div className="overflow-hidden">
 
     <header className="bg-[#030637] text-white h-[30rem]">
       <NavigationBar2 />

@@ -2,9 +2,8 @@ import React from "react";
 
 const HeroSection = ({ onWaitlistClick }) => {
   return (
-    <section className="relative bg-gradient-to-r pt-8 md:pt-24">
+    <section className="relative bg-gradient-to-r pt-8 md:pt-8">
       <div className="max-w-screen-xl flex md:flex-row flex-col-reverse justify-between items-center mx-auto px-4 sm:px-6 lg:px-8 ">
-
         <div className="space-y-4 md:w-1/2 text-left">
           <h1 className="font-poppins font-semibold text-3xl sm:text-4xl md:text-5xl leading-tight tracking-tighter">
             Bank Without Borders with Azawire's Web3 Solution
@@ -14,7 +13,7 @@ const HeroSection = ({ onWaitlistClick }) => {
             and innovative Web3 banking platform.
           </p>
           <button
-            className="inline-flex justify-center items-center bg-primary hover:bg-blue-600 px-6 py-3 rounded-lg font-medium font-poppins text-sm text-white md:text-lg transition-all duration-300"
+            className="inline-flex justify-center items-center bg-primary hover:bg-blue-600 px-6 py-4 rounded-lg font-poppins text-sm text-white md:text-lg transition-all duration-300"
             onClick={onWaitlistClick}
           >
             Join Waitlist
@@ -25,11 +24,11 @@ const HeroSection = ({ onWaitlistClick }) => {
         </div>
 
         {/* Right Content */}
-        <div className="relative flex justify-center md:w-1/2">
+        <div className="relative flex justify-center md:w-1/2 w-full">
           <img
             src="/images/Screenshot 2025-01-10 at 22.25.26 1.png"
             alt="3D Currency Icons"
-            className="w-[22rem] md:w-full max-w-[500px] sm:max-w-[1200px] md:max-w-[700px] lg:max-w-[800px] object-contain"
+            className="w-[30rem] md:w-[54rem] max-w-none"
           />
         </div>
       </div>

@@ -12,10 +12,10 @@ const Navbar = () => {
   const isActive = (path) => location.pathname === path;
 
   return (
-    <nav className="w-full fixed top-0 z-40 md:bg-transparent bg-white ">
+    <nav className="w-full fixed top-0 z-40 md:bg-transparent bg-white">
       <div className="max-w-7xl mx-auto flex items-center justify-between px-4 py-3">
         {/* Left Side - Logo and Navigation */}
-        <div className="flex items-center space-x-4">
+        <div className="flex items-center space-x-4 backdrop-blur-sm md:p-4 bg-white/60 rounded-full md:border border-[#e5f9ff]">
           {/* Logo */}
           <Link
             to="/"
@@ -24,7 +24,7 @@ const Navbar = () => {
             <img
               src="/images/Primary Logo Black.png"
               alt="Azawire Logo"
-              className="h-10 w-auto"
+              className="md:h-10 h-12 w-auto"
             />
           </Link>
 
@@ -64,7 +64,6 @@ const Navbar = () => {
 
           {/* Buttons */}
           <div className="hidden md:flex space-x-3 ps-5">
-
             <Link
               to="/business"
               className={`${
@@ -88,20 +87,38 @@ const Navbar = () => {
           </div>
         </div>
 
-        {/* Hamburger Menu Button */}
-        <button
-          className="md:hidden text-gray-700 hover:text-primary focus:outline-none"
-          onClick={toggleMenu}
-        >
-          {isMenuOpen ? (
-            <FiX className="h-6 w-6" />
-          ) : (
-            <FiMenu className="h-6 w-6" />
-          )}
-        </button>
+        <div className="flex items-center space-x-4 ml-auto">
+          {/* Language Selector */}
+          <div className="md:hidden relative flex items-center space-x-2 bg-white py-2 px-2 rounded-full cursor-pointer">
+            <img
+              src="/images/Frame 1000004490.png"
+              alt="Nigeria Flag"
+              className="w-7 rounded-full"
+            />
+            <button className="flex items-center space-x-1 text-gray-700 hover:text-primary transition-all">
+              <img
+                className="w-3 h-3"
+                src="/images/icons/Arrow down.svg"
+                alt="Arrow Down"
+              />
+            </button>
+          </div>
+
+          {/* Hamburger Menu Button */}
+          <button
+            className="md:hidden text-gray-700 hover:text-primary focus:outline-none"
+            onClick={toggleMenu}
+          >
+            {isMenuOpen ? (
+              <FiX className="h-6 w-6" />
+            ) : (
+              <FiMenu className="h-6 w-6" />
+            )}
+          </button>
+        </div>
 
         {/* Right Side - Sign In and Language Selector */}
-        <div className="hidden md:flex items-center space-x-3">
+        <div className="hidden md:flex items-center space-x-3 backdrop-blur-sm p-4 bg-white/60 rounded-full border border-[#e5f9ff]">
           <a
             href="#"
             className="bg-primary font-clash text-white py-2 px-3 rounded-full flex items-center space-x-2 hover:bg-variant transition-all"
@@ -132,7 +149,7 @@ const Navbar = () => {
 
       {/* Mobile Navigation */}
       {isMenuOpen && (
-        <div className="md:hidden bg-white w-full px-4 py-6 shadow-lg">
+        <div className="md:hidden bg-white w-full h-full px-4 py-6 shadow-lg">
           <ul className="space-y-4">
             <li>
               <Link to="#" className="block text-gray-700 hover:text-primary">

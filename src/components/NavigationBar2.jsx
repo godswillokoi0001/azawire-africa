@@ -12,14 +12,14 @@ const NavigationBar2 = () => {
   const isActive = (path) => location.pathname === path;
 
   return (
-    <nav className="w-full fixed top-0 z-40 md:bg-transparent bg-white">
+    <nav className="w-full fixed top-0 z-40 md:bg-transparent md:backdrop-blur-none backdrop-blur-sm bg-variant/30">
       <div className="max-w-7xl mx-auto flex items-center justify-between px-4 py-3">
         {/* Left Side - Logo and Navigation */}
-        <div className="flex items-center space-x-4">
+        <div className="flex items-center space-x-4 backdrop-blur-sm md:p-4 md:bg-variant/80 bg-transparent rounded-full md:border border-primary">
           {/* Logo */}
           <Link
             to="/"
-            className="text-2xl font-bold text-black flex items-center"
+            className="text-2xl font-bold text-black flex items-center "
           >
             <img
               src="/images/icons/Primary Logo White 1.svg"
@@ -117,16 +117,38 @@ const NavigationBar2 = () => {
           </div>
         </div>
 
-        {/* Hamburger Menu Button */}
-        <button
-          className="md:hidden text-gray-700 hover:text-primary focus:outline-none"
-          onClick={toggleMenu}
-        >
-          {isMenuOpen ? <FiX className="h-6 w-6" /> : <FiMenu className="h-6 w-6" />}
-        </button>
+        <div className="flex items-center space-x-4 ml-auto">
+          {/* Language Selector */}
+          <div className="md:hidden relative flex items-center space-x-2 bg-white py-2 px-2 rounded-full cursor-pointer">
+            <img
+              src="/images/Frame 1000004490.png"
+              alt="Nigeria Flag"
+              className="w-7 rounded-full"
+            />
+            <button className="flex items-center space-x-1 text-gray-700 hover:text-primary transition-all">
+              <img
+                className="w-3 h-3"
+                src="/images/icons/Arrow down.svg"
+                alt="Arrow Down"
+              />
+            </button>
+          </div>
+
+          {/* Hamburger Menu Button */}
+          <button
+            className="md:hidden text-gray-700 hover:text-primary focus:outline-none"
+            onClick={toggleMenu}
+          >
+            {isMenuOpen ? (
+              <FiX className="h-6 w-6" />
+            ) : (
+              <FiMenu className="h-6 w-6" />
+            )}
+          </button>
+        </div>
 
         {/* Right Side - Sign In and Language Selector */}
-        <div className="hidden md:flex items-center space-x-3">
+        <div className="hidden md:flex items-center space-x-3 backdrop-blur-sm p-4 bg-variant/80 rounded-full border border-primary">
           <a
             href="#"
             className="bg-primary font-clash text-white py-2 px-3 rounded-full flex items-center space-x-2 transition-all"

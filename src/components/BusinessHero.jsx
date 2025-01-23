@@ -3,7 +3,7 @@ import React from 'react';
 const BusinessHero = () => {
   return (
     <section className="relative bg-variant md:h-5/6">
-      <div className='max-w-screen-xl mx-auto px-4 flex flex-col md:flex-row items-center justify-between'>
+      <div className='max-w-screen-xl mx-auto px-4 flex md:flex-row flex-col-reverse items-center justify-between'>
       <div className="md:w-1/2 text-center md:text-left">
         <div className="text-center md:text-left md:flex md:items-center md:justify-between">
           {/* Text Content */}
@@ -11,7 +11,7 @@ const BusinessHero = () => {
             <h1 className="text-4xl font-bold leading-tight md:text-5xl">
               Giving your Business the Magic it Deserves
             </h1>
-            <p className="mt-4 text-lg text-gray-300">
+            <p className="md:mt-4 text-lg text-gray-300">
               Azawire is Revolutionizing Business Transactions through Web2 and Web3 Integration
             </p>
             <div className="mt-6 flex justify-center md:justify-start gap-4">
@@ -32,7 +32,7 @@ const BusinessHero = () => {
           <img
             src="/images/Business Hero Images 1.png"
             alt="Dashboard Preview"
-            className="w-full"
+            className="w-[30rem] md:w-[34rem] max-w-none"
           />
       </div>
       </div>  

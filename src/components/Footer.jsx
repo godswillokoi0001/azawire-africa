@@ -14,11 +14,11 @@ const Footer = () => {
             />
           </div>
 
-          <div className="w-full md:w-3/4 flex flex-wrap justify-between space-y-8 md:space-y-0 text-sm">
+          <div className="w-full md:w-3/4 flex flex-wrap justify-between space-y-8 md:space-y-0 md:text-[1rem] text-[1.2rem]">
             {/* Product Links */}
-            <div className="w-1/2 md:w-1/3 mb-6">
+            <div className="w-full md:1/2 lg:w-1/3 mb-6">
               <h3 className="font-bold mb-4">Product</h3>
-              <ul className="space-y-2">
+              <ul className="space-y-2 text-gray-600">
                 {["Universal checkout", "Payment workflows", "Observability", "UpliftAI", "Apps & integrations"].map((item) => (
                   <li key={item}>
                     <a href="#" className="hover:underline">
@@ -30,9 +30,9 @@ const Footer = () => {
             </div>
 
             {/* Why Us Links */}
-            <div className="w-1/2 md:w-1/3 mb-6">
+            <div className="w-full md:1/2 lg:w-1/3 mb-6">
               <h3 className="font-bold mb-4">Why us</h3>
-              <ul className="space-y-2">
+              <ul className="space-y-2 text-gray-600">
                 {[
                   "Expand to new markets",
                   "Boost payment success",
@@ -50,9 +50,9 @@ const Footer = () => {
             </div>
 
             {/* Developers Links */}
-            <div className="w-1/2 md:w-1/3 mb-6">
+            <div className="w-full md:1/2 lg:w-1/3 mb-6">
               <h3 className="font-bold mb-4">Developers</h3>
-              <ul className="space-y-2">
+              <ul className="space-y-2 text-gray-600">
                 {["Docs", "API Reference", "Payment methods guide", "Service status", "Community"].map((item) => (
                   <li key={item}>
                     <a href="#" className="hover:underline">
@@ -64,9 +64,9 @@ const Footer = () => {
             </div>
 
             {/* Resources Links */}
-            <div className="w-1/2 md:w-1/3 mb-6">
+            <div className="w-full md:1/2 lg:w-1/3 mb-6">
               <h3 className="font-bold mb-4">Resources</h3>
-              <ul className="space-y-2">
+              <ul className="space-y-2 text-gray-600">
                 {["Blog", "Success stories", "Terms", "Privacy"].map((item) => (
                   <li key={item}>
                     <a href="#" className="hover:underline">
@@ -78,9 +78,9 @@ const Footer = () => {
             </div>
 
             {/* Company Links */}
-            <div className="w-1/2 md:w-1/3 mb-6">
+            <div className="w-full md:1/2 lg:w-1/3 mb-6">
               <h3 className="font-bold mb-4">Company</h3>
-              <ul className="space-y-2">
+              <ul className="space-y-2 text-gray-600">
                 <li>
                   <a href="#" className="hover:underline">
                     Careers
@@ -90,7 +90,7 @@ const Footer = () => {
             </div>
 
             {/* Stay Up-to-Date */}
-            <div className="w-full md:w-1/3">
+            <div className="w-full md:1/2 lg:w-1/3">
               <h3 className="font-bold mb-4">Stay up to date</h3>
               <form className="flex items-center space-x-2 mb-4">
                 <input
@@ -102,7 +102,7 @@ const Footer = () => {
                   →
                 </button>
               </form>
-              <p className="text-sm text-gray-600 leading-6">
+              <p className="md:text-md text-[1rem] text-gray-600 leading-6">
                 I confirm that I have read Azawire’s Privacy policy and agree
                 with it.
               </p>
@@ -124,7 +124,7 @@ const Footer = () => {
         </div>
 
         {/* Copyright Section */}
-        <div className="mt-8 flex items-center gap-2 text-sm">
+        <div className="mt-8 flex items-center gap-2 md:text-[1rem] text-[1.2rem]">
           <img src="/images/icons/copyright.svg" alt="Copyright Icon" />
           <p className="text-gray-600">Copyright. 2025. Azawire</p>
         </div>

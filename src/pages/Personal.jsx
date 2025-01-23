@@ -34,7 +34,8 @@ const Personal = () => {
   }, [hasModalShown]);
 
   return (
-    <div className="w-full overflow-hidden">
+    <div className="mx-auto w-full max-w-[1440px] overflow-hidden">
+      <div className="">
       {/* Modal Component */}
       <Modal isOpen={isModalOpen} onClose={closeModal} className="z-50" />
 
@@ -48,6 +49,7 @@ const Personal = () => {
         <ValueProposition />
         <DownloadAppSection />
         <Footer />
+      </div>
       </div>
     </div>
   );
