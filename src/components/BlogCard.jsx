@@ -7,7 +7,7 @@ const BlogCard = ({ id, title, categories, date, image }) => {
       {/* Image Section */}
       <Link to={`/blog/${id}`}>
         <div
-          className="h-48 w-full bg-cover rounded-[1.2rem] mb-4"
+          className="md:h-[14rem] h-[16rem]  w-full bg-cover rounded-[1.2rem] mb-4"
           style={{
             backgroundImage: `url("${image}")`,
             backgroundSize: "cover",

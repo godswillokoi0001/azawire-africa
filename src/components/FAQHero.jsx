@@ -4,12 +4,12 @@ const FAQHero = () => {
   return (
     <section className="w-full">
       {/* Hero Section */}
-      <div className="max-w-screen-xl mx-auto px-6 lg:px-4 py-20  pt-48">
+      <div className="max-w-screen-xl mx-auto px-6 lg:px-4 py-20  md:pt-48 pt-32">
         <div>
-          <h1 className="text-xl lg:text-[3.5rem] font-semibold mb-10 text-white">
+          <h1 className="text-[2.4rem] md:text-[3.5rem] font-semibold mb-10 text-white leading-10">
             Frequently Asked Questions
           </h1>
-          <p className="text-[1.3rem] leading-relaxed w-1/2 text-gray-300 mb-8">
+          <p className="md:text-[1.3rem] leading-relaxed md:w-1/2 text-gray-300 mb-8">
             The global financial landscape is evolving rapidly, with Web3 at its
             forefront. Businesses must adapt to decentralized payment systems to
             stay competitive.

@@ -77,7 +77,7 @@ const FAQPage = () => {
         
 
         {/* Buttons Section */}
-        <div className="flex flex-wrap gap-4 md:justify-start justify-center mb-8">
+        <div className="flex flex-wrap gap-3 justify-start mb-8">
           {["Payments", "USSD Service", "Payment Link", "API Integration", "Policy"].map((button, index) => (
             <button
               key={index}

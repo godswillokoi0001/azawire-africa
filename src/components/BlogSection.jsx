@@ -84,7 +84,7 @@ const BlogSection = () => {
           {blogData.map((blog, index) => (
             <BlogCard
             key={index}
-            id={index} // or a unique ID if available
+            id={index} 
             title={blog.title}
             categories={blog.categories}
             date={blog.date}
