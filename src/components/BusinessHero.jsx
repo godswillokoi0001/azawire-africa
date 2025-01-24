@@ -2,7 +2,7 @@ import React from "react";
 
 const BusinessHero = () => {
   return (
-    <section className="relative bg-variant py-12 md:h-screen">
+    <section className="relative bg-variant md:py-40">
       <div className="max-w-screen-xl mx-auto px-4 py-8 flex flex-col-reverse md:flex-row items-center justify-between h-full">
         {/* Text Section */}
         <div className="md:w-[60%] md:mt-0 mt-80">
