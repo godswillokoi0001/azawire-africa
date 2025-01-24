@@ -2,7 +2,7 @@ import React from "react";
 
 const FeaturesSection = () => {
   return (
-    <section className="py-12 mt-[56rem]">
+    <section className="py-12 md:mt-[40rem] mt-80">
       <div className="max-w-screen-xl mx-auto px-6">
         <h2 className="text-3xl font-bold text-center mb-8">
           The Smart Way to Make And Accept Payments

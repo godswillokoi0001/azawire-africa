@@ -11,7 +11,7 @@ const ExploreMore = () => {
         <div className="bg-white md:p-8 p-4 sm:p-12 rounded-3xl w-full">
           {/* Heading and Button */}
           <div className="mb-12">
-            <h2 className="mb-6 font-medium font-poppins md:text-4xl text-[1.4rem] text-variant md:leading-[3rem] tracking-tight">
+            <h2 className="mb-6 font-medium font-poppins md:text-5xl text-[1.4rem] text-variant md:leading-[4rem] tracking-tight">
               Build your portfolio from a single app, <br />
               designed for the forward-thinking investor.
             </h2>

@@ -1,19 +1,25 @@
-import React from 'react';
+import React from "react";
 
 const BlogHero = () => {
   return (
-    <section className="flex items-center justify-center w-full">
+    <section className="flex items-center justify-center w-full py-16 md:py-20 text-white">
       {/* Hero Section */}
-      <div className="max-w-5xl mx-auto px-6 lg:px-8 py-20 text-center pt-48">
-        <h1 className="text-5xl font-bold mb-6">Blog</h1>
-        <div className="relative mx-auto w-full">
+      <div className="w-full mx-auto px-6 lg:px-8 text-center mt-24">
+        {/* Heading */}
+        <h1 className="text-3xl md:text-5xl font-bold text-white mb-6">
+          Blog
+        </h1>
+
+        {/* Search Bar */}
+        <div className="relative md:w-[50%]  mx-auto">
           <input
             type="text"
-            placeholder="Search for article"
-            className="w-[30rem] py-3 px-4 bg-[#051040] text-white rounded-full placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-[#00E3A5] backdrop-blur-md border-2 border-primary"
+            placeholder="Search for an article"
+            className="w-full py-3 pl-6 pr-12 bg-[#051040] text-white rounded-full placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-[#00E3A5] backdrop-blur-md border border-primary"
           />
           <button
-            className=" absolute right-3 top-1/2 transform -translate-y-1/2 text-white"
+            aria-label="Search"
+            className="absolute right-4 top-1/2 transform -translate-y-1/2 text-white text-lg"
           >
             🔍
           </button>

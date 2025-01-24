@@ -10,7 +10,7 @@ const BlogHeader = () => {
   return (
     <div className="overflow-hidden">
 
-    <header className="bg-[#030637] text-white h-[30rem]">
+    <header className="h-[30rem] bg-[#030637]">
       <NavigationBar2 />
       <BlogHero />
     </header>

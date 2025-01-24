@@ -29,7 +29,9 @@ const BusinessFeatures = () => {
   ];
 
   return (
-    <section className="bg-[#002C90] py-16">
+    <section className="">
+      <h2 className="pb-8 text-center font-clash text-[2rem] font-semibold leading-8">Features for <br /> Businesses</h2>
+      <div className="bg-[#002C90] py-16">
       <div className="max-w-7xl mx-auto px-6 sm:px-8 lg:px-12">
         {features.map((feature, index) => (
           <div
@@ -48,7 +50,7 @@ const BusinessFeatures = () => {
               </p>
               <a
                 href={feature.buttonLink}
-                className="inline-flex items-center px-6 sm:px-8 py-4 sm:py-6 bg-secondary text-accent font-medium text-lg sm:text-[1.2rem] rounded-full hover:bg-[#00b589] transition"
+                className="inline-flex items-center px-6 sm:px-8 py-4 sm:py-6 bg-secondary text-accent font-medium text-lg sm:text-[1.2rem] rounded-[1.5rem] hover:bg-[#00b589] transition"
               >
                 {feature.buttonText} <span className="ml-2">➔</span>
               </a>
@@ -63,6 +65,7 @@ const BusinessFeatures = () => {
             </div>
           </div>
         ))}
+      </div>
       </div>
     </section>
   );

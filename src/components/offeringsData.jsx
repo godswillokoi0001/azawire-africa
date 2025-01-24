@@ -13,13 +13,13 @@ export const offeringsData = [
     icon: "/images/Group 1000001744.png",
     bgColor: "#031335",
   },
-  {
-    title: "Wallet Generation",
-    description:
-      "Lorem ipsum dolor sit amet consectetur. Donec consequat facilisi id quam turpis a mi ultricies euismod. ",
-    icon: "/images/Group 1000001739.png",
-    bgColor: "#06D6A0",
-  },
+  // {
+  //   title: "Wallet Generation",
+  //   description:
+  //     "Lorem ipsum dolor sit amet consectetur. Donec consequat facilisi id quam turpis a mi ultricies euismod. ",
+  //   icon: "/images/Group 1000001739.png",
+  //   bgColor: "#06D6A0",
+  // },
   {
     title: "Global Payments Simplified",
     description:

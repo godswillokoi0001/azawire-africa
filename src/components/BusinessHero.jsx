@@ -1,41 +1,51 @@
-import React from 'react';
+import React from "react";
 
 const BusinessHero = () => {
   return (
-    <section className="relative bg-variant md:h-5/6">
-      <div className='max-w-screen-xl mx-auto px-4 flex md:flex-row flex-col-reverse items-center justify-between'>
-      <div className="md:w-1/2 text-center md:text-left">
-        <div className="text-center md:text-left md:flex md:items-center md:justify-between">
-          {/* Text Content */}
-          <div className="max-w-lg text-white">
-            <h1 className="text-4xl font-bold leading-tight md:text-5xl">
-              Giving your Business the Magic it Deserves
-            </h1>
-            <p className="md:mt-4 text-lg text-gray-300">
-              Azawire is Revolutionizing Business Transactions through Web2 and Web3 Integration
-            </p>
-            <div className="mt-6 flex justify-center md:justify-start gap-4">
-              <button className="flex items-center text-lg px-6 py-5 bg-secondary text-variant font-bold rounded-3xl transition">
-               <span><img className="w-6 me-2" src="/images/icons/Group 1000001750.svg" alt="" /></span> Request a Demo
-              </button>
-              <button className="flex items-center text-lg px-6 py-5 bg-primary text-accent font-bold rounded-3xl transition">
-              <span><img className="w-6 me-2" src="/images/icons/Group 1000001751.svg" alt="" /></span>
-                Contact Sales
-              </button>
+    <section className="relative bg-variant py-12 md:h-screen">
+      <div className="max-w-screen-xl mx-auto px-4 py-8 flex flex-col-reverse md:flex-row items-center justify-between h-full">
+        {/* Text Section */}
+        <div className="md:w-[60%] md:mt-0 mt-80">
+          <div className="ttext-left">
+            <div className=" text-white">
+              <h1 className="text-3xl sm:text-5xl md:text-5xl font-bold leading-tight">
+              Simplify your business with affordable, scalable payment solutions
+              </h1>
+              <p className="md:max-w-lg mt-4 text-base sm:text-[1.4rem] text-gray-300">
+                Azawire is Revolutionizing Business Transactions through Web2
+                and Web3 Integration
+              </p>
+              <div className="md:max-w-lg mt-6 flex flex-row justify-start md:justify-start gap-4">
+                <button className="w-1/2 flex items-center justify-center md:text-lg text-sm md:px-5 md:py-45 px-3 py-3 bg-secondary text-variant font-bold md:rounded-2xl rounded-lg transition hover:bg-secondary/80">
+                  <img
+                    className="md:w-6 w-4 me-2"
+                    src="/images/icons/Group 1000001750.svg"
+                    alt=""
+                  />
+                  Request a Demo
+                </button>
+                <button className="w-1/2 flex items-center justify-center  md:text-lg text-sm md:px-5 md:py-5 px-3 py-3 bg-primary text-accent font-bold md:rounded-2xl rounded-lg transition hover:bg-primary/80">
+                  <img
+                    className="md:w-6 w-4 me-2"
+                    src="/images/icons/Group 1000001751.svg"
+                    alt=""
+                  />
+                  Contact Sales
+                </button>
+              </div>
             </div>
           </div>
         </div>
-      </div>
 
-      {/* Overlapping Image */}
-      <div className="md:w-1/2 flex justify-center relative overflow-visible">
+        {/* Image Section */}
+        <div className="md:w-[40%] flex justify-center absolute overflow-visible md:right-0 right-50 md:top-0 top-[-2rem]">
           <img
             src="/images/Business Hero Images 1.png"
             alt="Dashboard Preview"
-            className="w-[30rem] md:w-[34rem] max-w-none"
+            className="w-[28rem] sm:w-[36rem] md:w-[34rem] lg:w-[40rem] max-w-none"
           />
+        </div>
       </div>
-      </div>  
     </section>
   );
 };

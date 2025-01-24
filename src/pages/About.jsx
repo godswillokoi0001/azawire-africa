@@ -14,7 +14,7 @@ const AboutSection = () => {
         <AboutHero />
       </header>
       <section className="text-white py-4 lg:py-8">
-        <div className="max-w-7xl mx-auto flex justify-between md:flex-row flex-col gap-2">
+        <div className="max-w-7xl mx-auto flex justify-between md:flex-row flex-col gap-4">
           {/* Left Section - Hero Content */}
           <div className="md:w-1/3 w-full">
             <img

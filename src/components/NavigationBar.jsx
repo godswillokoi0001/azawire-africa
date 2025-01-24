@@ -149,35 +149,45 @@ const Navbar = () => {
 
       {/* Mobile Navigation */}
       {isMenuOpen && (
-        <div className="md:hidden bg-white w-full h-full px-4 py-6 shadow-lg">
-          <ul className="space-y-4">
+        <div className="md:hidden bg-white w-full h-lvh px-4 py-6 shadow-lg">
+          <ul className="font-semibold">
+          <li>
+              <Link to="/personal" className="block text-gray-700 hover:text-primary py-3 border-t">
+                Personal
+              </Link>
+            </li>
             <li>
-              <Link to="#" className="block text-gray-700 hover:text-primary">
+              <Link to="/business" className="block text-gray-700 hover:text-primary py-3 border-t">
+                Business
+              </Link>
+            </li>
+            <li>
+              <Link to="#" className="block text-gray-700 hover:text-primary py-3 border-t">
                 Products
               </Link>
             </li>
             <li>
-              <Link to="#" className="block text-gray-700 hover:text-primary">
+              <Link to="#" className="block text-gray-700 hover:text-primary py-3 border-t">
                 Company
               </Link>
             </li>
             <li>
               <Link
                 to="/about"
-                className="block text-gray-700 hover:text-primary"
+                className="block text-gray-700 hover:text-primary py-3 border-t"
               >
                 About
               </Link>
             </li>
             <li>
-              <Link to="#" className="block text-gray-700 hover:text-primary">
+              <Link to="#" className="block text-gray-700 hover:text-primary py-3 border-t">
                 Developers
               </Link>
             </li>
             <li>
               <Link
                 to="/blog"
-                className="block text-gray-700 hover:text-primary"
+                className="block text-gray-700 hover:text-primary py-3 border-t"
               >
                 Blog
               </Link>
@@ -185,26 +195,15 @@ const Navbar = () => {
             <li>
               <Link
                 to="/faq"
-                className="block text-gray-700 hover:text-primary"
+                className="block text-gray-700 hover:text-primary py-3 border-t border-b"
               >
                 FAQ
               </Link>
             </li>
           </ul>
           <div className="mt-6 flex flex-col space-y-4">
-            <Link
-              to="/business"
-              className="bg-primary font-clash text-white py-2 px-6 rounded-full text-center hover:bg-variant"
-            >
-              Business
-            </Link>
-            <Link
-              to="/"
-              className="bg-transparent font-clash border border-black text-black py-2 px-6 rounded-full text-center hover:bg-variant hover:text-white"
-            >
-              Personal
-            </Link>
-            <button className="w-full bg-primary font-clash text-white py-3 rounded-md hover:bg-variant transition">
+            
+            <button className="w-full bg-variant font-clash text-white py-3 rounded-md hover:bg-variant transition">
               Join Waitlist
             </button>
           </div>

@@ -18,7 +18,7 @@ const HeroSection = ({ onWaitlistClick }) => {
             and innovative Web3 banking platform.
           </p>
           <button
-            className="inline-flex justify-center items-center bg-primary hover:bg-blue-600 px-6 py-4 rounded-lg font-poppins text-sm text-white md:text-lg transition-all duration-300"
+            className="hidden md:inline-flex justify-center items-center bg-primary hover:bg-blue-600 px-6 py-4 rounded-lg font-poppins text-sm text-white md:text-lg transition-all duration-300"
             onClick={onWaitlistClick}
           >
             Join Waitlist
@@ -29,7 +29,7 @@ const HeroSection = ({ onWaitlistClick }) => {
         </div>
 
         {/* Right Content */}
-        <div className="relative flex justify-center md:w-1/2 w-full z-40">
+        <div className="relative flex justify-center md:w-1/2 w-full z-20">
           <img
             src="/images/Screenshot 2025-01-10 at 22.25.26 1.png"
             alt="3D Currency Icons"

@@ -32,6 +32,36 @@ const faqData = [
     answer:
       "Feet you off its like like six. Among sex are leave law built now. Law county unable her sister.",
   },
+  {
+    question: "How long until we deliver your first blog post?",
+    answer:
+      "Really boy law county she unable her sister. Feet you off its like like six. Among sex are leave law built now.",
+  },
+  {
+    question: "What is the cost of our services?",
+    answer:
+      "In built table in an rapid blush. Merit’s behind on afraid or warmly. Law county unable her sister.",
+  },
+  {
+    question: "How do we manage content delivery?",
+    answer:
+      "Merit’s behind on afraid or warmly. Feet you off its like like six. Among sex are leave law built now.",
+  },
+  {
+    question: "Can I cancel my subscription at any time?",
+    answer:
+      "Law county unable her sister. Really boy law county she unable her sister. Feet you off its like like six.",
+  },
+  {
+    question: "What is the refund policy?",
+    answer:
+      "Among sex are leave law built now. In built table in an rapid blush. Merit’s behind on afraid or warmly.",
+  },
+  {
+    question: "Do you offer custom blog writing services?",
+    answer:
+      "Feet you off its like like six. Among sex are leave law built now. Law county unable her sister.",
+  },
 ];
 
 const FAQPage = () => {
