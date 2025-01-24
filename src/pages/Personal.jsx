@@ -36,22 +36,20 @@ const Personal = () => {
   return (
     <div className="mx-auto w-full overflow-hidden ">
       <div className="">
-      {/* Modal Component */}
-      <Modal isOpen={isModalOpen} onClose={closeModal} className="z-50" />
-      <div className="bg-gradient-to-r from-[#f9feff] to-[#e5f9ff] ">
-        
-        <header className="max-w-screen-xl mx-auto">
-          {/* Hero Illustrations */}
-          
-          <NavigationBar />
-          <HeroSection onWaitlistClick={openModal} />
-        </header>
-        <ExploreMore />
-        <CoreOfferings title="Core Offerings" offerings={offeringsData} />
-        <ValueProposition />
-        <DownloadAppSection />
-        <Footer />
-      </div>
+        {/* Modal Component */}
+        <Modal isOpen={isModalOpen} onClose={closeModal} className="z-50" />
+        <div className="bg-gradient-to-r from-[#f9feff] to-[#e5f9ff] ">
+          <header className="max-w-screen-xl mx-auto">
+            {/* Hero Illustrations */}
+            <NavigationBar />
+            <HeroSection onWaitlistClick={openModal} />
+          </header>
+          <ExploreMore />
+          <CoreOfferings title="Core Offerings" offerings={offeringsData} />
+          <ValueProposition />
+          <DownloadAppSection />
+          <Footer />
+        </div>
       </div>
     </div>
   );
