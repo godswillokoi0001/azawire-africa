@@ -8,6 +8,7 @@ import About from "./pages/About";
 import FAQ from "./pages/FAQ";
 import BlogSection from "./components/BlogSection";
 import BlogDetails from "./components/BlogDetails";
+import JoinWaitlist from "./pages/Waitlist";
 
 
 function App() {
@@ -21,6 +22,7 @@ function App() {
         <Route path="/about" element={<About />} />
         <Route path="/faq" element={<FAQ />} />
         <Route path="/" element={<BlogSection />} />
+        <Route path="/joinwaitlist" element={<JoinWaitlist />} />
         <Route path="/blog/:id" element={<BlogDetails />} />
       </Routes>
     </Router>

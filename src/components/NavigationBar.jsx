@@ -12,7 +12,7 @@ const Navbar = () => {
   const isActive = (path) => location.pathname === path;
 
   return (
-    <nav className="max-w-screen-xl w-full fixed top-0 z-40 md:bg-transparent bg-white">
+    <nav className="max-w-screen-xl w-full fixed top-0 z-50 md:bg-transparent bg-white">
       <div className="mx-auto flex items-center justify-between px-4 py-3">
         {/* Left Side - Logo and Navigation */}
         <div className="flex items-center space-x-4 backdrop-blur-sm md:p-4 bg-white/60 rounded-full md:border border-[#e5f9ff]">

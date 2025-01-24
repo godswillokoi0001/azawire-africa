@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from "react";
-import Modal from "../components/Modal";
+// import Modal from "../components/Modal";
 
 import CoreOfferings from "../components/CoreOfferings";
 import DownloadAppSection from "../components/DownloadAppSection";
@@ -14,15 +14,15 @@ const Personal = () => {
   const [isModalOpen, setIsModalOpen] = useState(false);
   const [hasModalShown, setHasModalShown] = useState(false);
 
-  const openModal = () => {
-    console.log("Opening modal manually");
-    setIsModalOpen(true);
-  };
+  // const openModal = () => {
+  //   console.log("Opening modal manually");
+  //   setIsModalOpen(true);
+  // };
 
-  const closeModal = () => {
-    console.log("Closing modal");
-    setIsModalOpen(false);
-  };
+  // const closeModal = () => {
+  //   console.log("Closing modal");
+  //   setIsModalOpen(false);
+  // };
 
   useEffect(() => {
     console.log("useEffect triggered. hasModalShown =", hasModalShown);
@@ -37,12 +37,12 @@ const Personal = () => {
     <div className="mx-auto w-full overflow-hidden ">
       <div className="">
         {/* Modal Component */}
-        <Modal isOpen={isModalOpen} onClose={closeModal} className="z-50" />
+        {/* <Modal isOpen={isModalOpen} onClose={closeModal} className="z-50" /> */}
         <div className="bg-gradient-to-r from-[#f9feff] to-[#e5f9ff] ">
           <header className="max-w-screen-xl mx-auto">
             {/* Hero Illustrations */}
             <NavigationBar />
-            <HeroSection onWaitlistClick={openModal} />
+            <HeroSection  />
           </header>
           <ExploreMore />
           <CoreOfferings title="Core Offerings" offerings={offeringsData} />

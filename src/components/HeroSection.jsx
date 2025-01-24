@@ -1,6 +1,7 @@
 import React from "react";
+import { Link } from "react-router-dom";
 
-const HeroSection = ({ onWaitlistClick }) => {
+const HeroSection = () => {
   return (
     <section className="relative bg-gradient-to-r pt-8 md:pt-8">
                  <div className="hidden md:inline ">
@@ -17,15 +18,16 @@ const HeroSection = ({ onWaitlistClick }) => {
             Effortlessly send and receive money worldwide with Azawire's secure
             and innovative Web3 banking platform.
           </p>
-          <button
+          <Link
+            to="joinwaitlist"
             className="hidden md:inline-flex justify-center items-center bg-primary hover:bg-blue-600 px-6 py-4 rounded-lg font-poppins text-sm text-white md:text-lg transition-all duration-300"
-            onClick={onWaitlistClick}
+
           >
             Join Waitlist
             <span className="pl-2">
               <img className="w-5" src="/images/icons/Icons.svg" alt="Icon" />
             </span>
-          </button>
+          </Link>
         </div>
 
         {/* Right Content */}
