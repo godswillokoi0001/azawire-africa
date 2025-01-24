@@ -13,7 +13,7 @@ const Business = () => {
       <NavigationBar2 />
         <BusinessHero />
       </header>
-      <div className=" max-w-screen-xl mx-auto text-white px-4 py-16 absolute inset-x-0 md:top-[30rem] top-[40rem]">
+      <div className=" max-w-screen-xl mx-auto text-white px-4 py-8">
           
         <div className=" bg-accent shadow-xl rounded-[1.5rem] flex flex-col md:flex-row items-center justify-between md:pt-4 md:px-2">
         <div className="md:block hidden">
@@ -30,7 +30,7 @@ const Business = () => {
       </div>
 
       {/* <FeaturesSection /> */}
-      <div className="md:mt-[48rem] mt-[24rem]">
+      <div className="md:mt-[8rem] mt-[4rem]">
       <BusinessFeatures />
       </div>
       
