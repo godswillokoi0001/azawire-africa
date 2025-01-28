@@ -59,7 +59,7 @@ const Personal = () => {
               <HeroSection />
             </div>
           </header>
-          <div className="mt-40">
+          <div className="md:mt-28 mt-20">
             <TrustedPartners />
           </div>
           <ExploreMore />

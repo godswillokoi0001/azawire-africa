@@ -8,6 +8,20 @@ const partners = [
   { name: "Bantu", logo: "/images/logos/bantu.svg" },
   { name: "Convexity", logo: "/images/logos/convexity.svg" },
   { name: "Sudo", logo: "/images/logos/sudo.svg" },
+  { name: "Vista", logo: "/images/logos/vista.svg" },
+  { name: "Sumsub", logo: "/images/logos/sumsub.svg" },
+  { name: "cNGN", logo: "/images/logos/cngn.svg" },
+  { name: "Stellar", logo: "/images/logos/stellar.svg" },
+  { name: "Bantu", logo: "/images/logos/bantu.svg" },
+  { name: "Convexity", logo: "/images/logos/convexity.svg" },
+  { name: "Sudo", logo: "/images/logos/sudo.svg" },
+  { name: "Vista", logo: "/images/logos/vista.svg" },
+  { name: "Sumsub", logo: "/images/logos/sumsub.svg" },
+  { name: "cNGN", logo: "/images/logos/cngn.svg" },
+  { name: "Stellar", logo: "/images/logos/stellar.svg" },
+  { name: "Bantu", logo: "/images/logos/bantu.svg" },
+  { name: "Convexity", logo: "/images/logos/convexity.svg" },
+  { name: "Sudo", logo: "/images/logos/sudo.svg" },
 ];
 
 export default function TrustedPartners() {
@@ -18,28 +32,30 @@ export default function TrustedPartners() {
         Trusted Partners
       </h2>
 
-      <div className="relative mt-4 flex w-full items-center">
-        {/* Scrolling logos */}
+      <div className="relative flex w-full items-center overflow-hidden">
+
         <motion.div
-          className="flex min-w-full gap-10 whitespace-nowrap"
+          className="flex w-max gap-10 whitespace-nowrap"
           animate={{ x: ["0%", "-100%"] }}
           transition={{
             repeat: Infinity,
-            duration: 10,
+            duration: 24,
             ease: "linear",
           }}
+          style={{ willChange: "transform" }}
         >
-          {[...partners, ...partners].map((partner, index) => (
+       
+          {[...partners, ...partners, ...partners].map((partner, index) => (
             <img
               key={index}
               src={partner.logo}
               alt={partner.name}
-              className="h-12 opacity-80"
+              className="md:h-12 h-10"
             />
           ))}
         </motion.div>
 
-        {/* Gradient Overlays to Create Fading Effect */}
+        {/* Gradient Overlays for Fading Effect */}
         <div className="absolute left-0 top-0 h-full w-40 bg-gradient-to-r from-[#f9feff] to-transparent pointer-events-none"></div>
         <div className="absolute right-0 top-0 h-full w-40 bg-gradient-to-l from-[#e5f9ff] to-transparent pointer-events-none"></div>
       </div>
