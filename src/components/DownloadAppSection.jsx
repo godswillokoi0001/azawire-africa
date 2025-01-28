@@ -11,7 +11,7 @@ const DownloadAppSection = () => {
       Be part of our exciting journey <br /> join the waitlist today!
           </h2>
       <Link
-            to="joinwaitlist"
+            to="/waitlist"
             className="hidden md:inline-flex justify-center items-center bg-primary hover:bg-blue-600 px-6 py-4 rounded-lg font-poppins text-sm text-white md:text-lg transition-all duration-300"
 
           >
