@@ -104,9 +104,9 @@ const JoinWaitlist = () => {
       <div className="h-screen flex flex-col justify-center items-center bg-[#02122d] text-white pt-[100rem]">
         <NavigationBar2 />
         <div className="w-full max-w-lg p-6">
-          <h2 className="text-center text-xl font-semibold mb-6">
-            Join the waitlist to be part of our exciting journey
-          </h2>
+            <h2 className="text-center text-xl font-semibold mb-6">
+              Join the waitlist to be part of our exciting journey
+            </h2>
           <form onSubmit={handleSubmit} className="space-y-4">
             <div className="relative">
               <FontAwesomeIcon
