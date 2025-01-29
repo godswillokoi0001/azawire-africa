@@ -1,12 +1,13 @@
 import React from "react";
 import NavigationBar2 from "../components/NavigationBar2";
+import Footer from "../components/Footer";
 
 const AMLCFTPolicy = () => {
   return (
     <>
       <header>
         <NavigationBar2 />
-        <div className="h-[24rem] bg-[#030637] flex items-center justify-center w-full py-16 md:py-20 text-white">
+        <div className=" h-[24rem] bg-[#030637] flex items-center justify-center w-full py-16 md:py-20 text-white">
           {/* Hero Section */}
           <div className="w-full mx-auto px-6 lg:px-8 text-center mt-24">
             {/* Heading */}
@@ -285,6 +286,7 @@ const AMLCFTPolicy = () => {
           </footer>
         </div>
       </div>
+      <Footer />
     </>
   );
 };

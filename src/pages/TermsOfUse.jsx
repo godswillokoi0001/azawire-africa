@@ -1,3 +1,4 @@
+import Footer from "../components/Footer";
 import NavigationBar2 from "../components/NavigationBar2";
 
 export default function TermsOfUse() {
@@ -227,6 +228,7 @@ export default function TermsOfUse() {
           </footer>
       
     </div>
+    <Footer />
     </>
   );
 }
