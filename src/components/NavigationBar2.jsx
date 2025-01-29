@@ -179,7 +179,7 @@ const NavigationBar2 = () => {
 
       {/* Mobile Navigation */}
             {isMenuOpen && (
-              <div className="md:hidden bg-white w-full h-lvh px-4 py-6 shadow-lg">
+              <div className="md:hidden bg-white w-full h-screen px-4 py-6 shadow-lg">
                 <ul className="font-semibold">
                 <li>
                     <Link to="/personal" className="block text-gray-700 hover:text-primary py-3 border-t">
