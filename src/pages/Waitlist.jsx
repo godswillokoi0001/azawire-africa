@@ -1,15 +1,17 @@
+import React, { useState, useEffect } from "react";
+import Select from "react-select";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faUser, faEnvelope, faArrowRight } from "@fortawesome/free-solid-svg-icons";
+import { faWhatsapp } from "@fortawesome/free-brands-svg-icons";
 import Footer from "../components/Footer";
 import NavigationBar2 from "../components/NavigationBar2";
-
-import React, { useState, useEffect } from "react";
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faUser, faPhone, faEnvelope, faArrowRight } from "@fortawesome/free-solid-svg-icons";
 
 const JoinWaitlist = () => {
   const [whatsAppNumber, setWhatsAppNumber] = useState("");
   const [isPhoneError, setPhoneError] = useState(false);
   const [formErrors, setFormErrors] = useState([]);
   const [countries, setCountries] = useState([]);
+  const [selectedCountry, setSelectedCountry] = useState(null);
   const [popupMessage, setPopupMessage] = useState("");
 
   // Fetch countries and phone codes
@@ -20,11 +22,13 @@ const JoinWaitlist = () => {
         const data = await response.json();
         const countryData = data
           .map((country) => ({
-            name: country.name.common,
-            dialCode: country.idd?.root + (country.idd?.suffixes ? country.idd.suffixes[0] : ""),
+            label: `${country.name.common} (${country.idd?.root}${
+              country.idd?.suffixes ? country.idd.suffixes[0] : ""
+            })`,
+            value: country.idd?.root + (country.idd?.suffixes ? country.idd.suffixes[0] : ""),
           }))
-          .filter((country) => country.dialCode); // Filter out countries without dial codes
-        setCountries(countryData.sort((a, b) => a.name.localeCompare(b.name))); // Sort alphabetically
+          .filter((country) => country.value); // Filter out countries without dial codes
+        setCountries(countryData.sort((a, b) => a.label.localeCompare(b.label))); // Sort alphabetically
       } catch (error) {
         console.error("Failed to fetch countries:", error);
       }
@@ -62,16 +66,21 @@ const JoinWaitlist = () => {
       return;
     }
 
+    if (!selectedCountry) {
+      alert("Please select your country.");
+      return;
+    }
+
     // Collect form data
     const formData = new FormData();
     formData.append("name", e.target.name.value);
-    formData.append("phoneCode", e.target.phoneCode.value);
+    formData.append("phoneCode", selectedCountry.value);
     formData.append("whatsAppNumber", whatsAppNumber);
     formData.append("email", e.target.email.value);
 
     // Send data via POST to the given URL
     try {
-      const response = await fetch("https://app/wamation.com.ng/processor", {
+      const response = await fetch("http://app/wamation.com.ng/processor", {
         method: "POST",
         body: formData,
       });
@@ -81,6 +90,7 @@ const JoinWaitlist = () => {
         setWhatsAppNumber(""); // Clear the form fields
         setPhoneError(false);
         setFormErrors([]);
+        setSelectedCountry(null);
       } else {
         alert("Failed to submit. Please try again later.");
       }
@@ -95,10 +105,10 @@ const JoinWaitlist = () => {
 
   return (
     <section>
-      <div className="h-[48rem] flex flex-col justify-center items-center bg-[#02122d] text-white">
+      <div className="h-screen flex flex-col justify-center items-center bg-[#02122d] text-white">
         <NavigationBar2 />
-        <div className="w-full max-w-md bg-transparent p-6">
-          <h2 className="text-center text-2xl font-semibold mb-6">
+        <div className="w-full max-w-lg bg-transparent p-6">
+          <h2 className="text-center text-xl font-semibold mb-6">
             Join the waitlist to be part of our exciting journey
           </h2>
           <form onSubmit={handleSubmit} className="space-y-4">
@@ -113,38 +123,54 @@ const JoinWaitlist = () => {
                 name="name"
                 placeholder="Full Name"
                 required
-                className="w-full px-10 py-3 rounded-lg bg-transparent border border-gray-600 text-white placeholder-gray-400 focus:outline-none focus:border-blue-500"
+                className="w-full px-12 py-3 rounded-md bg-transparent border border-gray-600 text-white placeholder-gray-400 focus:outline-none focus:border-blue-500"
               />
             </div>
 
-            {/* WhatsApp Number Field */}
-            <div className="flex space-x-4">
-              <select
-                name="phoneCode"
-                className="w-1/3 px-4 py-3 rounded-lg bg-transparent border border-gray-600 text-white focus:outline-none focus:border-blue-500"
-              >
-                {countries.map((country, index) => (
-                  <option key={index} value={country.dialCode} className="bg-variant text-white">
-                    {country.dialCode} ({country.name})
-                  </option>
-                ))}
-              </select>
-              <div className="relative w-2/3">
+            {/* Country Code and WhatsApp Number Field */}
+            <div className="relative flex gap-2">
+              <div className="w-1/2 relative">
                 <FontAwesomeIcon
-                  icon={faPhone}
+                  icon={faWhatsapp}
                   className="absolute left-4 top-1/2 transform -translate-y-1/2 text-gray-400"
                 />
-                <input
-                  type="number"
-                  name="whatsAppNumber"
-                  placeholder="Your WhatsApp number"
-                  value={whatsAppNumber}
-                  onChange={(e) => setWhatsAppNumber(e.target.value)}
-                  onBlur={handleWhatsAppNumberBlur}
-                  required
-                  className="w-full px-10 py-3 rounded-lg bg-transparent border border-gray-600 text-white placeholder-gray-400 focus:outline-none focus:border-blue-500"
+                <Select
+                  options={countries}
+                  value={selectedCountry}
+                  onChange={setSelectedCountry}
+                  placeholder="+234 (Nigeria)"
+                  className="react-select-container"
+                  classNamePrefix="react-select"
+                  styles={{
+                    control: (base) => ({
+                      ...base,
+                      backgroundColor: "transparent",
+                      borderColor: "#4b5563",
+                      color: "#000",
+                      paddingLeft: "2.5rem",
+                    }),
+                    singleValue: (base) => ({
+                      ...base,
+                      color: "#fff",
+                    }),
+                    placeholder: (base) => ({
+                      ...base,
+                      color: "#9ca3af",
+                    }),
+                  }}
                 />
               </div>
+
+              <input
+                type="number"
+                name="whatsAppNumber"
+                placeholder="Your WhatsApp number"
+                value={whatsAppNumber}
+                onChange={(e) => setWhatsAppNumber(e.target.value)}
+                onBlur={handleWhatsAppNumberBlur}
+                required
+                className="w-1/2 px-4 py-3 rounded-md bg-transparent border border-gray-600 text-white placeholder-gray-400 focus:outline-none focus:border-blue-500"
+              />
             </div>
 
             {/* Email Address Field */}
@@ -158,38 +184,39 @@ const JoinWaitlist = () => {
                 name="email"
                 placeholder="Your email address"
                 required
-                className="w-full px-10 py-3 rounded-lg bg-transparent border border-gray-600 text-white placeholder-gray-400 focus:outline-none focus:border-blue-500"
+                className="w-full px-12 py-3 rounded-md bg-transparent border border-gray-600 text-white placeholder-gray-400 focus:outline-none focus:border-blue-500"
               />
             </div>
 
             {/* Submit Button */}
             <button
               type="submit"
-              className="w-full flex items-center justify-center px-4 py-3 rounded-lg bg-teal-600 hover:bg-teal-700 text-white font-semibold space-x-2"
+              className="w-full flex items-center justify-center px-4 py-3 rounded-md bg-teal-600 hover:bg-teal-700 text-white font-semibold space-x-2"
             >
               <span>Join Waitlist</span>
               <FontAwesomeIcon icon={faArrowRight} />
             </button>
           </form>
 
+          {/* Error Messages */}
+          {isPhoneError && (
+            <p className="mt-2 text-red-500 text-sm">WhatsApp number must be at least 7 digits.</p>
+          )}
+
           {/* Popup Message */}
           {popupMessage && (
-            <div className="mt-6 p-4 bg-green-600 text-white rounded-lg text-center">
+            <div className="mt-6 p-4 bg-green-600 text-white rounded-md text-center">
               {popupMessage}
             </div>
           )}
+        </div>
 
-          {/* Social Links */}
-          <div className="text-center mt-6">
-            <p className="text-sm text-gray-400">We are also on</p>
-            <div className="flex justify-center gap-4 mt-3">
-              <button className="flex items-center px-6 py-3 bg-[#02122d] text-white rounded-md focus:outline-none hover:bg-[#051737] outline outline-1 outline-accent">
-                <i className="fa-brands fa-x mr-2"></i> Azawire
-              </button>
-              <button className="flex items-center px-6 py-3 bg-[#02122d] text-white rounded-md focus:outline-none hover:bg-[#051737] outline outline-1 outline-accent">
-                <i className="fab fa-mastodon mr-2"></i> Azawire
-              </button>
-            </div>
+        {/* Footer Icons */}
+        <div className="mt-6 text-center">
+          <p className="text-sm mb-2">We are also on</p>
+          <div className="flex justify-center space-x-4">
+            <button className="px-4 py-2 bg-gray-700 rounded-md">Azawire</button>
+            <button className="px-4 py-2 bg-gray-700 rounded-md">Azawire</button>
           </div>
         </div>
       </div>

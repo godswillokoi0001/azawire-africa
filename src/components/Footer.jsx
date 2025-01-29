@@ -1,4 +1,5 @@
 import React from "react";
+import { Link } from 'react-router-dom';
 
 const Footer = () => {
   return (
@@ -19,7 +20,13 @@ const Footer = () => {
             <div className="w-full md:1/2 lg:w-1/3 mb-6">
               <h3 className="font-bold mb-4">Product</h3>
               <ul className="space-y-2 text-gray-600">
-                {["Universal checkout", "Payment workflows", "Observability", "UpliftAI", "Apps & integrations"].map((item) => (
+                {[
+                  "Universal checkout",
+                  "Payment workflows",
+                  "Observability",
+                  "UpliftAI",
+                  "Apps & integrations",
+                ].map((item) => (
                   <li key={item}>
                     <a href="#" className="hover:underline">
                       {item}
@@ -53,7 +60,13 @@ const Footer = () => {
             <div className="w-full md:1/2 lg:w-1/3 mb-6">
               <h3 className="font-bold mb-4">Developers</h3>
               <ul className="space-y-2 text-gray-600">
-                {["Docs", "API Reference", "Payment methods guide", "Service status", "Community"].map((item) => (
+                {[
+                  "Docs",
+                  "API Reference",
+                  "Payment methods guide",
+                  "Service status",
+                  "Community",
+                ].map((item) => (
                   <li key={item}>
                     <a href="#" className="hover:underline">
                       {item}
@@ -67,11 +80,17 @@ const Footer = () => {
             <div className="w-full md:1/2 lg:w-1/3 mb-6">
               <h3 className="font-bold mb-4">Resources</h3>
               <ul className="space-y-2 text-gray-600">
-                {["Blog", "Success stories", "Terms", "Privacy"].map((item) => (
-                  <li key={item}>
-                    <a href="#" className="hover:underline">
-                      {item}
-                    </a>
+                {[
+                  { name: "Blog", link: "" },
+                  { name: "Success stories", link: "" },
+                  { name: "Terms", link: "/termsofuse" },
+                  { name: "Privacy", link: "/privacy" },
+                  { name: "AMLCFTPolicy", link: "/amlcftpolicy" },
+                ].map((item) => (
+                  <li key={item.name}>
+                    <Link to={item.link} className="hover:underline">
+                      {item.name}
+                    </Link>
                   </li>
                 ))}
               </ul>
@@ -109,15 +128,17 @@ const Footer = () => {
 
               {/* Social Media Icons */}
               <div className="flex space-x-4 mt-4">
-                {["email", "linkedin", "twitter", "youtube", "instagram"].map((icon) => (
-                  <a href="#" key={icon} className="hover:text-blue-500">
-                    <img
-                      src={`/images/icons/${icon}.svg`}
-                      alt={icon}
-                      className="h-5"
-                    />
-                  </a>
-                ))}
+                {["email", "linkedin", "twitter", "youtube", "instagram"].map(
+                  (icon) => (
+                    <a href="#" key={icon} className="hover:text-blue-500">
+                      <img
+                        src={`/images/icons/${icon}.svg`}
+                        alt={icon}
+                        className="h-5"
+                      />
+                    </a>
+                  )
+                )}
               </div>
             </div>
           </div>

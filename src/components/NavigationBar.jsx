@@ -10,7 +10,7 @@ const Navbar = () => {
 
   const location = useLocation();
   const isActive = (path) => location.pathname === path;
-
+  
   return (
     <nav className="max-w-screen-xl w-full fixed top-0 z-50 md:bg-transparent bg-white">
       <div className="mx-auto flex items-center justify-between px-4 py-3">

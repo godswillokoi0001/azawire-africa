@@ -9,6 +9,9 @@ import FAQ from "./pages/FAQ";
 import BlogSection from "./components/BlogSection";
 import BlogDetails from "./components/BlogDetails";
 import Waitlist from "./pages/Waitlist";
+import PrivacyPolicy from "./pages/PrivacyPolicy";
+import AMLCFTPolicy from "./pages/AMLCFTPolicy";
+import TermsOfUse from "./pages/TermsOfUse";
 
 
 function App() {
@@ -24,6 +27,10 @@ function App() {
         <Route path="/" element={<BlogSection />} />
         <Route path="/waitlist" element={<Waitlist />} />
         <Route path="/blog/:id" element={<BlogDetails />} />
+        <Route path="/privacy" element={<PrivacyPolicy />} />
+        <Route path="/amlcftpolicy" element={<AMLCFTPolicy />} />
+        <Route path="/termsofuse" element={<TermsOfUse />} />
+
       </Routes>
     </Router>
   );
