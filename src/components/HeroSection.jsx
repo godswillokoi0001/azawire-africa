@@ -14,7 +14,7 @@ const HeroSection = () => {
             and innovative Web3 banking platform.
           </p>
           <Link
-            to="waitlist"
+            to="/waitlist"
             className="w-full md:w-64 inline-flex justify-center items-center bg-primary hover:bg-blue-600 px-8 py-4 rounded-lg font-poppins text-sm text-white md:text-lg transition-all duration-300"
           >
             Join Waitlist
