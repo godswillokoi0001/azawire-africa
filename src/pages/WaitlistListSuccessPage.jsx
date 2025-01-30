@@ -9,7 +9,7 @@ const WaitlistSuccessPage = () => {
     <>
       <header>
         <NavigationBar2 />
-        <div className="h-[32rem] bg-[#030637] flex items-center justify-center w-full py-16 md:py-20 text-white">
+        <div className="h-screen bg-[#030637] flex items-center justify-center w-full py-16 md:py-20 text-white">
           {/* Hero Section */}
           <div className="w-full mx-auto px-6 lg:px-8 text-center mt-24"
                   data-aos="zoom-in"
