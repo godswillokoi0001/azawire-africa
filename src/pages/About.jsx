@@ -9,7 +9,13 @@ const AboutSection = () => {
   console.log("AboutSection");
   return (
     <div>
-      <header className="bg-[#030637] text-white h-[30rem]">
+      <header className="bg-[#030637] text-white h-[30rem]"
+       style={{
+        backgroundImage: "url(/images/background-line-3.png)",
+        backgroundSize: "cover",
+        backgroundRepeat: "no-repeat",
+        backgroundPosition: "center",
+    }}>
         <NavigationBar2 />
         <AboutHero />
       </header>

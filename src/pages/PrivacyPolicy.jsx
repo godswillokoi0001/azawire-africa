@@ -7,7 +7,14 @@ const PrivacyPolicy = () => {
     <>
       <header>
         <NavigationBar2 />
-        <div className="h-[24rem] bg-[#030637] flex items-center justify-center w-full py-16 md:py-20 text-white">
+        <div className="h-[24rem] bg-[#030637] flex items-center justify-center w-full py-16 md:py-20 text-white"
+           style={{
+            backgroundImage: "url(/images/background-line-2.png)",
+            backgroundSize: "cover",
+            backgroundRepeat: "no-repeat",
+            backgroundPosition: "center",
+        }}
+        >
           {/* Hero Section */}
           <div className="w-full mx-auto px-6 lg:px-8 text-center mt-24">
             {/* Heading */}
