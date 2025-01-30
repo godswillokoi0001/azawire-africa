@@ -11,6 +11,7 @@ import PrivacyPolicy from "./pages/PrivacyPolicy";
 import AMLCFTPolicy from "./pages/AMLCFTPolicy";
 import TermsOfUse from "./pages/TermsOfUse";
 import WaitlistPage from "./pages/WaitlistPage"; // Corrected import name
+import WaitlistSuccessPage from "./pages/WaitlistListSuccessPage";
 
 function App() {
   return (
@@ -26,7 +27,8 @@ function App() {
         <Route path="/privacy" element={<PrivacyPolicy />} />
         <Route path="/amlcftpolicy" element={<AMLCFTPolicy />} />
         <Route path="/termsofuse" element={<TermsOfUse />} />
-        <Route path="/waitlist" element={<WaitlistPage />} /> {/* Corrected route */}
+        <Route path="/waitlist" element={<WaitlistPage />} />
+        <Route path="/success" element={<WaitlistSuccessPage />} />
       </Routes>
     </Router>
   );
