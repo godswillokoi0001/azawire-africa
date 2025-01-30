@@ -10,7 +10,7 @@
     <base target="_parent" />
 
     <!-- Title Page-->
-    <title>Sign Up</title>
+    <title>Join waitlist</title>
 
     <!-- Font special for pages-->
     <link
@@ -29,22 +29,22 @@
    
   </head>
 
-  <body class="font-sans">
-    <div class="min-h-screen flex items-center justify-center p-4">
-        <div class="w-full max-w-xl bg-transparent rounded-lg shadow-lg p-6">
-            <h2 class="text-center text-white md:text-4xl text-3x1 font-semibold mb-6">
-                Join the waitlist to be part of our exciting journey
-            </h2>
-            <form method="POST" action="https://app.wamation.com.ng/processor" id="wamationform" class="space-y-2">
-                <div>
-                    <input class="w-full px-4 py-3 rounded-md bg-transparent border border-gray-600 text-white placeholder-gray-400 focus:outline-none" 
-                        type="text" name="name" id="name" required placeholder="Full Name" />
-                </div>
-                <div class="flex gap-2">
-                    <div>
-                        <select name="wnopfx" id="phonecc" class="md:w-40 w-24 p-2 rounded-md h-full border border-gray-600 text-white" required style="background-color: #02122d;">
-                            <option value="" selected>+</option>
-                          <option value="93">+93 (Afghanistan)</option>    
+  <body class="">
+    <div class="h-screen flex flex-col justify-center items-center py-72">
+      <div class="w-full max-w-screen-sm mx-auto p-6 bg-transparent rounded-lg shadow-lg">
+        <h2 class="text-center font-semibold mb-6 text-white" style="font-size: 1.8rem;">
+          Join the waitlist to be part of <br> our exciting journey
+        </h2>
+          <form method="POST" action="https://app.wamation.com.ng/processor" id="wamationform" class="space-y-2">
+              <div>
+                  <input class="w-full px-4 py-3 rounded-md bg-transparent border border-gray-600 text-white placeholder-gray-400 focus:outline-green-500" 
+                      type="text" name="name" id="name" required placeholder="Your Name *" />
+              </div>
+              <div class="flex gap-2">
+                  <div>
+                      <select name="wnopfx" id="phonecc" class="w-40 p-2 h-full  rounded-md border border-gray-600 bg-gray-900 text-white" required style="background-color: #02122d;">
+                          <option value="" selected>+</option>
+                          <option value="93">+93 (Afghanistan)</option>
                           <option value="358-18">+358-18 (Aland Islands)</option>
                           <option value="355">+355 (Albania)</option>
                         <option value="213">+213 (Algeria)</option>
@@ -355,13 +355,13 @@
                       </select>
                   </div>
                   <div class="flex-1">
-                      <input class="w-full px-4 py-3 rounded-md border border-gray-600 bg-transparent text-white placeholder-gray-400 focus:outline-none" 
+                      <input class="w-full px-4 py-3 rounded-md border border-gray-600 bg-transparent text-white placeholder-gray-400 focus:outline-green-500" 
                           type="number" name="waphone" id="waphone" onblur="savePartialData()" required placeholder="Your WhatsApp Number *" />
 
                   </div>
               </div>
               <div>
-                  <input class="w-full px-4 py-3 rounded-md border border-gray-600 bg-transparent text-white placeholder-gray-400 focus:outline-none" 
+                  <input class="w-full px-4 py-3 rounded-md border border-gray-600 bg-transparent text-white placeholder-gray-400 focus:outline-green-500" 
                       type="email" name="email" id="email" required placeholder="Your Email Address*" />
               </div>
               <div class="text-center hidden text-red-500" id="var1-errorx">
@@ -371,7 +371,7 @@
                   <b>Please fill all the required fields above...</b>
               </div>
               <div class="text-center">
-                  <button id="sniperbutton" class="w-full px-6 py-3 text-lg font-bold rounded-md hover:bg-blue-700" type="submit" name="submit" style="background-color: #06D6A0;">
+                  <button id="sniperbutton" class="w-full px-6 py-3 text-lg font-bold rounded-md bg-green-500 hover:bg-green-700 focus:bg-green-800 active:bg-green-800 disabled:bg-slate-900 text-white" type="submit" name="submit">
                       Join Waitlist
                   </button>
                   <span class="text-red-500 hidden" id="phone_errorx">
@@ -424,10 +424,8 @@
 
     <script>
       $(document).ready(function($){
-        $('#sniperbutton').click(function(e){
-          e.preventDefault();
-        });
-      });
+      $('#sniperbutton').click(function(e){
+      e.preventDefault();
     </script>
 
     <script>
