@@ -7,10 +7,10 @@ const HeroSection = () => {
       <div className=" flex md:flex-row flex-col-reverse justify-between items-center mx-auto px-4 sm:px-6 lg:px-8 ">
         <div className="space-y-4 md:w-1/2 text-left">
           <h1 className="font-poppins font-semibold text-3xl sm:text-4xl md:text-5xl leading-tight tracking-tighter">
-            Bank Without Borders with Azawire's Web3 Solution
+            Bank Without Borders with Azawire&apos;s Web3 Solution
           </h1>
           <p className="text-base text-gray-600 sm:text-lg md:text-xl">
-            Effortlessly send and receive money worldwide with Azawire's secure
+            Effortlessly send and receive money worldwide with Azawire&apos;s secure
             and innovative Web3 banking platform.
           </p>
           <Link

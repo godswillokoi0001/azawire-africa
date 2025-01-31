@@ -167,6 +167,13 @@ const Footer = () => {
         <div className="mt-8 flex items-center gap-2 md:text-[1rem] text-[1.2rem]">
           <img src="/images/icons/copyright.svg" alt="Copyright Icon" />
           <p className="text-gray-600">Copyright. 2025. Azawire</p>
+          <p className="mt-8 flex ml-5 text-gray-600 text-[1rem]">
+          Azawire is a fintech company, not a bank. 
+          <br />
+          Banking services are provided by licensed banks and financial 
+          <br />
+          institutions in their respective jurisdictions.
+          </p>
         </div>
       </div>
     </footer>
