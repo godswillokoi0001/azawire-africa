@@ -41,7 +41,7 @@ const Navbar = () => {
               </Link>
             </li>
             <li>
-              <Link to="#" className="hover:text-primary">
+              <Link to="/pricing" className="hover:text-primary">
                 Pricing
               </Link>
             </li>
@@ -189,7 +189,7 @@ const Navbar = () => {
             </li> */}
             <li>
               <Link
-                to="/about"
+                to="/pricing"
                 className="block text-gray-700 hover:text-primary py-3 border-t"
               >
                 Pricing
