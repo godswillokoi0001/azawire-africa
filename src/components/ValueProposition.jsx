@@ -28,7 +28,7 @@ const ValueProposition = () => {
                     />
                   </span>
                   <p className="text-variant">
-                    <span className="font-semibold">Global Accessibility:</span> Seamlessly transact across borders
+                    <span className="font-semibold">Zero Hassle:</span>  Create virtual USD, EUR, or GBP accounts in seconds.
                   </p>
                 </li>
                 <li className="flex items-start">
@@ -40,7 +40,8 @@ const ValueProposition = () => {
                     />
                   </span>
                   <p className="text-variant">
-                    <span className="font-semibold">Cost Efficiency:</span> Avoid high transfer fees and hidden charges
+                    <span className="font-semibold">Spend Stablecoins Anywhere:</span> Use physical/virtual cards accepted at 50M+ merchants worldwide.
+
                   </p>
                 </li>
                 <li className="flex items-start">
@@ -52,7 +53,7 @@ const ValueProposition = () => {
                     />
                   </span>
                   <p className="text-variant">
-                    <span className="font-semibold">Faster Transaction:</span> Powered by Web3 technology for instant payments
+                    <span className="font-semibold">Instant Off-Ramp:</span> Auto-convert stablecoins to your bank—no manual swaps.
                   </p>
                 </li>
                 <li className="flex items-start">
@@ -64,7 +65,19 @@ const ValueProposition = () => {
                     />
                   </span>
                   <p className="text-variant">
-                    <span className="font-semibold">Freedom Empowering:</span> Users with control over their funds, anytime, anywhere
+                    <span className="font-semibold">Low Fees, No Delays:</span> Skip traditional banking bottlenecks and hidden charges.
+                  </p>
+                </li>
+                <li className="flex items-start">
+                  <span className="flex-shrink-0 h-6 w-6 mr-4">
+                    <img
+                      src="/images/icons/Group 1000001745.svg"
+                      alt="Check icon"
+                      className="h-full w-full"
+                    />
+                  </span>
+                  <p className="text-variant">
+                    <span className="font-semibold">Works Without Internet:</span> Transact securely via USSD, even in low-connectivity areas.
                   </p>
                 </li>
               </ul>

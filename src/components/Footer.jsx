@@ -78,10 +78,9 @@ const Footer = () => {
 
             {/* Resources Links */}
             <div className="w-full md:1/2 lg:w-1/3 mb-6">
-              <h3 className="font-bold mb-4">Resources</h3>
+              <h3 className="font-bold mb-4">Legal</h3>
               <ul className="space-y-2 text-gray-600">
                 {[
-                  { name: "Blog", link: "https://azawire.medium.com/" },
                   { name: "Terms", link: "/termsofuse" },
                   { name: "Privacy", link: "/privacy" },
                   { name: "AMLCFTPolicy", link: "/amlcftpolicy" },

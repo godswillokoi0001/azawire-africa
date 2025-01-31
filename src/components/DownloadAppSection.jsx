@@ -8,8 +8,13 @@ const DownloadAppSection = () => {
         <div className="max-w-screen-xl mx-auto  text-white px-4 py-8">  
       <div className="bg-variant rounded-[1.5rem] flex flex-col  items-center justify-between gap-8 p-4 md:py-24 py-12 md:px-40">
       <h2 className="text-3xl lg:text-[3rem] text-center font-medium mb-4 font-clash tracking-tight leading-10">
-      Be part of our exciting journey <br /> join the waitlist today!
-          </h2>
+      Ready to Bank Smarter? 
+      </h2>
+      <p className="text-center text-base md:text-lg font-poppins">
+      Join thousands who’ve ditched slow banks and complex crypto swaps. 
+        <br />
+        Get early access to the world’s first all-in-one web3 banking app.
+      </p>
       <Link
             to="/waitlist"
             className="inline-flex justify-center items-center bg-primary hover:bg-blue-600 px-6 py-4 rounded-lg font-poppins text-sm text-white md:text-lg transition-all duration-300"

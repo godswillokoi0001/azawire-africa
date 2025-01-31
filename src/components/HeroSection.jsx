@@ -10,8 +10,8 @@ const HeroSection = () => {
             Bank Without Borders with Azawire&apos;s Web3 Solution
           </h1>
           <p className="text-base text-gray-600 sm:text-lg md:text-xl">
-            Effortlessly send and receive money worldwide with Azawire&apos;s secure
-            and innovative Web3 banking platform.
+            Get paid globally, spend crypto like cash, auto-convert stablecoins, 
+            and transact offline—all in one platform.
           </p>
           <Link
             to="/waitlist"
