@@ -30,7 +30,7 @@ const NavigationBar2 = () => {
 
           {/* Desktop Navigation Links */}
           <ul className="hidden md:flex space-x-7 text-sm text-accent font-clash">
-            <li>
+            {/* <li>
               <Link
                 to="#"
                 className={`hover:text-primary ${
@@ -39,7 +39,7 @@ const NavigationBar2 = () => {
               >
                 Products
               </Link>
-            </li>
+            </li> */}
             <li>
               <Link
                 to="#"
@@ -80,7 +80,7 @@ const NavigationBar2 = () => {
                 Blog
               </Link>
             </li>
-            <li>
+            {/* <li>
               <Link
                 to="/faq"
                 className={`hover:text-primary ${
@@ -89,7 +89,7 @@ const NavigationBar2 = () => {
               >
                 FAQ
               </Link>
-            </li>
+            </li> */}
           </ul>
 
           {/* Buttons */}
@@ -191,11 +191,11 @@ const NavigationBar2 = () => {
                       Business
                     </Link>
                   </li>
-                  <li>
+                  {/* <li>
                     <Link to="#" className="block text-gray-700 hover:text-primary py-3 border-t">
                       Products
                     </Link>
-                  </li>
+                  </li> */}
                   <li>
                     <Link to="#" className="block text-gray-700 hover:text-primary py-3 border-t">
                       Company
@@ -222,14 +222,14 @@ const NavigationBar2 = () => {
                       Blog
                     </Link>
                   </li>
-                  <li>
+                  {/* <li>
                     <Link
                       to="/faq"
                       className="block text-gray-700 hover:text-primary py-3 border-t border-b"
                     >
                       FAQ
                     </Link>
-                  </li>
+                  </li> */}
                 </ul>
                 <div className="mt-6 flex flex-col space-y-4">
                   

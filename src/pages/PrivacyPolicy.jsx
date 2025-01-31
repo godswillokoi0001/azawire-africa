@@ -286,18 +286,11 @@ const PrivacyPolicy = () => {
               </h2>
               <p>For questions, complaints, or data requests:</p>
               <p>
-                Data Protection Officer: data-desk@azawire.africa
+                Data Protection Officer: fruaddesk@azawire.africa
                 <br />
                 Email: hello@azawire.africa Phone: +2342013306430
               </p>
             </section>
-
-            <p className="mt-6 text-sm text-gray-600">
-              This policy complies with the African Union's Convention on Cyber
-              Security and Personal Data Protection (2014), Nigeria's NDPR
-              (2019), Kenya's Data Protection Act (2019), and South Africa's
-              POPIA (2020).
-            </p>
           </div>
         </div>
       </div>

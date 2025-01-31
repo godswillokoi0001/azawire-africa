@@ -17,7 +17,7 @@ const Footer = () => {
 
           <div className="w-full md:w-3/4 flex flex-wrap justify-between space-y-8 md:space-y-0 md:text-[1rem] text-[1.2rem]">
             {/* Product Links */}
-            <div className="w-full md:1/2 lg:w-1/3 mb-6">
+            {/* <div className="w-full md:1/2 lg:w-1/3 mb-6">
               <h3 className="font-bold mb-4">Product</h3>
               <ul className="space-y-2 text-gray-600">
                 {[
@@ -34,10 +34,10 @@ const Footer = () => {
                   </li>
                 ))}
               </ul>
-            </div>
+            </div> */}
 
             {/* Why Us Links */}
-            <div className="w-full md:1/2 lg:w-1/3 mb-6">
+            {/* <div className="w-full md:1/2 lg:w-1/3 mb-6">
               <h3 className="font-bold mb-4">Why us</h3>
               <ul className="space-y-2 text-gray-600">
                 {[
@@ -54,7 +54,7 @@ const Footer = () => {
                   </li>
                 ))}
               </ul>
-            </div>
+            </div> */}
 
             {/* Developers Links */}
             <div className="w-full md:1/2 lg:w-1/3 mb-6">
@@ -81,11 +81,13 @@ const Footer = () => {
               <h3 className="font-bold mb-4">Resources</h3>
               <ul className="space-y-2 text-gray-600">
                 {[
-                  { name: "Blog", link: "" },
-                  { name: "Success stories", link: "" },
+                  { name: "Blog", link: "https://azawire.medium.com/" },
                   { name: "Terms", link: "/termsofuse" },
                   { name: "Privacy", link: "/privacy" },
                   { name: "AMLCFTPolicy", link: "/amlcftpolicy" },
+                  // { name: "FAQ", link: "/faq" },
+                  // { name: "Support", link: "#" },
+
                 ].map((item) => (
                   <li key={item.name}>
                     <Link to={item.link} className="hover:underline">
@@ -103,6 +105,16 @@ const Footer = () => {
                 <li>
                   <a href="#" className="hover:underline">
                     Careers
+                  </a>
+                </li>
+                <li>
+                  <a href="#" className="hover:underline">
+                    About Us
+                  </a>
+                </li>
+                <li>
+                  <a href="#" className="hover:underline">
+                    Get in touch
                   </a>
                 </li>
               </ul>
@@ -137,6 +149,13 @@ const Footer = () => {
                         className="h-5"
                       />
                     </a>
+// email: azawire.africa
+// facebook: https://fb.me/azawirehq
+// twitter: https://x.com/azawirehq
+// linkedin: https://www.linkedin.com/company/azawirehq/
+// youtube: https://azawire
+// instagram: https//azawire.io
+
                   )
                 )}
               </div>

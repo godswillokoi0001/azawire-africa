@@ -30,30 +30,34 @@ const Navbar = () => {
 
           {/* Desktop Navigation Links */}
           <ul className="hidden md:flex space-x-7 text-sm text-gray-700 font-clash">
-            <li>
+            {/* <li>
               <Link to="#" className="hover:text-primary">
                 Products
               </Link>
-            </li>
+            </li> */}
             <li>
               <Link to="#" className="hover:text-primary">
                 Company
               </Link>
             </li>
             <li>
-              <Link to="/about" className="hover:text-primary">
-                About
+              <Link to="#" className="hover:text-primary">
+                Pricing
               </Link>
             </li>
-            <li>
+            {/* <li>
               <Link to="#" className="hover:text-primary">
                 Developers
               </Link>
-            </li>
+              
+              API Documentation
+              API Reference 
+              
+            </li> */}
             <li>
-              <Link to="/blog" className="hover:text-primary">
+              <a href="https://azawire.medium.com/" target="_blank">
                 Blog
-              </Link>
+              </a>
             </li>
             <li>
               <Link to="/faq" className="hover:text-primary">
@@ -151,58 +155,71 @@ const Navbar = () => {
       {isMenuOpen && (
         <div className="md:hidden bg-white w-full h-screen px-4 py-6 shadow-lg">
           <ul className="font-semibold">
-          <li>
-              <Link to="/personal" className="block text-gray-700 hover:text-primary py-3 border-t">
+            <li>
+              <Link
+                to="/personal"
+                className="block text-gray-700 hover:text-primary py-3 border-t"
+              >
                 Personal
               </Link>
             </li>
             <li>
-              <Link to="/business" className="block text-gray-700 hover:text-primary py-3 border-t">
+              <Link
+                to="/business"
+                className="block text-gray-700 hover:text-primary py-3 border-t"
+              >
                 Business
               </Link>
             </li>
-            <li>
-              <Link to="#" className="block text-gray-700 hover:text-primary py-3 border-t">
+            {/* <li>
+              <Link
+                to="#"
+                className="block text-gray-700 hover:text-primary py-3 border-t"
+              >
                 Products
               </Link>
-            </li>
-            <li>
-              <Link to="#" className="block text-gray-700 hover:text-primary py-3 border-t">
+            </li> */}
+            {/* <li>
+              <Link
+                to="#"
+                className="block text-gray-700 hover:text-primary py-3 border-t"
+              >
                 Company
               </Link>
-            </li>
+            </li> */}
             <li>
               <Link
                 to="/about"
                 className="block text-gray-700 hover:text-primary py-3 border-t"
               >
-                About
-              </Link>
-            </li>
-            <li>
-              <Link to="#" className="block text-gray-700 hover:text-primary py-3 border-t">
-                Developers
+                Pricing
               </Link>
             </li>
             <li>
               <Link
-                to="/blog"
+                to="#"
                 className="block text-gray-700 hover:text-primary py-3 border-t"
               >
-                Blog
+                Developers
               </Link>
             </li>
             <li>
+              <a
+                href="https://azawire.medium.com/"
+                target="_blank"
+                className="block text-gray-700 hover:text-primary py-3 border-t"
+              ></a>
+            </li>
+            {/* <li>
               <Link
                 to="/faq"
                 className="block text-gray-700 hover:text-primary py-3 border-t border-b"
               >
                 FAQ
               </Link>
-            </li>
+            </li> */}
           </ul>
           <div className="mt-6 flex flex-col space-y-4">
-            
             <button className="w-full bg-variant font-clash text-white py-3 rounded-md hover:bg-variant transition">
               Join Waitlist
             </button>

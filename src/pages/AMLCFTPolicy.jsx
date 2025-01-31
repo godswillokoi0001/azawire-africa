@@ -257,41 +257,6 @@ const AMLCFTPolicy = () => {
               </li>
             </ul>
           </section>
-
-          <section className="mb-10">
-            <h2 className="text-4xl font-semibold mb-6">
-              4. Policy Governance
-            </h2>
-            <ul className="list-disc pl-6 text-lg mb-6">
-              <li>Approval: Board-approved annually.</li>
-              <li>Exceptions: Requires CCO and Board approval.</li>
-              <li>
-                Violations: Disciplinary action, including termination and
-                regulatory reporting.
-              </li>
-            </ul>
-
-            <p className="mt-8 text-lg  text-gray-600">
-              Azawire Africa reserves the right to amend this policy in response
-              to regulatory changes or operational risks. All staff are
-              responsible for compliance.
-            </p>
-            <p className="text-lg text-gray-600 mt-4">
-             <strong> Chief Compliance Officer: </strong> [Insert Name]
-              <br />
-              <strong> Contact: </strong> [Insert Email/Phone]
-              <br />
-              <strong> Board Approval Date: </strong> [Insert Date]
-            </p>
-          </section>
-
-          <footer className="mt-16">
-            <p className="text-lg text-gray-600">
-              This policy aligns with the Financial Action Task Force (FATF)
-              Recommendations, the AU’s AML/CFT Strategy, and local regulations
-              in Azawire’s jurisdictions of operation.
-            </p>
-          </footer>
         </div>
       </div>
       <Footer />
