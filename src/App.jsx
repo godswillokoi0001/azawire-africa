@@ -5,14 +5,13 @@ import Business from "./pages/Business";
 import Blog from "./pages/Blog";
 import About from "./pages/About";
 import FAQ from "./pages/FAQ";
-import BlogSection from "./components/BlogSection";
 import BlogDetails from "./components/BlogDetails";
 import PrivacyPolicy from "./pages/PrivacyPolicy";
 import AMLCFTPolicy from "./pages/AMLCFTPolicy";
 import TermsOfUse from "./pages/TermsOfUse";
 import WaitlistPage from "./pages/WaitlistPage"; // Corrected import name
 import WaitlistSuccessPage from "./pages/WaitlistListSuccessPage";
-import Pricing from "./pages/Pricing";
+// import Pricing from "./pages/Pricing";
 
 function App() {
   return (
@@ -30,7 +29,7 @@ function App() {
         <Route path="/termsofuse" element={<TermsOfUse />} />
         <Route path="/waitlist" element={<WaitlistPage />} />
         <Route path="/success" element={<WaitlistSuccessPage />} />
-        <Route path="/pricing" element={<Pricing /> } />
+        {/* <Route path="/pricing" element={<Pricing /> } /> */}
       </Routes>
     </Router>
   );

@@ -52,12 +52,12 @@ const NavigationBar2 = () => {
             </li>
             <li>
               <Link
-                to="/pricing"
+                to="/about"
                 className={`hover:text-primary ${
                   isActive("/about") ? "text-primary font-semibold" : ""
                 }`}
               >
-                Pricing
+                About Us
               </Link>
             </li>
             <li>
@@ -206,7 +206,7 @@ const NavigationBar2 = () => {
                       to="/about"
                       className="block text-gray-700 hover:text-primary py-3 border-t"
                     >
-                      Pricing
+                      About
                     </Link>
                   </li>
                   <li>

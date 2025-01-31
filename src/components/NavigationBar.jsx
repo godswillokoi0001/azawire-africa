@@ -41,8 +41,8 @@ const Navbar = () => {
               </Link>
             </li>
             <li>
-              <Link to="/pricing" className="hover:text-primary">
-                Pricing
+              <Link to="/about" className="hover:text-primary">
+                About Us
               </Link>
             </li>
             {/* <li>
@@ -189,10 +189,10 @@ const Navbar = () => {
             </li> */}
             <li>
               <Link
-                to="/pricing"
+                to="/about"
                 className="block text-gray-700 hover:text-primary py-3 border-t"
               >
-                Pricing
+                About Us
               </Link>
             </li>
             <li>
