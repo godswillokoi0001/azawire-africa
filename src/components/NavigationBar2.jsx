@@ -99,7 +99,7 @@ const NavigationBar2 = () => {
               className={`${
                 isActive("/business")
                   ? "bg-primary text-white"
-                  : "bg-transparent text-white border-white"
+                  : "bg-primary text-white border-white"
               } font-clash py-2 px-6 rounded-full hover:bg-primary `}
             >
               Business
