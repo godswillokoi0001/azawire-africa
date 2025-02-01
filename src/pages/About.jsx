@@ -2,7 +2,7 @@ import React from "react";
 import NavigationBar2 from "../components/NavigationBar2";
 import Footer from "../components/Footer";
 import JoinOurTeam from "../components/JoinOurTeam";
-import MeetOurSuperstars from "../components/MeetOurSuperStars";
+// import MeetOurSuperstars from "../components/MeetOurSuperStars";
 
 const About = () => {
   return (
@@ -77,13 +77,9 @@ const About = () => {
         </div>
       </section>
 
-      <section>
-        <MeetOurSuperstars />
-      </section>
-
-      <section>
         <JoinOurTeam />
-      </section>
+        {/* <MeetOurSuperstars /> */}
+
       <Footer />
     </>
   );
