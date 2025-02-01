@@ -14,7 +14,6 @@ module.exports = {
       },
       fontFamily: {
         poppins: ["Poppins", "sans-serif"], // Add Poppins
-        clash: ["Clash Display", "sans-serif"],
         sora: ["Sora", "sans-serif"],
         inter: ["Inter", "serif"],
       },

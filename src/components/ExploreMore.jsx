@@ -39,7 +39,7 @@ const ExploreMore = () => {
                   alt="For Individuals"
                   className="mb-4 w-12"
                 />
-                <h3 className="mb-4 font-clash text-[1.4rem] text-lg">
+                <h3 className="mb-4 font-sora text-[1.4rem] text-lg">
                   For Individuals
                 </h3>
               </div>
@@ -53,7 +53,7 @@ const ExploreMore = () => {
 
             {/* Business Card */}
             <div
-              className="flex flex-col space-y-3 border-gray-200 bg-white md:p-6 p-4 border rounded-xl"
+              className="flex flex-col space-y-3 border-gray-200 bg-white md:p-6 p-4 border rounded-xl font-sora"
               data-aos="zoom-in"
               data-aos-delay="600"
             >
@@ -63,7 +63,7 @@ const ExploreMore = () => {
                   alt="For Businesses"
                   className="mb-4 w-12"
                 />
-                <h3 className="mb-4 font-clash text-[1.4rem] text-lg text-variant">
+                <h3 className="mb-4 text-[1.4rem] text-lg text-variant">
                   For Businesses
                 </h3>
               </div>
