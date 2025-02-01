@@ -11,6 +11,7 @@ import AMLCFTPolicy from "./pages/AMLCFTPolicy";
 import TermsOfUse from "./pages/TermsOfUse";
 import WaitlistPage from "./pages/WaitlistPage"; // Corrected import name
 import WaitlistSuccessPage from "./pages/WaitlistListSuccessPage";
+import ProductCustomer from "./pages/ProductCustomer";
 // import Pricing from "./pages/Pricing";
 
 function App() {
@@ -29,10 +30,11 @@ function App() {
         <Route path="/termsofuse" element={<TermsOfUse />} />
         <Route path="/waitlist" element={<WaitlistPage />} />
         <Route path="/success" element={<WaitlistSuccessPage />} />
+        <Route path="/productcustomer" element={<ProductCustomer />} />
         {/* <Route path="/pricing" element={<Pricing /> } /> */}
       </Routes>
     </Router>
-  );
+);
 }
 
 export default App;
