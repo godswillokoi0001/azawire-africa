@@ -15,7 +15,7 @@ const NavigationBar2 = () => {
     <nav className="w-full fixed top-0 z-40 md:bg-transparent md:backdrop-blur-none backdrop-blur-sm bg-variant/30">
       <div className="max-w-7xl mx-auto flex items-center justify-between px-4 py-3">
         {/* Left Side - Logo and Navigation */}
-        <div className="flex items-center space-x-4 backdrop-blur-sm md:p-4 md:bg-variant/80 bg-transparent rounded-full md:border border-primary">
+        <div className="hidden lg:flex items-center space-x-4 backdrop-blur-sm md:p-4 md:bg-variant/80 bg-transparent rounded-full md:border border-primary">
           {/* Logo */}
           <Link
             to="/"
@@ -29,7 +29,7 @@ const NavigationBar2 = () => {
           </Link>
 
           {/* Desktop Navigation Links */}
-          <ul className="hidden md:flex space-x-7 text-sm text-accent font-clash">
+          <ul className="hidden lg:flex space-x-7 text-sm text-accent font-clash">
             {/* <li>
               <Link
                 to="#"
@@ -71,14 +71,14 @@ const NavigationBar2 = () => {
               </Link>
             </li>
             <li>
-              <Link
-                to="/blog"
+              <a
+                href="https://azawire.medium.com/" target="_blank"
                 className={`hover:text-primary ${
                   isActive("/blog") ? "text-primary font-semibold" : ""
                 }`}
               >
                 Blog
-              </Link>
+              </a>
             </li>
             {/* <li>
               <Link
@@ -136,7 +136,7 @@ const NavigationBar2 = () => {
 
           {/* Hamburger Menu Button */}
           <button
-            className="md:hidden text-gray-700 hover:text-primary focus:outline-none"
+            className="lg:hidden text-gray-700 hover:text-primary focus:outline-none"
             onClick={toggleMenu}
           >
             {isMenuOpen ? (
@@ -148,7 +148,7 @@ const NavigationBar2 = () => {
         </div>
 
         {/* Right Side - Sign In and Language Selector */}
-        <div className="hidden md:flex items-center space-x-3 backdrop-blur-sm p-4 bg-variant/80 rounded-full border border-primary">
+        <div className="hidden lg:flex items-center space-x-3 backdrop-blur-sm p-4 bg-variant/80 rounded-full border border-primary">
           <a
             href="#"
             className="bg-primary font-clash text-white py-2 px-3 rounded-full flex items-center space-x-2 transition-all"
@@ -179,7 +179,7 @@ const NavigationBar2 = () => {
 
       {/* Mobile Navigation */}
             {isMenuOpen && (
-              <div className="md:hidden bg-white w-full h-screen px-4 py-6 shadow-lg">
+              <div className="lg:hidden bg-white w-full h-screen px-4 py-6 shadow-lg">
                 <ul className="font-semibold">
                 <li>
                     <Link to="/personal" className="block text-gray-700 hover:text-primary py-3 border-t">

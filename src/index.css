@@ -3,6 +3,8 @@
 @import "tailwindcss/utilities";
 
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Sora:wght@100..800&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap');
 
 @font-face {
     font-family: 'Clash Display';
@@ -11,6 +13,9 @@
     font-weight: 400; /* Adjust weight */
     font-style: normal;
   }
+  
+
+
   
   .scrollbar-hide {
      -ms-overflow-style: none; /* IE and Edge */
@@ -43,3 +48,19 @@
     width: 100%;
   }
    */
+
+   .business-hero-bg {
+      background-image: "url(/images/background-line-4.png)";
+      background-size: "100%";
+      background-repeat: "no-repeat";
+      background-position: "center";
+   }
+
+   @media only screen and (max-width: 768px) {
+      .business-hero-bg {
+        background-image: none;
+      }
+  }
+
+
+   

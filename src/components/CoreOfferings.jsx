@@ -24,32 +24,38 @@ const CoreOfferings = ({ title, offerings }) => {
         data-aos="fade-up"
         data-aos-duration="1000"
       >
+        {/* Title and Buttons */}
         <div className="flex items-center justify-between mb-8">
-          <h2 className="text-4xl font-poppins font-medium mb-8 tracking-tighter">
+          <h2 className="text-4xl font-poppins font-medium tracking-tighter">
             {title}
           </h2>
-          {/* Arrow buttons */}
+          {/* Scroll Arrow Buttons */}
           <div className="flex space-x-4">
             <button
               onClick={() => scroll("left")}
-              className="bg-[#bfd4ff] p-2 py-3 px-6 rounded-full active:bg-secondary"
+              className="bg-[#bfd4ff] p-3 rounded-full hover:bg-secondary hover:text-white transition"
             >
-              <span>
-                <img src="/images/icons/scroll left arrow.svg" alt="" />
-              </span>
+              <img
+                src="/images/icons/scroll left arrow.svg"
+                alt="Scroll left"
+                className="w-6 h-6"
+              />
             </button>
             <button
               onClick={() => scroll("right")}
-              className="bg-[#bfd4ff] p-2 py-3 px-6 rounded-full hover:bg-secondary hover:text-white"
+              className="bg-[#bfd4ff] p-3 rounded-full hover:bg-secondary hover:text-white transition"
             >
-              <span>
-                <img src="/images/icons/scroll right arrow.svg" alt="" />
-              </span>
+              <img
+                src="/images/icons/scroll right arrow.svg"
+                alt="Scroll right"
+                className="w-6 h-6"
+              />
             </button>
           </div>
         </div>
+
+        {/* Scrollable Cards Section */}
         <div className="relative">
-          {/* Scrollable cards */}
           <div
             ref={scrollRef}
             className="flex space-x-6 overflow-x-auto scrollbar-hide scroll-smooth"
@@ -57,19 +63,22 @@ const CoreOfferings = ({ title, offerings }) => {
             {offerings.map((offer, index) => (
               <div
                 key={index}
-                className="md:min-w-[450px] min-w-[310px] md:max-h-full max-h-96 bg-white shadow-md rounded-[24px] px-6 pt-4 flex flex-col justify-between overflow-hidden"
-                style={{ backgroundColor: offer.bgColor }}
+                className="md:min-w-[450px] min-w-[310px] bg-white shadow-md rounded-2xl px-6 pt-4 flex flex-col justify-between overflow-hidden"
+                style={{ backgroundColor: offer.bgColor || "#ffffff" }}
               >
                 <div className="flex flex-col items-center justify-between h-full w-full">
-                
-                <h3 className="font-medium mt-4  text-accent md:text-3xl text-3xl md:px-20 px-8 mb-3 text-center tracking-tight ">{offer.title}</h3>
-                <p className="mt-2 text-accent text-sm md:text-[1.2rem] text-center">{offer.description}</p>
+                  <h3 className="font-medium mt-4 text-accent text-3xl md:px-20 px-8 mb-3 text-center tracking-tight">
+                    {offer.title}
+                  </h3>
+                  <p className="mt-2 text-accent text-sm md:text-lg text-center">
+                    {offer.description}
+                  </p>
                   <img
                     src={offer.icon}
-                    alt={offer.title}
-                    className="mt-4 md:w-60"
+                    alt={offer.title || "Icon"}
+                    className="mt-4 md:w-60 w-48 h-auto"
                   />
-              </div>
+                </div>
               </div>
             ))}
           </div>

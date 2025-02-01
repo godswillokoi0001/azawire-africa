@@ -6,7 +6,7 @@ const HeroSection = () => {
     <section className="relative bg-gradient-to-r pt-8 md:pt-8">
       <div className=" flex md:flex-row flex-col-reverse justify-between items-center mx-auto px-4 sm:px-6 lg:px-8 ">
         <div className="space-y-4 md:w-1/2 text-left">
-          <h1 className="font-poppins font-semibold text-3xl sm:text-4xl md:text-5xl leading-tight tracking-tighter">
+          <h1 className="font-sora font-bold text-3xl sm:text-4xl md:text-5xl leading-tight tracking-tighter text-[#252C34]">
             Bank Without Borders with Azawire&apos;s Web3 Solution
           </h1>
           <p className="text-base text-gray-600 sm:text-lg md:text-xl">

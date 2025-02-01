@@ -1,3 +1,5 @@
+import { HiMiniArrowRight } from "react-icons/hi2";
+
 import React from "react";
 import { Link } from 'react-router-dom';
 
@@ -122,15 +124,15 @@ const Footer = () => {
             {/* Stay Up-to-Date */}
             <div className="w-full md:1/2 lg:w-1/3">
               <h3 className="font-bold mb-4">Stay up to date</h3>
-              <form className="flex items-center space-x-2 mb-4">
+              <form className="flex h-11 items-center mb-4">
                 <input
                   type="email"
                   placeholder="Enter your email"
-                  className="w-full px-4 py-2 border border-gray-300 rounded-l-lg focus:outline-none focus:ring-2 focus:ring-blue-500"
+                  className="w-full h-full px-4 py-2 border border-gray-300 rounded-l-lg focus:outline-none focus:ring-2 focus:ring-blue-500"
                 />
-                <button className="bg-black text-white px-4 py-2 rounded-r-full">
-                  →
-                </button>
+                <span className="bg-black text-white px-3 py-2 rounded-r-full h-full font-bold flex items-center justify-between">
+                <HiMiniArrowRight className="text-xl" />
+                </span>
               </form>
               <p className="md:text-md text-[1rem] text-gray-600 leading-6">
                 I confirm that I have read Azawire’s Privacy policy and agree

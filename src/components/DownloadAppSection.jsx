@@ -7,7 +7,7 @@ const DownloadAppSection = () => {
     <section className=" py-12">
         <div className="max-w-screen-xl mx-auto  text-white px-4 py-8">  
       <div className="bg-variant rounded-[1.5rem] flex flex-col  items-center justify-between gap-8 p-4 md:py-24 py-12 md:px-40">
-      <h2 className="text-3xl lg:text-[3rem] text-center font-medium mb-4 font-clash tracking-tight leading-10">
+      <h2 className="text-3xl lg:text-[3rem] text-center font-semibold font-sora tracking-tighter leading-10">
       Ready to Bank Smarter? 
       </h2>
       <p className="text-center text-base md:text-lg font-poppins">

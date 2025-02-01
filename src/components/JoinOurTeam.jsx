@@ -4,7 +4,7 @@ import { FiMapPin, FiClock } from "react-icons/fi";
 
 const JoinOurTeam = () => {
   return (
-    <div className="bg-blue-900 text-white py-36 px-6 md:px-16 font-poppins">
+    <div className="bg-blue-900 text-white md:py-36 py-12 px-6 md:px-16 font-poppins">
       <div className="max-w-5xl mx-auto text-center">
         <h2 className="text-6xl font-normal mb-4">Join our Team</h2>
         <p className="text-xl text-gray-300 mb-12">
@@ -31,7 +31,7 @@ const JoinOurTeam = () => {
                 </div>
               </div>
               <div className="mt-4 md:mt-0">
-                <button className="flex items-center px-6 py-3 bg-blue-600 text-white rounded-lg font-bold hover:bg-blue-700">
+                <button className="flex items-center px-6 py-3 bg-primary text-white rounded-lg font-bold hover:bg-blue-700">
                   Join Waitlist <FiArrowRight className="ml-2" />
                 </button> 
               </div>

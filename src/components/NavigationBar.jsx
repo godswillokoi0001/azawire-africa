@@ -208,7 +208,7 @@ const Navbar = () => {
                 href="https://azawire.medium.com/"
                 target="_blank"
                 className="block text-gray-700 hover:text-primary py-3 border-t"
-              ></a>
+              >Blog</a>
             </li>
             {/* <li>
               <Link
@@ -218,6 +218,7 @@ const Navbar = () => {
                 FAQ
               </Link>
             </li> */}
+            
           </ul>
           <div className="mt-6 flex flex-col space-y-4">
             <button className="w-full bg-variant font-clash text-white py-3 rounded-md hover:bg-variant transition">
