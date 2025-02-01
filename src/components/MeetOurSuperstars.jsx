@@ -28,7 +28,6 @@ const MeetOurSuperStars = () => {
           is effortless and cost-effective.
         </p>
       </div>
-
       {/* First Row */}
       <div className="flex flex-col md:flex-row items-center gap-6 max-w-6xl mx-auto mb-12">
         <div className="relative group flex-grow lg:w-[35%]">
