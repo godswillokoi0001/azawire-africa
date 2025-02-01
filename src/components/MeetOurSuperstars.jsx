@@ -1,6 +1,6 @@
 import React from "react";
 
-const MeetOurSuperstars = () => {
+const MeetOurSuperStars = () => {
   const teamMembers = [
     { name: "Emmanuel Onyo", position: "CO-FOUNDER & CEO", image: "/images/team1.png" },
     { name: "Emmanuel Onyo", position: "CO-FOUNDER", image: "/images/team1.png" },
@@ -110,4 +110,4 @@ const MeetOurSuperstars = () => {
   );
 };
 
-export default MeetOurSuperstars;
+export default MeetOurSuperStars;
