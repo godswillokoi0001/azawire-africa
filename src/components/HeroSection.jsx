@@ -3,15 +3,15 @@ import { Link } from "react-router-dom";
 
 const HeroSection = () => {
   return (
-    <section className="relative bg-gradient-to-r pt-8 md:pt-8">
+    <section className="relative bg-gradient-to-r pt-8 md:pt-36">
       <div className=" flex md:flex-row flex-col-reverse justify-between items-center mx-auto px-4 sm:px-6 lg:px-8 ">
         <div className="space-y-4 md:w-1/2 text-left">
-          <h1 className="font-sora font-bold text-[2.5rem] md:text-[3.3rem] tracking-tighter text-[#252C34] md:absolute top-40"
+          <h1 className="font-sora font-bold text-3xl sm:text-4xl md:text-5xl tracking-tighter text-[#252C34]"
             style={{lineHeight: 1.3,}}
           >
-            Bank Without Borders with <br /> Azawire&apos;s Web3 Solution
+            Bank Without Borders with Azawire&apos;s Web3 Solution
           </h1>
-          <p className="text-base text-gray-600 sm:text-lg md:text-xl md:pt-36 md:pb-4">
+          <p className="text-base text-gray-600 sm:text-lg md:text-xl">
             Get paid globally, spend crypto like cash, auto-convert stablecoins, 
             and transact offline—all in one platform.
           </p>
@@ -29,9 +29,9 @@ const HeroSection = () => {
         {/* Right Content */}
         <div className="relative flex justify-center md:w-1/2 w-full z-20">
           <img
-            src="/images/Screenshot 2025-01-10 at 22.25.26 1.png"
+            src="/images/coin.png"
             alt="3D Currency Icons"
-            className="w-[30rem] md:w-[44rem] max-w-none float-start md:me-20 md:mt-8"
+            className="w-[14rem] md:w-[20rem] max-w-none float-start md:me-20 my-14 md:mt-8"
           />
         </div>
       </div>
