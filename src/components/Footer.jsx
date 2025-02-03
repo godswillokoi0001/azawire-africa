@@ -1,12 +1,12 @@
 import { HiMiniArrowRight } from "react-icons/hi2";
 
 import React from "react";
-import { Link } from 'react-router-dom';
+import { Link } from "react-router-dom";
 
 const Footer = () => {
   return (
-    <footer className="bg-lightblue text-dark py-10 px-6">
-      <div className="max-w-screen-xl mx-auto">
+    <footer className="bg-lightblue text-dark ">
+      <div className="max-w-screen-xl mx-auto py-10 px-6">
         <div className="flex flex-wrap md:flex-nowrap">
           {/* Logo Section */}
           <div className="w-full md:w-1/4 mb-6 md:mb-0">
@@ -88,7 +88,6 @@ const Footer = () => {
                   { name: "AMLCFTPolicy", link: "/amlcftpolicy" },
                   // { name: "FAQ", link: "/faq" },
                   // { name: "Support", link: "#" },
-
                 ].map((item) => (
                   <li key={item.name}>
                     <Link to={item.link} className="hover:underline">
@@ -131,7 +130,7 @@ const Footer = () => {
                   className="w-full h-full px-4 py-2 border border-gray-300 rounded-l-lg focus:outline-none focus:ring-2 focus:ring-blue-500"
                 />
                 <span className="bg-black text-white px-3 py-2 rounded-r-full h-full font-bold flex items-center justify-between">
-                <HiMiniArrowRight className="text-xl" />
+                  <HiMiniArrowRight className="text-xl" />
                 </span>
               </form>
               <p className="md:text-md text-[1rem] text-gray-600 leading-6">
@@ -140,40 +139,57 @@ const Footer = () => {
               </p>
 
               {/* Social Media Icons */}
-              <div className="flex space-x-4 mt-4">
-                {["email", "linkedin", "twitter", "youtube", "instagram"].map(
-                  (icon) => (
-                    <a href="#" key={icon} className="hover:text-blue-500">
-                      <img
-                        src={`/images/icons/${icon}.svg`}
-                        alt={icon}
-                        className="h-5"
-                      />
-                    </a>
-// email: azawire.africa
-// facebook: https://fb.me/azawirehq
-// twitter: https://x.com/azawirehq
-// linkedin: https://www.linkedin.com/company/azawirehq/
-// youtube: https://azawire
-// instagram: https//azawire.io
 
-                  )
-                )}
+              {/* // email: azawire.africa
+                  // facebook: https://fb.me/azawirehq
+                  // twitter: https://x.com/azawirehq
+                  // linkedin: https://www.linkedin.com/company/azawirehq/
+                  // youtube: https://azawire
+                  // instagram: https//azawire.io 
+              */}
+
+              <div className="flex space-x-4 mt-4">
+                {[
+                  { name: "email", url: "mailto:azawire.africa" },
+                  {
+                    name: "linkedin",
+                    url: "https://www.linkedin.com/company/azawirehq/",
+                  },
+                  { name: "twitter", url: "https://x.com/azawirehq" },
+                  { name: "youtube", url: "https://azawire" },
+                  { name: "instagram", url: "https://azawire.io" },
+                ].map((icon) => (
+                  <a
+                    href={icon.url}
+                    key={icon.name}
+                    className="hover:text-blue-500"
+                  >
+                    <img
+                      src={`/images/icons/${icon.name}.svg`}
+                      alt={icon.name}
+                      className="h-5"
+                    />
+                  </a>
+                ))}
               </div>
             </div>
           </div>
         </div>
+      </div>
+      {/* Copyright Section */}
+      <div className=" bg-white">
+        <div className="px-6 py-4  max-w-screen-xl mx-auto p mt-8 md:flex items-start justify-between gap-2 md:text-[1rem] text-[1.2rem] ">
+          <div className="flex gap-x-2">
+            <img src="/images/icons/copyright.svg" alt="Copyright Icon" />
+            <p className="text-gray-600">Copyright. 2025. Azawire</p>
+          </div>
 
-        {/* Copyright Section */}
-        <div className="mt-8 flex items-center gap-2 md:text-[1rem] text-[1.2rem]">
-          <img src="/images/icons/copyright.svg" alt="Copyright Icon" />
-          <p className="text-gray-600">Copyright. 2025. Azawire</p>
-          <p className="mt-8 flex ml-5 text-gray-600 text-[1rem]">
-          Azawire is a fintech company, not a bank. 
-          <br />
-          Banking services are provided by licensed banks and financial 
-          <br />
-          institutions in their respective jurisdictions.
+          <p className="flex md:mt-0 mt-6 text-gray-600 text-[1rem]">
+            Azawire is a fintech company, not a bank.
+            <br />
+            Banking services are provided by licensed banks and financial
+            <br />
+            institutions in their respective jurisdictions.
           </p>
         </div>
       </div>

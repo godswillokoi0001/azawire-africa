@@ -16,6 +16,7 @@ module.exports = {
         poppins: ["Poppins", "sans-serif"], // Add Poppins
         sora: ["Sora", "sans-serif"],
         inter: ["Inter", "serif"],
+        clash: ["Clash Display", "san serif"]
       },
     },
   },

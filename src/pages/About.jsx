@@ -194,7 +194,7 @@ const About = () => {
             {teamMembers.slice(1, 5).map((member, index) => (
               <div
                 key={index}
-                className="relative w-[135px] md:w-[40%] lg:w-[20%]"
+                className="relative w-[125px] md:w-[40%] lg:w-[20%]"
               >
                 <img
                   src={member.image}
@@ -214,7 +214,7 @@ const About = () => {
           {/* Third Row */}
           <div className="flex flex-wrap justify-center gap-2 max-w-6xl mx-auto mb-4 w-full">
             {teamMembers.slice(5, 10).map((member, index) => (
-              <div key={index} className="relative w-[125px] md:w-[180px]">
+              <div key={index} className="relative w-[115px] md:w-[180px]">
                 <img
                   src={member.image}
                   alt={member.name}

@@ -1,15 +1,45 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import { Link, useLocation } from "react-router-dom";
 import { FiMenu, FiX } from "react-icons/fi";
+import { BiSolidDownArrow } from "react-icons/bi";
 
 const Navbar = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
+  const [openDropdown, setOpenDropdown] = useState(null);
+  const [mobileDropdown, setMobileDropdown] = useState(null);
+
   const toggleMenu = () => {
     setIsMenuOpen(!isMenuOpen);
   };
 
   const location = useLocation();
   const isActive = (path) => location.pathname === path;
+
+  const handleDropdownClick = (menu) => {
+    setOpenDropdown(openDropdown === menu ? null : menu);
+  };
+
+  // Close dropdown when clicking outside
+  useEffect(() => {
+    const handleClickOutside = (event) => {
+      if (openDropdown && !event.target.closest(".dropdown-menu")) {
+        setOpenDropdown(null);
+      }
+    };
+
+    document.addEventListener("click", handleClickOutside);
+    return () => {
+      document.removeEventListener("click", handleClickOutside);
+    };
+  }, []);
+
+  const handleMouseLeave = () => {
+    setOpenDropdown(null);
+  };
+
+  const toggleMobileDropdown = (menu) => {
+    setMobileDropdown(mobileDropdown === menu ? null : menu);
+  };
 
   return (
     <nav className="max-w-screen-xl w-full fixed top-0 z-50 md:bg-transparent bg-white">
@@ -29,38 +59,143 @@ const Navbar = () => {
           </Link>
 
           {/* Desktop Navigation Links */}
-          <ul className="hidden md:flex space-x-7 text-sm text-gray-700 font-clash">
-            {/* <li>
-              <Link to="#" className="hover:text-primary">
+          <ul className="hidden lg:flex space-x-7 text-sm text-black font-clash">
+            {/* Products Dropdown */}
+            <li className="relative dropdown">
+              <button
+                onClick={() => handleDropdownClick("products")}
+                className={`hover:text-primary flex gap-x-1 items-center ${
+                  openDropdown === "products"
+                    ? "text-primary font-semibold"
+                    : ""
+                }`}
+              >
                 Products
-              </Link>
-            </li> */}
-            <li>
-              <Link to="#" className="hover:text-primary">
+                <BiSolidDownArrow />
+              </button>
+
+              {openDropdown === "products" && (
+                <ul
+                  className="absolute left-0 mt-2 w-48 bg-accent border shadow-lg rounded-lg dropdown-menu "
+                  onMouseLeave={handleMouseLeave}
+                >
+                  <li>
+                    <Link
+                      to="#"
+                      className="block px-4 py-2 hover:bg-primary/10 border-b-2 border-black/10"
+                    >
+                      Product 1
+                    </Link>
+                  </li>
+                  <li>
+                    <Link
+                      to="#"
+                      className="block px-4 py-2 hover:bg-primary/10 border-b-2 border-black/10"
+                    >
+                      Product 2
+                    </Link>
+                  </li>
+                  <li>
+                    <Link
+                      to="#"
+                      className="block px-4 py-2 hover:bg-primary/10 border-b-2 border-black/10"
+                    >
+                      Product 3
+                    </Link>
+                  </li>
+                  <li>
+                    <Link
+                      to="#"
+                      className="block px-4 py-2 hover:bg-primary/10 border-b-2 border-black/10"
+                    >
+                      Product 4
+                    </Link>
+                  </li>
+                  <li>
+                    <Link
+                      to="#"
+                      className="block px-4 py-2 hover:bg-primary/10 border-b-2 border-black/10"
+                    >
+                      Product 5
+                    </Link>
+                  </li>
+                </ul>
+              )}
+            </li>
+
+            {/* Company Dropdown */}
+            <li className="relative dropdown">
+              <button
+                onClick={() => handleDropdownClick("company")}
+                className={`hover:text-primary  flex items-center gap-x-1 ${
+                  openDropdown === "company" ? "text-primary font-semibold" : ""
+                }`}
+              >
                 Company
+                <BiSolidDownArrow />
+              </button>
+              {openDropdown === "company" && (
+                <ul
+                  className="absolute left-0 mt-2 w-48 bg-accent border border-white shadow-lg rounded-lg dropdown-menu"
+                  onMouseLeave={handleMouseLeave}
+                >
+                  <li>
+                    <Link
+                      to="/about"
+                      className="block px-4 py-2 hover:bg-primary/10 border-b-2 border-black/10"
+                    >
+                      About Us
+                    </Link>
+                  </li>
+                  <li>
+                    <Link
+                      to="#"
+                      className="block px-4 py-2 hover:bg-primary/10 border-b-2 border-black/10"
+                    >
+                      Career
+                    </Link>
+                  </li>
+                </ul>
+              )}
+            </li>
+            <li>
+              <Link
+                to="/about"
+                className={`hover:text-primary ${
+                  isActive("/about") ? "text-primary font-semibold" : ""
+                }`}
+              >
+                Pricing
               </Link>
             </li>
             <li>
-              <Link to="/about" className="hover:text-primary">
-                About Us
-              </Link>
-            </li>
-            {/* <li>
-              <Link to="#" className="hover:text-primary">
+              <Link
+                to="#"
+                className={`hover:text-primary ${
+                  isActive("#") ? "text-primary font-semibold" : ""
+                }`}
+              >
                 Developers
               </Link>
-              
-              API Documentation
-              API Reference 
-              
-            </li> */}
+            </li>
             <li>
-              <a href="https://azawire.medium.com/" target="_blank">
+              <a
+                href="https://azawire.medium.com/"
+                target="_blank"
+                className={`hover:text-primary ${
+                  isActive("/blog") ? "text-primary font-semibold" : ""
+                }`}
+              >
                 Blog
               </a>
             </li>
             <li>
-              <Link to="/faq" className="hover:text-primary">
+              <Link
+                to="/faq"
+                className={`hover:text-primary ${
+                  isActive("/faq") ? "text-primary font-semibold" : ""
+                }`}
+              >
                 FAQ
               </Link>
             </li>
@@ -153,7 +288,7 @@ const Navbar = () => {
 
       {/* Mobile Navigation */}
       {isMenuOpen && (
-        <div className="md:hidden bg-white w-full h-screen px-4 py-6 shadow-lg">
+        <div className="md:hidden bg-white w-full h-screen px-4 py-6 shadow-lg font-clash">
           <ul className="font-semibold">
             <li>
               <Link
@@ -171,29 +306,27 @@ const Navbar = () => {
                 Business
               </Link>
             </li>
-            {/* <li>
-              <Link
-                to="#"
-                className="block text-gray-700 hover:text-primary py-3 border-t"
-              >
-                Products
-              </Link>
-            </li> */}
-            {/* <li>
-              <Link
-                to="#"
-                className="block text-gray-700 hover:text-primary py-3 border-t"
-              >
-                Company
-              </Link>
-            </li> */}
             <li>
-              <Link
-                to="/about"
-                className="block text-gray-700 hover:text-primary py-3 border-t"
-              >
-                About Us
-              </Link>
+              <button onClick={() => toggleMobileDropdown("products")} className="block text-gray-700 hover:text-primary py-3 border-t w-full text-left">
+                Products
+              </button>
+              {mobileDropdown === "products" && (
+                <ul className="pl-4 border-l">
+                  <li><Link to="#" className="block px-4 py-2 hover:bg-primary/20">Product 1</Link></li>
+                  <li><Link to="#" className="block px-4 py-2 hover:bg-primary/20">Product 2</Link></li>
+                </ul>
+              )}
+            </li>
+            <li>
+              <button onClick={() => toggleMobileDropdown("company")} className="block text-gray-700 hover:text-primary py-3 border-t w-full text-left">
+                Company
+              </button>
+              {mobileDropdown === "company" && (
+                <ul className="pl-4 border-l">
+                  <li><Link to="/about" className="block px-4 py-2 hover:bg-primary/20">About Us</Link></li>
+                  <li><Link to="#" className="block px-4 py-2 hover:bg-primary/20">Career</Link></li>
+                </ul>
+              )}
             </li>
             <li>
               <Link
@@ -208,17 +341,18 @@ const Navbar = () => {
                 href="https://azawire.medium.com/"
                 target="_blank"
                 className="block text-gray-700 hover:text-primary py-3 border-t"
-              >Blog</a>
+              >
+                Blog
+              </a>
             </li>
-            {/* <li>
+            <li>
               <Link
                 to="/faq"
                 className="block text-gray-700 hover:text-primary py-3 border-t border-b"
               >
                 FAQ
               </Link>
-            </li> */}
-            
+            </li>
           </ul>
           <div className="mt-6 flex flex-col space-y-4">
             <button className="w-full bg-variant font-clash text-white py-3 rounded-md hover:bg-variant transition">
