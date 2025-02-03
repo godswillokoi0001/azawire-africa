@@ -149,7 +149,6 @@ const About = () => {
         </div>
       </section>
 
-      
       <section>
         <div className="py-16 px-6 bg-white font-sora">
           {/* Title Section */}
@@ -168,7 +167,7 @@ const About = () => {
               <img
                 src={teamMembers[0].image}
                 alt={teamMembers[0].name}
-                className="w-full h-auto rounded-[1.8rem] grayscale group-hover:grayscale-0 transition duration-300"
+                className="w-full h-auto rounded-[1.8rem] lg:grayscale group-hover:grayscale-0 transition duration-100"
               />
               <div className="absolute bottom-0 right-0 bg-secondary text-white text-center py-2 w-[80%] rounded-tl-3xl">
                 <p className="font-semibold text-lg">{teamMembers[0].name}</p>
@@ -188,7 +187,6 @@ const About = () => {
               </p>
             </div>
           </div>
-
           {/* Second Row */}
           <div className="flex flex-wrap justify-center md:gap-6 gap-2 lg:space-x-4 lg:max-w-6xl w-full mx-auto mb-12">
             {teamMembers.slice(1, 5).map((member, index) => (
@@ -199,7 +197,7 @@ const About = () => {
                 <img
                   src={member.image}
                   alt={member.name}
-                  className="w-full h-auto rounded-lg grayscale hover:grayscale-0 transition duration-300"
+                  className="w-full h-auto rounded-lg lg:grayscale hover:grayscale-0 transition duration-100"
                 />
                 <div className="absolute bottom-0 right-0 bg-secondary text-white text-center md:py-2 py-[0.2rem] w-[80%] md:rounded-tl-3xl rounded-tl-lg">
                   <p className="font-semibold md:text-sm text-[0.5rem]">
@@ -212,13 +210,13 @@ const About = () => {
           </div>
 
           {/* Third Row */}
-          <div className="flex flex-wrap justify-center gap-2 max-w-6xl mx-auto mb-4 w-full">
-            {teamMembers.slice(5, 10).map((member, index) => (
+          <div className="flex flex-wrap justify-center lg:gap-6 gap-3 max-w-6xl mx-auto mb-4 w-full">
+            {teamMembers.slice(5, 15).map((member, index) => (
               <div key={index} className="relative w-[115px] md:w-[180px]">
                 <img
                   src={member.image}
                   alt={member.name}
-                  className="w-full h-auto rounded-xl grayscale hover:grayscale-0 transition duration-300"
+                  className="w-full h-auto rounded-xl lg:grayscale hover:grayscale-0 transition duration-100"
                 />
                 <div className="absolute bottom-0 left-0 right-0 bg-secondary text-white text-center md:py-2 py-[0.2rem]">
                   <p className="font-semibold md:text-sm text-[0.6rem]">
@@ -231,7 +229,7 @@ const About = () => {
           </div>
 
           {/* Fourth Row */}
-          <div className="flex flex-wrap justify-center gap-2 max-w-6xl mx-auto content-end">
+          {/* <div className="flex flex-wrap justify-center gap-2 max-w-6xl mx-auto content-end">
             {teamMembers.slice(10).map((member, index) => (
               <div key={index} className="relative w-[125px] md:w-[180px]">
                 <img
@@ -247,7 +245,7 @@ const About = () => {
                 </div>
               </div>
             ))}
-          </div>
+          </div> */}
         </div>
       </section>
       <JoinOurTeam />

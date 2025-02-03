@@ -63,9 +63,9 @@ const ProductCustomer = () => {
             </div>
           </div>
         </header>
-        <div className="max-w-7xl mx-auto px-4 py-8 flex gap-8">
-          <div className="flex flex-col gap-10">
-            <div className="flex gap-8">
+        <div className="max-w-7xl mx-auto px-4 py-8 flex lg:flex-row flex-col  gap-8">
+          <div className="flex lg:flex-row flex-col gap-10">
+            <div className="flex md:flex-row flex-col gap-8">
               {/* First Card */}
               <div className="flex flex-col items-center bg-white rounded-lg p-2">
                 <img

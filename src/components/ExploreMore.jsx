@@ -1,6 +1,13 @@
 import "aos/dist/aos.css";
+import { PiApertureThin } from "react-icons/pi";
+import { SlArrowRightCircle } from "react-icons/sl";
+import { Link, useLocation } from "react-router-dom";
 
 const ExploreMore = () => {
+  const location = useLocation();
+  const isPersonalPage = location.pathname === "/";
+  const isBusinessPage = location.pathname === "/business";
+
   return (
     <section className="py-16">
       <div
@@ -29,21 +36,28 @@ const ExploreMore = () => {
           >
             {/* Individual Card */}
             <div
-              className="flex flex-col space-y-3 bg-black md:p-6 p-4 rounded-xl text-white"
+              className={`flex flex-col space-y-3 border border-gray-200 md:p-10 p-4 rounded-[1.1rem] transition duration-300 
+        ${
+          isPersonalPage
+            ? "bg-black text-white"
+            : "bg-white text-gray-700 hover:bg-black hover:text-white"
+        }`}
               data-aos="zoom-in"
               data-aos-delay="400"
             >
-              <div className="">
-                <img
-                  src="/images/icons/Icons (1).svg"
-                  alt="For Individuals"
-                  className="mb-4 w-12"
-                />
-                <h3 className="mb-4 font-sora text-[1.4rem] text-lg">
-                  For Individuals
-                </h3>
+              <div className="flex items-center justify-between">
+                <PiApertureThin style={{ fontSize: "52px" }} />
+                <Link to="/">
+                  <SlArrowRightCircle
+                    style={{ fontSize: "42px" }}
+                    className="cursor-pointer text-white"
+                  />
+                </Link>
               </div>
-              <p className="font-poppins md:text-sm text-[0.8rem] leading-relaxed">
+              <h3 className="pb-6 font-sora text-[1.4rem] text-xl">
+                For Individuals
+              </h3>
+              <p className="font-poppins md:text-[0.9rem] text-[0.7rem] leading-relaxed">
                 Maximize earnings, minimize fees, and grow your financial
                 portfolio with stablecoin-backed accounts offering personal
                 wallet management, secure savings, and instant, low-cost global
@@ -53,25 +67,30 @@ const ExploreMore = () => {
 
             {/* Business Card */}
             <div
-              className="flex flex-col space-y-3 border-gray-200 bg-white md:p-6 p-4 border rounded-xl font-sora"
+              className={`flex flex-col space-y-3 border border-gray-200 md:p-10 p-4 rounded-[1.1rem] transition duration-300 
+        ${
+          isBusinessPage
+            ? "bg-black text-white"
+            : "bg-white text-gray-700 hover:bg-black hover:text-white"
+        }`}
               data-aos="zoom-in"
               data-aos-delay="600"
             >
-              <div className="">
-                <img
-                  src="/images/icons/Icons (2).svg"
-                  alt="For Businesses"
-                  className="mb-4 w-12"
-                />
-                <h3 className="mb-4 text-[1.4rem] text-lg text-variant">
-                  For Businesses
-                </h3>
+              <div className="flex items-center justify-between">
+                <PiApertureThin style={{ fontSize: "52px" }} />
+                <Link to="/business">
+                  <SlArrowRightCircle
+                    style={{ fontSize: "42px" }}
+                    className="cursor-pointer text-white"
+                  />
+                </Link>
               </div>
-              <p className="font-poppins text-gray-700 md:text-sm text-[0.8rem] leading-relaxed">
+              <h3 className="pb-6 text-[1.4rem]">For Businesses</h3>
+              <p className="font-poppins md:text-[0.9rem] text-[0.7rem] leading-relaxed">
                 Empower your business with Azawire’s scalable, cost-effective
                 payment solutions, featuring cross-border payments,
                 multi-currency support for seamless transactions, and scalable
-                APIs for easy integration
+                APIs for easy integration.
               </p>
             </div>
           </div>
