@@ -160,7 +160,7 @@ const Navbar = () => {
             </li>
             <li>
               <Link
-                to="/about"
+                to="#"
                 className={`hover:text-primary ${
                   isActive("/about") ? "text-primary font-semibold" : ""
                 }`}

@@ -63,8 +63,8 @@ const ProductCustomer = () => {
             </div>
           </div>
         </header>
-        <div className="max-w-7xl mx-auto px-4 py-8 flex lg:flex-row flex-col  gap-8">
-          <div className="flex lg:flex-row flex-col gap-10">
+        <div className="max-w-7xl mx-auto px-4 py-8 flex lg:flex-row flex-col font-poppins gap-8">
+          <div className="flex lg:flex-col flex-col justify-between gap-10">
             <div className="flex md:flex-row flex-col gap-8">
               {/* First Card */}
               <div className="flex flex-col items-center bg-white rounded-lg p-2">
@@ -74,11 +74,12 @@ const ProductCustomer = () => {
                   className="rounded-lg mb-4"
                 />
                 <div className="flex gap-4">
-                  <div className="bg-primary p-4 h-auto w-[5.5rem] rounded-full text-white text-[1.6rem] flex items-center justify-center">
+                  <div className="bg-primary p-4 md:h-[5.3rem] md:w-[5.3rem] h-[4.5rem] w-[4.5rem] aspect-square rounded-full text-white text-[2.2rem] flex items-center justify-center">
                     <GoArrowUpRight />
                   </div>
+
                   <div>
-                    <h3 className="text-md font-semibold">
+                    <h3 className="text-md font-normal md:text-[1.4rem] text-xl leading-5 tracking-tight pb-3">
                       {products[0].title}
                     </h3>
                     <p className="text-sm text-gray-600">
@@ -96,11 +97,11 @@ const ProductCustomer = () => {
                   className="rounded-lg mb-4"
                 />
                 <div className="flex gap-4">
-                  <div className="bg-primary p-4 h-auto w-[5.5rem] rounded-full text-white text-[1.6rem] flex items-center justify-center">
+                <div className="bg-primary p-4 md:h-[5.3rem] md:w-[5.3rem] h-[4.5rem] w-[4.5rem] aspect-square rounded-full text-white text-[2.2rem] flex items-center justify-center">
                     <GoArrowUpRight />
                   </div>
                   <div>
-                    <h3 className="text-md font-semibold">
+                    <h3 className="text-md font-normal md:text-[1.4rem] text-xl leading-5 tracking-tight pb-3">
                       {products[1].title}
                     </h3>
                     <p className="text-sm text-gray-600">
@@ -112,25 +113,23 @@ const ProductCustomer = () => {
             </div>
 
             {/* Third Card (Wider layout for multicurrency virtual account) */}
-            <div className="md:col-span-2 flex flex-col items-center bg-white rounded-lg p-2">
+            <div className="md:col-span-2 flex flex-col items-start bg-white rounded-lg p-2">
               <img
                 src={products[2].image}
                 alt={products[2].title}
                 className="rounded-lg mb-4 w-full"
               />
-              <div className="flex gap-4">
-                  <div className="bg-primary p-4 h-auto w-[4rem] rounded-full text-white text-[1.6rem] flex items-center justify-center">
+              <div className="flex justify-start gap-4">
+              <div className="bg-primary p-4 md:h-[5.3rem] md:w-[5.3rem] h-[4.5rem] w-[4.5rem] aspect-square rounded-full text-white text-[2.2rem] flex items-center justify-center">
                     <GoArrowUpRight />
                   </div>
-                  <div>
-                    <h3 className="text-md font-semibold">
-                      {products[2].title}
-                    </h3>
-                    <p className="text-sm text-gray-600">
-                      {products[2].description}
-                    </p>
-                  </div>
+                <div>
+                  <h3 className="text-md font-normal md:text-[1.4rem] text-xl leading-5 tracking-tight pb-3">{products[2].title}</h3>
+                  <p className="text-sm text-gray-600 pe-[40%]">
+                    {products[2].description}
+                  </p>
                 </div>
+              </div>
             </div>
           </div>
           {/* Fourth Card */}
@@ -141,18 +140,16 @@ const ProductCustomer = () => {
               className="rounded-lg mb-4"
             />
             <div className="flex gap-4">
-                  <div className="bg-primary p-4 h-auto w-[5.5rem] rounded-full text-white text-[1.6rem] flex items-center justify-center">
+            <div className="bg-primary p-4 md:h-[5.3rem] md:w-[5.3rem] h-[4.5rem] w-[4.5rem] aspect-square rounded-full text-white text-[2.2rem] flex items-center justify-center">
                     <GoArrowUpRight />
                   </div>
-                  <div>
-                    <h3 className="text-md font-semibold">
-                      {products[3].title}
-                    </h3>
-                    <p className="text-sm text-gray-600">
-                      {products[3].description}
-                    </p>
-                  </div>
-                </div>
+              <div>
+                <h3 className="text-md font-normal md:text-[1.4rem] text-xl leading-5 tracking-tight pb-3">{products[3].title}</h3>
+                <p className="text-sm text-gray-600">
+                  {products[3].description}
+                </p>
+              </div>
+            </div>
           </div>
         </div>
         <DownloadAppSection />
