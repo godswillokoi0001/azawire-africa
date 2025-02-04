@@ -3,7 +3,7 @@ import { Link } from "react-router-dom";
 
 const HeroSection = () => {
   return (
-    <section className="relative bg-gradient-to-r pt-8 md:pt-36">
+    <section className="relative bg-gradient-to-r pt-8 md:pt-20">
       <div className=" flex md:flex-row flex-col-reverse justify-between items-center mx-auto px-4 sm:px-6 lg:px-8 ">
         <div className="space-y-4 md:w-1/2 text-left">
           <h1 className="font-sora font-bold text-3xl sm:text-4xl md:text-5xl tracking-tighter text-[#252C34]"
@@ -30,9 +30,9 @@ const HeroSection = () => {
         {/* Right Content */}
         <div className="relative flex justify-center md:w-1/2 w-full z-20">
           <img
-            src="/images/coin.png"
+            src="/images/new-coins.png"
             alt="3D Currency Icons"
-            className="w-[14rem] md:w-[20rem] max-w-none float-start md:me-20 my-14 md:mt-8"
+            className="w-[14rem] md:w-[34em] max-w-none float-start md:me-20 my-14 md:mt-8"
           />
         </div>
       </div>

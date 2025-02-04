@@ -50,9 +50,9 @@ const BusinessHero = () => {
         {/* Image Section */}
         <div className="md:w-[40%] pt-10 md:pt-0 flex justify-center overflow-visible]">
           <img
-            src="/images/coin.png"
+            src="/images/new-coins.png"
             alt="Dashboard Preview"
-            className="w-[14rem] lg:w-[24rem] max-w-none"
+            className="w-[14rem] lg:w-[36rem] max-w-none"
           />
         </div>
       </div>
