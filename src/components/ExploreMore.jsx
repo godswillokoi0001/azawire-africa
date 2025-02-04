@@ -56,7 +56,7 @@ const ExploreMore = () => {
                 {/* Hide arrow if on Personal Page */}
                 {!isPersonalPage && (
                   <Link to="/">
-                    <SlArrowRightCircle className="text-[42px] text-black transition duration-300 group-hover:text-white" />
+                    <SlArrowRightCircle className="text-[42px] text-black group-hover:text-white" />
                   </Link>
                 )}
               </div>
@@ -92,7 +92,7 @@ const ExploreMore = () => {
                 {/* Hide arrow if on Business Page */}
                 {!isBusinessPage && (
                   <Link to="/business">
-                    <SlArrowRightCircle className="text-[42px] text-black transition duration-300 group-hover:text-white" />
+                    <SlArrowRightCircle className="text-[42px] text-black group-hover:text-white" />
                   </Link>
                 )}
               </div>
