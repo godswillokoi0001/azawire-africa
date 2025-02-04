@@ -15,6 +15,7 @@ const HeroSection = () => {
             Get paid globally, spend crypto like cash, auto-convert stablecoins, 
             and transact offline—all in one platform.
           </p>
+          <br />
           <Link
             to="/waitlist"
             className="w-full md:w-64 inline-flex justify-center items-center bg-primary hover:bg-blue-600 px-8 py-4 rounded-lg font-poppins text-sm text-white md:text-lg transition-all duration-300"
