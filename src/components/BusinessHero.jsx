@@ -3,7 +3,12 @@ import React from "react";
 const BusinessHero = () => {
   return (
     <section className="relative bg-privariant md:py-28 business-hero-bg"
-
+    style={{
+      backgroundImage: "url(/images/background-line-2.png)",
+      backgroundSize: "cover",
+      backgroundRepeat: "no-repeat",
+      backgroundPosition: "center",
+  }}
     >
       <div className="max-w-screen-xl mx-auto px-4 md:py-12 py-8 flex flex-col-reverse md:flex-row items-center justify-between h-full">
         {/* Text Section */}

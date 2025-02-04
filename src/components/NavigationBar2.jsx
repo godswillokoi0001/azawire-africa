@@ -84,7 +84,7 @@ const NavigationBar2 = () => {
                       to="#"
                       className="block px-4 py-2 hover:bg-primary/20 border-b-2 border-white/5"
                     >
-                      Product 1
+                       Virtual and physical card issuance
                     </Link>
                   </li>
                   <li>
@@ -92,7 +92,7 @@ const NavigationBar2 = () => {
                       to="#"
                       className="block px-4 py-2 hover:bg-primary/20 border-b-2 border-white/5"
                     >
-                      Product 2
+                      Offline payment integration
                     </Link>
                   </li>
                   <li>
@@ -100,7 +100,7 @@ const NavigationBar2 = () => {
                       to="#"
                       className="block px-4 py-2 hover:bg-primary/20 border-b-2 border-white/5"
                     >
-                      Product 3
+                      Multicurrency Account
                     </Link>
                   </li>
                   <li>
@@ -108,7 +108,7 @@ const NavigationBar2 = () => {
                       to="#"
                       className="block px-4 py-2 hover:bg-primary/20 border-b-2 border-white/5"
                     >
-                      Product 4
+                      Payout
                     </Link>
                   </li>
                   <li>
@@ -116,7 +116,31 @@ const NavigationBar2 = () => {
                       to="#"
                       className="block px-4 py-2 hover:bg-primary/20 border-b-2 border-white/5"
                     >
-                      Product 5
+                      Payment link
+                    </Link>
+                  </li>
+                  <li>
+                    <Link
+                      to="#"
+                      className="block px-4 py-2 hover:bg-primary/20 border-b-2 border-white/5"
+                    >
+                      Azaconnect
+                    </Link>
+                  </li>
+                  <li>
+                    <Link
+                      to="#"
+                      className="block px-4 py-2 hover:bg-primary/20 border-b-2 border-white/5"
+                    >
+                      Multichain wallet
+                    </Link>
+                  </li>
+                  <li>
+                    <Link
+                      to="#"
+                      className="block px-4 py-2 hover:bg-primary/20 border-b-2 border-white/5"
+                    >
+                      on-ramp and off-ramp payment
                     </Link>
                   </li>
                 </ul>
@@ -312,8 +336,14 @@ const NavigationBar2 = () => {
               </button>
               {mobileDropdown === "products" && (
                 <ul className="pl-4 border-l">
-                  <li><Link to="#" className="block px-4 py-2 hover:bg-primary/20">Product 1</Link></li>
-                  <li><Link to="#" className="block px-4 py-2 hover:bg-primary/20">Product 2</Link></li>
+                  <li><Link to="#" className="block px-4 py-2 hover:bg-primary/20">Virtual and physical card issuance</Link></li>
+                  <li><Link to="#" className="block px-4 py-2 hover:bg-primary/20">Offline payment integrationProduct 2</Link></li>
+                  <li><Link to="#" className="block px-4 py-2 hover:bg-primary/20">Multicurrency Account</Link></li>
+                  <li><Link to="#" className="block px-4 py-2 hover:bg-primary/20">Payout</Link></li>
+                  <li><Link to="#" className="block px-4 py-2 hover:bg-primary/20">Payment link</Link></li>
+                  <li><Link to="#" className="block px-4 py-2 hover:bg-primary/20"> Azaconnect</Link></li>
+                  <li><Link to="#" className="block px-4 py-2 hover:bg-primary/20">Multichain wallet</Link></li>
+                  <li><Link to="#" className="block px-4 py-2 hover:bg-primary/20">on-ramp and off-ramp payment</Link></li>
                 </ul>
               )}
             </li>

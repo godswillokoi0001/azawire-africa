@@ -84,7 +84,7 @@ const Navbar = () => {
                       to="#"
                       className="block px-4 py-2 hover:bg-primary/10 border-b-2 border-black/10"
                     >
-                      Product 1
+                      Virtual cards
                     </Link>
                   </li>
                   <li>
@@ -92,7 +92,7 @@ const Navbar = () => {
                       to="#"
                       className="block px-4 py-2 hover:bg-primary/10 border-b-2 border-black/10"
                     >
-                      Product 2
+                      physical card
                     </Link>
                   </li>
                   <li>
@@ -100,7 +100,7 @@ const Navbar = () => {
                       to="#"
                       className="block px-4 py-2 hover:bg-primary/10 border-b-2 border-black/10"
                     >
-                      Product 3
+                      Offline payment
                     </Link>
                   </li>
                   <li>
@@ -108,7 +108,7 @@ const Navbar = () => {
                       to="#"
                       className="block px-4 py-2 hover:bg-primary/10 border-b-2 border-black/10"
                     >
-                      Product 4
+                      Multicurrency virtual account
                     </Link>
                   </li>
                   <li>
@@ -116,7 +116,7 @@ const Navbar = () => {
                       to="#"
                       className="block px-4 py-2 hover:bg-primary/10 border-b-2 border-black/10"
                     >
-                      Product 5
+                      Stable coin payment
                     </Link>
                   </li>
                 </ul>
@@ -312,8 +312,11 @@ const Navbar = () => {
               </button>
               {mobileDropdown === "products" && (
                 <ul className="pl-4 border-l">
-                  <li><Link to="#" className="block px-4 py-2 hover:bg-primary/20">Product 1</Link></li>
-                  <li><Link to="#" className="block px-4 py-2 hover:bg-primary/20">Product 2</Link></li>
+                  <li><Link to="#" className="block px-4 py-2 hover:bg-primary/20">Virtual cards</Link></li>
+                  <li><Link to="#" className="block px-4 py-2 hover:bg-primary/20">physical card</Link></li>
+                  <li><Link to="#" className="block px-4 py-2 hover:bg-primary/20">Offline payment</Link></li>
+                  <li><Link to="#" className="block px-4 py-2 hover:bg-primary/20">Multicurrency virtual account</Link></li>
+                  <li><Link to="#" className="block px-4 py-2 hover:bg-primary/20">Stable coin payment</Link></li>
                 </ul>
               )}
             </li>
