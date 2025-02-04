@@ -9,7 +9,7 @@ const ProductBusiness = () => {
   const products = [
     {
       id: 1,
-      image: "/images/Visual Card and Physical Cards.png", // Replace with actual image paths
+      image: "/images/Visual Card and Physical Cards.png",
       title: "Virtual & Physical cards",
       description:
         "Empower your business with Azawire's scalable, cost-effective payment solutions.",
