@@ -84,7 +84,7 @@ const NavigationBar2 = () => {
                       to="#"
                       className="block px-4 py-2 hover:bg-primary/20 border-b-2 border-white/5"
                     >
-                       Virtual and physical card issuance
+                      Virtual and physical card issuance
                     </Link>
                   </li>
                   <li>
@@ -331,30 +331,107 @@ const NavigationBar2 = () => {
               </Link>
             </li>
             <li>
-              <button onClick={() => toggleMobileDropdown("products")} className="block text-gray-700 hover:text-primary py-3 border-t w-full text-left">
+              <button
+                onClick={() => toggleMobileDropdown("products")}
+                className="block text-gray-700 hover:text-primary py-3 border-t w-full text-left"
+              >
                 Products
               </button>
               {mobileDropdown === "products" && (
                 <ul className="pl-4 border-l">
-                  <li><Link to="#" className="block px-4 py-2 hover:bg-primary/20">Virtual and physical card issuance</Link></li>
-                  <li><Link to="#" className="block px-4 py-2 hover:bg-primary/20">Offline payment integrationProduct 2</Link></li>
-                  <li><Link to="#" className="block px-4 py-2 hover:bg-primary/20">Multicurrency Account</Link></li>
-                  <li><Link to="#" className="block px-4 py-2 hover:bg-primary/20">Payout</Link></li>
-                  <li><Link to="#" className="block px-4 py-2 hover:bg-primary/20">Payment link</Link></li>
-                  <li><Link to="#" className="block px-4 py-2 hover:bg-primary/20"> Azaconnect</Link></li>
-                  <li><Link to="#" className="block px-4 py-2 hover:bg-primary/20">Multichain wallet</Link></li>
-                  <li><Link to="#" className="block px-4 py-2 hover:bg-primary/20">on-ramp and off-ramp payment</Link></li>
+                  <li>
+                    <Link
+                      to="#"
+                      className="block px-4 py-2 hover:bg-primary/20"
+                    >
+                      Virtual and physical card issuance
+                    </Link>
+                  </li>
+                  <li>
+                    <Link
+                      to="#"
+                      className="block px-4 py-2 hover:bg-primary/20"
+                    >
+                      Offline payment integrationProduct 2
+                    </Link>
+                  </li>
+                  <li>
+                    <Link
+                      to="#"
+                      className="block px-4 py-2 hover:bg-primary/20"
+                    >
+                      Multicurrency Account
+                    </Link>
+                  </li>
+                  <li>
+                    <Link
+                      to="#"
+                      className="block px-4 py-2 hover:bg-primary/20"
+                    >
+                      Payout
+                    </Link>
+                  </li>
+                  <li>
+                    <Link
+                      to="#"
+                      className="block px-4 py-2 hover:bg-primary/20"
+                    >
+                      Payment link
+                    </Link>
+                  </li>
+                  <li>
+                    <Link
+                      to="#"
+                      className="block px-4 py-2 hover:bg-primary/20"
+                    >
+                      {" "}
+                      Azaconnect
+                    </Link>
+                  </li>
+                  <li>
+                    <Link
+                      to="#"
+                      className="block px-4 py-2 hover:bg-primary/20"
+                    >
+                      Multichain wallet
+                    </Link>
+                  </li>
+                  <li>
+                    <Link
+                      to="#"
+                      className="block px-4 py-2 hover:bg-primary/20"
+                    >
+                      on-ramp and off-ramp payment
+                    </Link>
+                  </li>
                 </ul>
               )}
             </li>
             <li>
-              <button onClick={() => toggleMobileDropdown("company")} className="block text-gray-700 hover:text-primary py-3 border-t w-full text-left">
+              <button
+                onClick={() => toggleMobileDropdown("company")}
+                className="block text-gray-700 hover:text-primary py-3 border-t w-full text-left"
+              >
                 Company
               </button>
               {mobileDropdown === "company" && (
                 <ul className="pl-4 border-l">
-                  <li><Link to="/about" className="block px-4 py-2 hover:bg-primary/20">About Us</Link></li>
-                  <li><Link to="#" className="block px-4 py-2 hover:bg-primary/20">Career</Link></li>
+                  <li>
+                    <Link
+                      to="/about"
+                      className="block px-4 py-2 hover:bg-primary/20"
+                    >
+                      About Us
+                    </Link>
+                  </li>
+                  <li>
+                    <Link
+                      to="#"
+                      className="block px-4 py-2 hover:bg-primary/20"
+                    >
+                      Career
+                    </Link>
+                  </li>
                 </ul>
               )}
             </li>

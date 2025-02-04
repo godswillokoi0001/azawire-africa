@@ -7,7 +7,7 @@ import DownloadAppSection from "../components/DownloadAppSection";
 import ExploreMore from "../components/ExploreMore";
 import Footer from "../components/Footer";
 import HeroSection from "../components/HeroSection";
-import NavigationBar from "../components/NavigationBar";
+import NavigationBarP from "../components/NavigationBarP";
 import ValueProposition from "../components/ValueProposition";
 import { offeringsData } from "/src/components/offeringsData.jsx";
 import TrustedPartners from "../components/TrustedPartners";
@@ -59,7 +59,7 @@ const Personal = () => {
               />
             </div>
             <div className="max-w-screen-xl mx-auto">
-              <NavigationBar />
+              <NavigationBarP />
               <HeroSection />
             </div>
           </header>

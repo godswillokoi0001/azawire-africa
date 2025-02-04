@@ -73,7 +73,6 @@ const Navbar = () => {
                 Products
                 <BiSolidDownArrow />
               </button>
-
               {openDropdown === "products" && (
                 <ul
                   className="absolute left-0 mt-2 w-48 bg-accent border shadow-lg rounded-lg dropdown-menu "
@@ -122,41 +121,45 @@ const Navbar = () => {
                 </ul>
               )}
             </li>
-
             {/* Company Dropdown */}
             <li className="relative dropdown">
               <button
                 onClick={() => handleDropdownClick("company")}
-                className={`hover:text-primary  flex items-center gap-x-1 ${
-                  openDropdown === "company" ? "text-primary font-semibold" : ""
+                className={`hover:text-primary flex items-center transition-all ${
+                  openDropdown === "company" ? "text-primary" : ""
                 }`}
               >
                 Company
-                <BiSolidDownArrow />
+                <BiSolidDownArrow className="transition-transform duration-200" />
               </button>
-              {openDropdown === "company" && (
-                <ul
-                  className="absolute left-0 mt-2 w-48 bg-accent border border-white shadow-lg rounded-lg dropdown-menu"
-                  onMouseLeave={handleMouseLeave}
-                >
-                  <li>
-                    <Link
-                      to="/about"
-                      className="block px-4 py-2 hover:bg-primary/10 border-b-2 border-black/10"
-                    >
-                      About Us
-                    </Link>
-                  </li>
-                  <li>
-                    <Link
-                      to="#"
-                      className="block px-4 py-2 hover:bg-primary/10 border-b-2 border-black/10"
-                    >
-                      Career
-                    </Link>
-                  </li>
-                </ul>
-              )}
+
+              {/* Prevent layout shifts using absolute positioning */}
+              <ul
+                className={`absolute left-0 mt-2 w-48 bg-accent border border-white shadow-lg rounded-lg dropdown-menu 
+              transition-opacity duration-300 ease-in-out transform ${
+                openDropdown === "company"
+                  ? "opacity-100 scale-100 visible"
+                  : "opacity-0 scale-95 invisible"
+              }`}
+                onMouseLeave={handleMouseLeave}
+              >
+                <li>
+                  <Link
+                    to="/about"
+                    className="block px-4 py-2 hover:bg-primary/10 border-b-2 border-black/10"
+                  >
+                    About Us
+                  </Link>
+                </li>
+                <li>
+                  <Link
+                    to="#"
+                    className="block px-4 py-2 hover:bg-primary/10 border-b-2 border-black/10"
+                  >
+                    Career
+                  </Link>
+                </li>
+              </ul>
             </li>
             <li>
               <Link
@@ -307,27 +310,82 @@ const Navbar = () => {
               </Link>
             </li>
             <li>
-              <button onClick={() => toggleMobileDropdown("products")} className="block text-gray-700 hover:text-primary py-3 border-t w-full text-left">
+              <button
+                onClick={() => toggleMobileDropdown("products")}
+                className="block text-gray-700 hover:text-primary py-3 border-t w-full text-left"
+              >
                 Products
               </button>
               {mobileDropdown === "products" && (
                 <ul className="pl-4 border-l">
-                  <li><Link to="#" className="block px-4 py-2 hover:bg-primary/20">Virtual cards</Link></li>
-                  <li><Link to="#" className="block px-4 py-2 hover:bg-primary/20">physical card</Link></li>
-                  <li><Link to="#" className="block px-4 py-2 hover:bg-primary/20">Offline payment</Link></li>
-                  <li><Link to="#" className="block px-4 py-2 hover:bg-primary/20">Multicurrency virtual account</Link></li>
-                  <li><Link to="#" className="block px-4 py-2 hover:bg-primary/20">Stable coin payment</Link></li>
+                  <li>
+                    <Link
+                      to="#"
+                      className="block px-4 py-2 hover:bg-primary/20"
+                    >
+                      Virtual cards
+                    </Link>
+                  </li>
+                  <li>
+                    <Link
+                      to="#"
+                      className="block px-4 py-2 hover:bg-primary/20"
+                    >
+                      physical card
+                    </Link>
+                  </li>
+                  <li>
+                    <Link
+                      to="#"
+                      className="block px-4 py-2 hover:bg-primary/20"
+                    >
+                      Offline payment
+                    </Link>
+                  </li>
+                  <li>
+                    <Link
+                      to="#"
+                      className="block px-4 py-2 hover:bg-primary/20"
+                    >
+                      Multicurrency virtual account
+                    </Link>
+                  </li>
+                  <li>
+                    <Link
+                      to="#"
+                      className="block px-4 py-2 hover:bg-primary/20"
+                    >
+                      Stable coin payment
+                    </Link>
+                  </li>
                 </ul>
               )}
             </li>
             <li>
-              <button onClick={() => toggleMobileDropdown("company")} className="block text-gray-700 hover:text-primary py-3 border-t w-full text-left">
+              <button
+                onClick={() => toggleMobileDropdown("company")}
+                className="block text-gray-700 hover:text-primary py-3 border-t w-full text-left"
+              >
                 Company
               </button>
               {mobileDropdown === "company" && (
                 <ul className="pl-4 border-l">
-                  <li><Link to="/about" className="block px-4 py-2 hover:bg-primary/20">About Us</Link></li>
-                  <li><Link to="#" className="block px-4 py-2 hover:bg-primary/20">Career</Link></li>
+                  <li>
+                    <Link
+                      to="/about"
+                      className="block px-4 py-2 hover:bg-primary/20"
+                    >
+                      About Us
+                    </Link>
+                  </li>
+                  <li>
+                    <Link
+                      to="#"
+                      className="block px-4 py-2 hover:bg-primary/20"
+                    >
+                      Career
+                    </Link>
+                  </li>
                 </ul>
               )}
             </li>
