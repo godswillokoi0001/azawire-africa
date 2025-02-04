@@ -1,6 +1,6 @@
 import React from "react";
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
-import ScrollToTop from "./components/ScrollToTop"; // Import ScrollToTop
+import ScrollToTop from "./components/ScrollToTop";
 import Personal from "./pages/Personal";
 import Business from "./pages/Business";
 import Blog from "./pages/Blog";
@@ -10,7 +10,7 @@ import BlogDetails from "./components/BlogDetails";
 import PrivacyPolicy from "./pages/PrivacyPolicy";
 import AMLCFTPolicy from "./pages/AMLCFTPolicy";
 import TermsOfUse from "./pages/TermsOfUse";
-import WaitlistPage from "./pages/WaitlistPage"; // Corrected import name
+import WaitlistPage from "./pages/WaitlistPage"; 
 import WaitlistSuccessPage from "./pages/WaitlistListSuccessPage";
 import ProductCustomer from "./pages/ProductCustomer";
 // import Pricing from "./pages/Pricing";

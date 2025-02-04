@@ -146,7 +146,6 @@ const NavigationBar2 = () => {
                 </ul>
               )}
             </li>
-
             {/* Company Dropdown */}
             <li className="relative dropdown">
               <button

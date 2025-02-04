@@ -68,7 +68,7 @@ const FAQPage = () => {
   const [openIndex, setOpenIndex] = useState(null);
 
   const toggleFAQ = (index) => {
-    setOpenIndex(openIndex === index ? null : index); // Toggle open/close
+    setOpenIndex(openIndex === index ? null : index);
   };
 
   return (
@@ -97,7 +97,7 @@ const FAQPage = () => {
               key={index}
               className="bg-white shadow-md rounded-lg p-6 cursor-pointer hover:shadow-lg transition duration-200"
               onClick={() => toggleFAQ(index)}
-              style={{ alignSelf: "start" }} // Allows independent row expansion
+              style={{ alignSelf: "start" }} 
             >
               {/* Question */}
               <div className="flex justify-between items-center">
@@ -110,7 +110,8 @@ const FAQPage = () => {
                   <FiPlus className="text-xl text-gray-600" />
                 )}
               </div>
-              {/* Answer (only visible when open) */}
+              
+              
               {openIndex === index && (
                 <p className="text-gray-600 mt-4">{faq.answer}</p>
               )}
