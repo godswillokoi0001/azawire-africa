@@ -49,7 +49,7 @@ const ExploreMore = () => {
               <div className="flex items-center justify-between">
                 {/* Individual Icon - Adjust color properly */}
                 <PiApertureThin
-                  className={`text-[52px] transition duration-300 
+                  className={`text-[52px]
         ${isPersonalPage ? "text-white" : "text-black group-hover:text-white"}`}
                 />
 
@@ -85,7 +85,7 @@ const ExploreMore = () => {
               <div className="flex items-center justify-between">
                 {/* Business Icon - Ensuring correct hover effect */}
                 <IoBusinessOutline
-                  className={`text-[52px] transition duration-300 
+                  className={`text-[52px]
         ${isBusinessPage ? "text-white" : "text-black group-hover:text-white"}`}
                 />
 
