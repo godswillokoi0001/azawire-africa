@@ -1,6 +1,7 @@
 import "aos/dist/aos.css";
 import { PiApertureThin } from "react-icons/pi";
 import { SlArrowRightCircle } from "react-icons/sl";
+import { IoBusinessOutline } from "react-icons/io5";
 import { Link, useLocation } from "react-router-dom";
 
 const ExploreMore = () => {
@@ -36,23 +37,28 @@ const ExploreMore = () => {
           >
             {/* Individual Card */}
             <div
-              className={`flex flex-col space-y-3 border border-gray-200 md:p-10 p-4 rounded-[1.1rem] transition duration-300 
-        ${
-          isPersonalPage
-            ? "bg-black text-white"
-            : "bg-white text-gray-700 hover:bg-black hover:text-white"
-        }`}
+              className={`group flex flex-col space-y-3 border border-gray-200 md:p-10 p-4 rounded-[1.1rem] 
+    ${
+      isPersonalPage
+        ? "bg-black text-white"
+        : "bg-white text-gray-700 hover:bg-black hover:text-white"
+    }`}
               data-aos="zoom-in"
               data-aos-delay="400"
             >
               <div className="flex items-center justify-between">
-                <PiApertureThin style={{ fontSize: "52px" }} />
-                <Link to="/">
-                  <SlArrowRightCircle
-                    style={{ fontSize: "42px" }}
-                    className="cursor-pointer text-white"
-                  />
-                </Link>
+                {/* Individual Icon - Adjust color properly */}
+                <PiApertureThin
+                  className={`text-[52px] transition duration-300 
+        ${isPersonalPage ? "text-white" : "text-black group-hover:text-white"}`}
+                />
+
+                {/* Hide arrow if on Personal Page */}
+                {!isPersonalPage && (
+                  <Link to="/">
+                    <SlArrowRightCircle className="text-[42px] text-black transition duration-300 group-hover:text-white" />
+                  </Link>
+                )}
               </div>
               <h3 className="pb-6 font-sora text-[1.4rem] text-xl">
                 For Individuals
@@ -67,23 +73,28 @@ const ExploreMore = () => {
 
             {/* Business Card */}
             <div
-              className={`flex flex-col space-y-3 border border-gray-200 md:p-10 p-4 rounded-[1.1rem] transition duration-300 
-        ${
-          isBusinessPage
-            ? "bg-black text-white"
-            : "bg-white text-gray-700 hover:bg-black hover:text-white"
-        }`}
+              className={`group flex flex-col space-y-3 border border-gray-200 md:p-10 p-4 rounded-[1.1rem]
+    ${
+      isBusinessPage
+        ? "bg-black text-white"
+        : "bg-white text-gray-700 hover:bg-black hover:text-white"
+    }`}
               data-aos="zoom-in"
               data-aos-delay="600"
             >
               <div className="flex items-center justify-between">
-                <PiApertureThin style={{ fontSize: "52px" }} />
-                <Link to="/business">
-                  <SlArrowRightCircle
-                    style={{ fontSize: "42px" }}
-                    className="cursor-pointer text-white"
-                  />
-                </Link>
+                {/* Business Icon - Ensuring correct hover effect */}
+                <IoBusinessOutline
+                  className={`text-[52px] transition duration-300 
+        ${isBusinessPage ? "text-white" : "text-black group-hover:text-white"}`}
+                />
+
+                {/* Hide arrow if on Business Page */}
+                {!isBusinessPage && (
+                  <Link to="/business">
+                    <SlArrowRightCircle className="text-[42px] text-black transition duration-300 group-hover:text-white" />
+                  </Link>
+                )}
               </div>
               <h3 className="pb-6 text-[1.4rem]">For Businesses</h3>
               <p className="font-poppins md:text-[0.9rem] text-[0.7rem] leading-relaxed">
