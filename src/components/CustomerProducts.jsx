@@ -66,7 +66,7 @@ const CustomerProducts = () => {
         <h3 className="text-md font-normal md:text-[1.4rem] text-xl leading-5 tracking-tight pb-3">
           {products[2].title}
         </h3>
-        <p className="text-sm text-gray-600 pe-[40%]">
+        <p className="text-sm text-gray-600 md:pe-[40%] pe-0">
           {products[2].description}
         </p>
       </div>

@@ -6,11 +6,11 @@ import JoinOurTeam from "../components/JoinOurTeam";
 const teamMembers = [
   {
     name: "Emmanuel Onyo",
-    position: "CO-FOUNDER & CEO",
+    position: "CEO & CO-FOUNDER",
     image: "/images/team1.png",
   },
   {
-    name: "Emmanuel Onyo",
+    name: "Terry O Christopher",
     position: "CO-FOUNDER",
     image: "/images/team1.png",
   },
@@ -191,7 +191,7 @@ const About = () => {
             </div>
           </div>
           {/* Second Row */}
-          <div className="flex flex-wrap justify-center md:gap-6 gap-5 lg:space-x-4 lg:max-w-6xl w-full mx-auto mb-12">
+          <div className="flex flex-wrap justify-center md:gap-6 gap-5 lg:space-x-4 lg:max-w-6xl w-full mx-auto mb-12 ">
             {teamMembers.slice(1, 5).map((member, index) => (
               <div key={index} className="relative w-full lg:w-[20%]">
                 <img
@@ -207,22 +207,25 @@ const About = () => {
             ))}
           </div>
 
-          {/* Third Row */}
-          <div className="flex flex-wrap justify-center lg:gap-6 gap-4 max-w-6xl mx-auto mb-4 w-full">
-            {teamMembers.slice(5, 15).map((member, index) => (
-              <div key={index} className="relative w-full md:w-[180px]">
-                <img
-                  src={member.image}
-                  alt={member.name}
-                  className="w-full h-auto rounded-xl lg:grayscale hover:grayscale-0 transition duration-100"
-                />
-                <div className="absolute bottom-0 left-0 right-0 bg-secondary text-white text-center md:py-1 py-2">
-                <p className="font-semibold md:text-sm text-lg">{teamMembers[0].name}</p>
-                <p className="md:text-[0.7rem] text-sm">{teamMembers[0].position}</p>
-                </div>
-              </div>
-            ))}
-          </div>
+{/* Third Row */}
+<div className="max-w-6xl mx-auto mb-4 w-full">
+  <div className="flex lg:flex-wrap flex-nowrap overflow-x-auto scrollbar-hide justify-start md:justify-center lg:gap-6 gap-4">
+    {teamMembers.slice(5, 15).map((member, index) => (
+      <div key={index} className="relative w-[70%] sm:w-[50%] md:w-[180px] flex-shrink-0 snap-start">
+        <img
+          src={member.image}
+          alt={member.name}
+          className="w-full h-auto rounded-xl lg:grayscale hover:grayscale-0 transition duration-100"
+        />
+        <div className="absolute bottom-0 left-0 right-0 bg-secondary text-white text-center md:py-1 py-2">
+          <p className="font-semibold md:text-sm text-lg">{member.name}</p>
+          <p className="md:text-[0.7rem] text-sm">{member.position}</p>
+        </div>
+      </div>
+    ))}
+  </div>
+</div>
+
 
           {/* Fourth Row */}
           {/* <div className="flex flex-wrap justify-center gap-2 max-w-6xl mx-auto content-end">

@@ -145,7 +145,7 @@ const NavigationBar2 = () => {
               <Link
                 to="#"
                 className={`hover:text-primary ${
-                  isActive("/about") ? "text-primary font-semibold" : ""
+                  isActive("/pricing") ? "text-primary font-semibold" : ""
                 }`}
               >
                 Pricing
