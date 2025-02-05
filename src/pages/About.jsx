@@ -177,12 +177,12 @@ const About = () => {
             <div className="flex-grow lg:text-left text-center md:ml-8 lg:w-[75%]">
               <h3
                 className="text-2xl md:text-5xl font-sora mb-4 tracking-tight"
-                style={{ lineHeight: 1.3 }}
+                style={{ lineHeight: 1.2 }}
               >
                 Behind Azawire is a team of innovators, fintech experts, and
                 creatives dedicated to revolutionizing digital banking
               </h3>
-              <p className="text-gray-600 md:text-[1.1rem] text-[1rem] tracking-tight md:leading-8">
+              <p className="text-gray-600 md:text-[1.3rem] text-[1rem] tracking-tight md:leading-8">
                 We believe in borderless banking solutions, security, and
                 seamless transactions for everyone. With a passion for financial
                 innovation, we're building the future of banking—one
@@ -199,9 +199,9 @@ const About = () => {
                   alt={member.name}
                   className="w-full h-auto rounded-lg lg:grayscale hover:grayscale-0 transition duration-100"
                 />
-              <div className="absolute bottom-0 right-0 bg-secondary text-white text-center py-2 w-[80%] rounded-tl-3xl">
-                <p className="font-semibold text-lg">{teamMembers[0].name}</p>
-                <p className="text-sm">{teamMembers[0].position}</p>
+              <div className="absolute bottom-0 right-0 bg-secondary text-white text-center md:py-1 py-2  w-[80%] rounded-tl-3xl">
+                <p className="font-semibold md:text-sm text-lg">{teamMembers[0].name}</p>
+                <p className="md:text-[0.7rem] text-sm">{teamMembers[0].position}</p>
               </div>
               </div>
             ))}
@@ -216,9 +216,9 @@ const About = () => {
                   alt={member.name}
                   className="w-full h-auto rounded-xl lg:grayscale hover:grayscale-0 transition duration-100"
                 />
-                <div className="absolute bottom-0 left-0 right-0 bg-secondary text-white text-center md:py-2 py-2">
-                <p className="font-semibold text-lg">{teamMembers[0].name}</p>
-                <p className="text-sm">{teamMembers[0].position}</p>
+                <div className="absolute bottom-0 left-0 right-0 bg-secondary text-white text-center md:py-1 py-2">
+                <p className="font-semibold md:text-sm text-lg">{teamMembers[0].name}</p>
+                <p className="md:text-[0.7rem] text-sm">{teamMembers[0].position}</p>
                 </div>
               </div>
             ))}
