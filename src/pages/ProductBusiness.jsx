@@ -1,5 +1,5 @@
 import React from "react";
-import NavigationBarB from "../components/NavigationBarB";
+import NavigationBar2 from "../components/NavigationBar2";
 import Footer from "../components/Footer";
 import DownloadAppSection from "../components/DownloadAppSection";
 import BusinessProducts from "../components/BusinessProducts";
@@ -11,7 +11,7 @@ const ProductBusiness = () => {
     <div className="bg-gradient-to-r from-[#f9feff] to-[#e5f9ff]">
       <div className="">
         <header className=" overflow-hidden bg-privariant">
-          <NavigationBarB />
+          <NavigationBar2 />
           <div className=" px-6 lg:px-4 py-20 pt-24 md:pt-48 max-w-screen-xl mx-auto">
             <div className="flex flex-col md:flex-row items-center md:items-start">
               {/* Left Section */}

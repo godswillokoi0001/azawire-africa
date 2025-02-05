@@ -66,12 +66,16 @@ const Navbar = () => {
                 onClick={() => handleDropdownClick("products")}
                 className={`hover:text-primary flex gap-x-1 items-center ${
                   openDropdown === "products"
-                    ? "text-primary font-semibold"
+                    ? "text-primary"
                     : ""
                 }`}
               >
                 Products
-                <BiSolidDownArrow />
+                <BiSolidDownArrow
+                  className={`transition-transform duration-200 ${
+                    openDropdown === "products" ? "rotate-180" : "rotate-0"
+                  }`}
+                />
               </button>
               {openDropdown === "products" && (
                 <ul
@@ -80,44 +84,21 @@ const Navbar = () => {
                 >
                   <li>
                     <Link
-                      to="#"
+                      to="/productcustomer"
                       className="block px-4 py-2 hover:bg-primary/10 border-b-2 border-black/10"
                     >
-                      Virtual cards
+                      Personal
                     </Link>
                   </li>
                   <li>
                     <Link
-                      to="#"
+                      to="/productbusiness"
                       className="block px-4 py-2 hover:bg-primary/10 border-b-2 border-black/10"
                     >
-                      physical card
+                      Business
                     </Link>
                   </li>
-                  <li>
-                    <Link
-                      to="#"
-                      className="block px-4 py-2 hover:bg-primary/10 border-b-2 border-black/10"
-                    >
-                      Offline payment
-                    </Link>
-                  </li>
-                  <li>
-                    <Link
-                      to="#"
-                      className="block px-4 py-2 hover:bg-primary/10 border-b-2 border-black/10"
-                    >
-                      Multicurrency virtual account
-                    </Link>
-                  </li>
-                  <li>
-                    <Link
-                      to="#"
-                      className="block px-4 py-2 hover:bg-primary/10 border-b-2 border-black/10"
-                    >
-                      Stable coin payment
-                    </Link>
-                  </li>
+
                 </ul>
               )}
             </li>
@@ -125,12 +106,16 @@ const Navbar = () => {
             <li className="relative dropdown">
               <button
                 onClick={() => handleDropdownClick("company")}
-                className={`hover:text-primary flex items-center transition-all ${
+                className={`hover:text-primary flex items-center gap-x-1 transition-all ${
                   openDropdown === "company" ? "text-primary" : ""
                 }`}
               >
                 Company
-                <BiSolidDownArrow className="transition-transform duration-200" />
+                <BiSolidDownArrow
+                  className={`transition-transform duration-200 ${
+                    openDropdown === "company" ? "rotate-180" : "rotate-0"
+                  }`}
+                />
               </button>
 
               {/* Prevent layout shifts using absolute positioning */}

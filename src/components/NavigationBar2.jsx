@@ -66,12 +66,16 @@ const NavigationBar2 = () => {
                 onClick={() => handleDropdownClick("products")}
                 className={`hover:text-primary flex gap-x-1 items-center ${
                   openDropdown === "products"
-                    ? "text-primary font-semibold"
+                    ? "text-primary"
                     : ""
                 }`}
               >
                 Products
-                <BiSolidDownArrow />
+                <BiSolidDownArrow
+                  className={`transition-transform duration-200 ${
+                    openDropdown === "products" ? "rotate-180" : "rotate-0"
+                  }`}
+                />
               </button>
 
               {openDropdown === "products" && (
@@ -79,21 +83,20 @@ const NavigationBar2 = () => {
                   className="absolute left-0 mt-2 w-48 bg-privariant border border-white shadow-lg rounded-lg dropdown-menu "
                   onMouseLeave={handleMouseLeave}
                 >
-
                   <li>
                     <Link
                       to="/productcustomer"
                       className="block px-4 py-2 hover:bg-primary/20 border-b-2 border-white/5"
                     >
-                      Product - Customer
+                      Personal
                     </Link>
                   </li>
                   <li>
                     <Link
-                      to="#"
+                      to="/productbusiness"
                       className="block px-4 py-2 hover:bg-primary/20 border-b-2 border-white/5"
                     >
-                      Product - Business
+                      Business
                     </Link>
                   </li>
                 </ul>
@@ -108,7 +111,11 @@ const NavigationBar2 = () => {
                 }`}
               >
                 Company
-                <BiSolidDownArrow />
+                <BiSolidDownArrow
+                  className={`transition-transform duration-200 ${
+                    openDropdown === "company" ? "rotate-180" : "rotate-0"
+                  }`}
+                />
               </button>
               {openDropdown === "company" && (
                 <ul

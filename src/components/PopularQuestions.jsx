@@ -7,70 +7,55 @@ const faqData = [
     answer:
       "Azawire is a next-generation banking platform integrating Web3 technology to make global payments seamless. We offer stablecoin on-ramp and off-ramp services, virtual cards, USSD payments, WhatsApp banking, and free US account numbers for ACH transfers.",
   },
-  {
+  
+  {  
     question: "Who is Azawire for?",
-answer:[
-      "Azawire is built for:",
-      "• Freelancers & remote workers who need smooth cross-border payments.",
-      "• Businesses looking for fast, low-cost transactions.", 
-      "• Everyday users who want simple and accessible banking solutions"
-    ].join('\n'),
+    answer:
+      "Azawire is designed for freelancers and remote workers who need seamless cross-border payments, businesses seeking fast and low-cost transactions, and everyday users looking for simple and accessible banking solutions.",
   },
-  {
+
+{  
     question: "How does Azawire work?",
-    answer:[
-      "Azawire connects traditional banking with Web3, allowing you to:",
-      "> Receive and send payments globally using stablecoins",
-      "> Withdraw funds easily via on-ramp/off-ramp solutions",
-      "> Use virtual cards for online transactions",
-      "> Make payments via USSD & WhatsApp, even without internet access"
-    ].join('\n')
-  },
-  {
-    question: "Can I cancel my subscription at any time?",
     answer:
-      "Law county unable her sister. Really boy law county she unable her sister. Feet you off its like like six.",
+      "Azawire bridges traditional banking with Web3, enabling global payments with stablecoins, easy fund withdrawals through on-ramp/off-ramp solutions, virtual cards for online transactions, and seamless payments via USSD and WhatsApp, even without internet access.",
   },
-  {
-    question: "What is the refund policy?",
+
+  {  
+    question: "What makes Azawire different from regular banks?",
     answer:
-      "Among sex are leave law built now. In built table in an rapid blush. Merit’s behind on afraid or warmly.",
+      "Unlike traditional banks, Azawire supports crypto and stablecoin transactions, offers borderless banking powered by Web3 technology, provides free US account numbers for seamless ACH transfers, and enables offline transactions via USSD.",
   },
-  {
-    question: "Do you offer custom blog writing services?",
+
+   {  
+    question: "Is Azawire safe?",
     answer:
-      "Feet you off its like like six. Among sex are leave law built now. Law county unable her sister.",
+      "Yes! Security is a top priority at Azawire. Azawire uses blockchain technology, encryption, and compliance protocols to protect your funds and data.",
   },
-  {
-    question: "How long until we deliver your first blog post?",
+
+  {  
+    question: "Can I use Azawire without crypto knowledge?",
     answer:
-      "Really boy law county she unable her sister. Feet you off its like like six. Among sex are leave law built now.",
+      "Absolutely! Azawire is designed for everyone, whether you’re familiar with crypto or not. Our platform makes it easy to use stablecoins and traditional payment methods seamlessly. ",
   },
-  {
-    question: "What is the cost of our services?",
+
+  {  
+    question: "How do I sign up?",
     answer:
-      "In built table in an rapid blush. Merit’s behind on afraid or warmly. Law county unable her sister.",
+      "Signing up is simple—just click the Sign Up button, fill in your details, verify your account, and start transacting instantly!",
   },
-  {
-    question: "How do we manage content delivery?",
+
+  {  
+    question: "Does Azawire have an app?",
     answer:
-      "Merit’s behind on afraid or warmly. Feet you off its like like six. Among sex are leave law built now.",
+      "Yes! Azawire will launch a mobile app soon for a smoother experience. Stay tuned!",
   },
-  {
-    question: "Can I cancel my subscription at any time?",
+
+   {  
+    question: "How can I contact support?",
     answer:
-      "Law county unable her sister. Really boy law county she unable her sister. Feet you off its like like six.",
+      "For any questions, reach out via email at support@azawire.com or connect with us on Twitter and Telegram.",
   },
-  {
-    question: "What is the refund policy?",
-    answer:
-      "Among sex are leave law built now. In built table in an rapid blush. Merit’s behind on afraid or warmly.",
-  },
-  {
-    question: "Do you offer custom blog writing services?",
-    answer:
-      "Feet you off its like like six. Among sex are leave law built now. Law county unable her sister.",
-  },
+  
 ];
 
 const FAQPage = () => {
@@ -132,4 +117,4 @@ const FAQPage = () => {
   );
 };
 
-export default FAQPage;
+export default FAQPage;

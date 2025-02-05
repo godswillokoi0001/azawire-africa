@@ -4,7 +4,7 @@ import BusinessHero from "../components/BusinessHero";
 import DownloadAppSection from "../components/DownloadAppSection";
 import ExploreMore from "../components/ExploreMore";
 import Footer from "../components/Footer";
-import NavigationBarB from "../components/NavigationBarB";
+import NavigationBar2 from "../components/NavigationBar2";
 // import { offeringsData } from "/src/components/offeringsData.jsx";
 import TrustedPartners from "../components/TrustedPartners";
 import products from "../components/businessProductData";
@@ -15,7 +15,7 @@ const Business = () => {
   return (
     <div className="w-full overflow-hidden bg-gradient-to-r from-[#f9feff] to-[#e5f9ff]">
       <header className="overflow-hidden">
-        <NavigationBarB />
+        <NavigationBar2 />
         <BusinessHero />
       </header>
       <div className="mt-20">

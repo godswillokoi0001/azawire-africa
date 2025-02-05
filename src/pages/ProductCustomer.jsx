@@ -1,5 +1,5 @@
 import React from "react";
-import NavigationBarP from "../components/NavigationBarP";
+import NavigationBar from "../components/NavigationBar";
 import Footer from "../components/Footer";
 import DownloadAppSection from "../components/DownloadAppSection";
 import CustomerProducts from "../components/CustomerProducts";
@@ -10,7 +10,7 @@ const ProductCustomer = () => {
     <div className="bg-gradient-to-r from-[#f9feff] to-[#e5f9ff]">
       <div className="max-w-screen-xl mx-auto">
         <header className="">
-          <NavigationBarP />
+          <NavigationBar />
           <div className=" px-6 lg:px-4 py-20 pt-24 md:pt-48">
             <div className="flex flex-col md:flex-row items-center md:items-start">
               {/* Left Section */}
