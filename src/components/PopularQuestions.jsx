@@ -9,16 +9,30 @@ const faqData = [
   },
   {
     question: "Who is Azawire for?",
+<<<<<<< HEAD
 answer: `Azawire is built for:
 - Freelancers & remote workers who need smooth cross-border payments. 
 - Businesses looking for fast, low-cost transactions.
 - Everyday users who want simple and accessible banking solutions
 `,
+=======
+answer:[
+      "Azawire is built for:",
+      "• Freelancers & remote workers who need smooth cross-border payments.",
+      "• Businesses looking for fast, low-cost transactions.", 
+      "• Everyday users who want simple and accessible banking solutions"
+    ].join('\n'),
+>>>>>>> 4c5f8b667dd9f76a8adfe4d2a06d0549d5af542f
   },
   {
     question: "How does Azawire work?",
-    answer:
-      "Merit’s behind on afraid or warmly. Feet you off its like like six. Among sex are leave law built now.",
+    answer:[
+      "Azawire connects traditional banking with Web3, allowing you to:",
+      "> Receive and send payments globally using stablecoins",
+      "> Withdraw funds easily via on-ramp/off-ramp solutions",
+      "> Use virtual cards for online transactions",
+      "> Make payments via USSD & WhatsApp, even without internet access"
+    ].join('\n')
   },
   {
     question: "Can I cancel my subscription at any time?",
