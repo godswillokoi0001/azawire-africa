@@ -75,7 +75,7 @@ const Personal = () => {
           <section className="max-w-screen-xl mx-auto mt-12">
             <div className="flex items-center justify-between mb-4 px-6">
               <h2 className="text-4xl font-poppins font-medium tracking-tighter">
-                CoreOfferings
+                Core <br className="md:hidden" /> Offerings
               </h2>
               {/* See more */}
               <div className="flex space-x-4">
