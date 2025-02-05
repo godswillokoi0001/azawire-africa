@@ -152,14 +152,14 @@ const NavigationBar2 = () => {
               </Link>
             </li>
             <li>
-              <Link
-                to="#"
+              <a
+                to="https://azawire.readme.io" target="_blank"
                 className={`hover:text-primary ${
                   isActive("#") ? "text-primary font-semibold" : ""
                 }`}
               >
                 Developers
-              </Link>
+              </a>
             </li>
             <li>
               <a
@@ -346,12 +346,12 @@ const NavigationBar2 = () => {
               )}
             </li>
             <li>
-              <Link
-                to="#"
+              <a
+                to="https://azawire.readme.io" target="_blank"
                 className="block text-gray-700 hover:text-primary py-3 border-t"
               >
                 Developers
-              </Link>
+              </a>
             </li>
             <li>
               <a
