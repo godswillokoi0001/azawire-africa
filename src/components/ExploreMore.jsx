@@ -60,10 +60,10 @@ const ExploreMore = () => {
                   </Link>
                 )}
               </div>
-              <h3 className="pb-6 font-sora text-[1.4rem] text-xl">
+              <h3 className="pb-6 font-sora md:text-[1.6rem] text-xl">
                 For Individuals
               </h3>
-              <p className="font-poppins md:text-[0.9rem] text-[0.7rem] leading-relaxed">
+              <p className="font-poppins md:text-lg text-sm leading-relaxed">
                 Maximize earnings, minimize fees, and grow your financial
                 portfolio with stablecoin-backed accounts offering personal
                 wallet management, secure savings, and instant, low-cost global
@@ -96,8 +96,8 @@ const ExploreMore = () => {
                   </Link>
                 )}
               </div>
-              <h3 className="pb-6 text-[1.4rem]">For Businesses</h3>
-              <p className="font-poppins md:text-[0.9rem] text-[0.7rem] leading-relaxed">
+              <h3 className="pb-6 md:text-[1.6rem] text-xl">For Businesses</h3>
+              <p className="font-poppins md:text-lg text-sm leading-relaxed">
                 Empower your business with Azawire’s scalable, cost-effective
                 payment solutions, featuring cross-border payments,
                 multi-currency support for seamless transactions, and scalable
