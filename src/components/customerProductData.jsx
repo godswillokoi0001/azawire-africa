@@ -27,6 +27,13 @@ const products = [
       description:
         "Empower your business with Azawire's scalable, cost-effective payment solutions.",
     },
+    {
+      id: 5,
+      image: "/images/Multichain wallet.png",
+      title: "Multichain wallet",
+      description:
+        "Empower your business with Azawire's scalable, cost-effective payment solutions.",
+    },
   ];
 
 export default products;

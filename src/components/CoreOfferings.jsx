@@ -16,7 +16,6 @@ const CoreOfferings = ({ title, offerings }) => {
       scrollRef.current.scrollTo({ left: scrollTo, behavior: "smooth" });
     }
   };
-
   return (
     <div className="py-16">
       <div
@@ -53,7 +52,6 @@ const CoreOfferings = ({ title, offerings }) => {
             </button>
           </div>
         </div>
-
         {/* Scrollable Cards Section */}
         <div className="relative">
           <div

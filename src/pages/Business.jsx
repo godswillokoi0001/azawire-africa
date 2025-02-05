@@ -34,8 +34,21 @@ const Business = () => {
           </div>
         </div>
       </div>
-      <section>
-        <div className="max-w-7xl mx-auto px-4 py-8 flex lg:flex-row flex-col justify-between flex-wrap font-poppins gap-4">
+      <section className="max-w-screen-xl mx-auto mt-12">
+        <div className="flex items-center justify-between mb-4 px-6">
+          <h2 className="text-4xl font-poppins font-medium tracking-tighter">
+            CoreOfferings
+          </h2>
+          {/* See more */}
+          <div className="flex space-x-4">
+          <Link to="/productbusiness" className="text-lg font-semibold mt-4">
+            <button className="px-6 py-3 text-xl bg-privariant hover:bg-variant text-white rounded-lg mb-4 font-sora transition duration-300">
+              See more
+            </button>
+          </Link>
+          </div>
+        </div>
+        <div className="max-w-7xl mx-auto px-4 py-4 flex lg:flex-row flex-col justify-between flex-wrap font-poppins gap-4">
           {/* First Card */}
           <div className="flex flex-col items-center bg-white rounded-lg p-2 lg:w-[32%] md:[32%] sm:w-full">
             <img
@@ -102,11 +115,7 @@ const Business = () => {
               </div>
             </div>
           </div>
-          <Link to="/productbusiness" className="text-lg font-semibold mt-4">
-            <button className="px-6 py-3 text-xl bg-secondary text-white rounded-lg mb-4 font-sora">
-              See more
-            </button>
-          </Link>
+
         </div>
       </section>
       {/* <CoreOfferings title="Core Offerings" offerings={offeringsData} /> */}
