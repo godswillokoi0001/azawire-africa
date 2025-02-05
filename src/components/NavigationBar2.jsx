@@ -151,7 +151,7 @@ const NavigationBar2 = () => {
               <button
                 onClick={() => handleDropdownClick("company")}
                 className={`hover:text-primary  flex items-center gap-x-1 ${
-                  openDropdown === "company" ? "text-primary font-semibold" : ""
+                  openDropdown === "company" ? "text-primary" : ""
                 }`}
               >
                 Company

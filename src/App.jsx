@@ -13,6 +13,7 @@ import TermsOfUse from "./pages/TermsOfUse";
 import WaitlistPage from "./pages/WaitlistPage"; 
 import WaitlistSuccessPage from "./pages/WaitlistListSuccessPage";
 import ProductCustomer from "./pages/ProductCustomer";
+import ProductBusiness from "./pages/ProductBusiness";
 // import Pricing from "./pages/Pricing";
 
 function App() {
@@ -33,6 +34,7 @@ function App() {
         <Route path="/waitlist" element={<WaitlistPage />} />
         <Route path="/success" element={<WaitlistSuccessPage />} />
         <Route path="/productcustomer" element={<ProductCustomer />} />
+        <Route path="/productbusiness" element={<ProductBusiness />} />
         {/* <Route path="/pricing" element={<Pricing /> } /> */}
       </Routes>
     </Router>

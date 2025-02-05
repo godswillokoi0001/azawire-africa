@@ -3,17 +3,22 @@ import { FiPlus, FiMinus } from "react-icons/fi";
 
 const faqData = [
   {
-    question: "How long until we deliver your first blog post?",
+    question: "What is Azawire?",
     answer:
-      "Really boy law county she unable her sister. Feet you off its like like six. Among sex are leave law built now.",
+      "Azawire is a next-generation banking platform integrating Web3 technology to make global payments seamless. We offer stablecoin on-ramp and off-ramp services, virtual cards, USSD payments, WhatsApp banking, and free US account numbers for ACH transfers.",
   },
   {
-    question: "What is the cost of our services?",
-    answer:
-      "In built table in an rapid blush. Merit’s behind on afraid or warmly. Law county unable her sister.",
+    question: "Who is Azawire for?",
+answer: `Azawire is built for:
+- Freelancers & remote workers who need smooth cross-border payments. 
+
+- Businesses looking for fast, low-cost transactions.
+
+- Everyday users who want simple and accessible banking solutions
+`,
   },
   {
-    question: "How do we manage content delivery?",
+    question: "How does Azawire work?",
     answer:
       "Merit’s behind on afraid or warmly. Feet you off its like like six. Among sex are leave law built now.",
   },
@@ -74,11 +79,15 @@ const FAQPage = () => {
   return (
     <section className="bg-gray-50 py-16">
       <div className="max-w-7xl mx-auto px-6 lg:px-8">
-        
-
         {/* Buttons Section */}
         <div className="flex flex-wrap gap-3 justify-start mb-8">
-          {["Payments", "USSD Service", "Payment Link", "API Integration", "Policy"].map((button, index) => (
+          {[
+            "Payments",
+            "USSD Service",
+            "Payment Link",
+            "API Integration",
+            "Policy",
+          ].map((button, index) => (
             <button
               key={index}
               className="bg-blue-600 text-white px-4 py-2 rounded-full hover:bg-blue-700 transition duration-200"
@@ -87,9 +96,7 @@ const FAQPage = () => {
             </button>
           ))}
         </div>
-        <h1 className="text-3xl font-bold mb-12">
-          Frequently Asked Questions
-        </h1>
+        <h1 className="text-3xl font-bold mb-12">Frequently Asked Questions</h1>
         {/* Responsive Grid */}
         <div className="grid grid-cols-1 sm:grid-cols-2 gap-6">
           {faqData.map((faq, index) => (
@@ -97,7 +104,7 @@ const FAQPage = () => {
               key={index}
               className="bg-white shadow-md rounded-lg p-6 cursor-pointer hover:shadow-lg transition duration-200"
               onClick={() => toggleFAQ(index)}
-              style={{ alignSelf: "start" }} 
+              style={{ alignSelf: "start" }}
             >
               {/* Question */}
               <div className="flex justify-between items-center">
@@ -110,8 +117,7 @@ const FAQPage = () => {
                   <FiPlus className="text-xl text-gray-600" />
                 )}
               </div>
-              
-              
+
               {openIndex === index && (
                 <p className="text-gray-600 mt-4">{faq.answer}</p>
               )}
