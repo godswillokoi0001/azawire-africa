@@ -9,20 +9,12 @@ const faqData = [
   },
   {
     question: "Who is Azawire for?",
-<<<<<<< HEAD
-answer: `Azawire is built for:
-- Freelancers & remote workers who need smooth cross-border payments. 
-- Businesses looking for fast, low-cost transactions.
-- Everyday users who want simple and accessible banking solutions
-`,
-=======
 answer:[
       "Azawire is built for:",
       "• Freelancers & remote workers who need smooth cross-border payments.",
       "• Businesses looking for fast, low-cost transactions.", 
       "• Everyday users who want simple and accessible banking solutions"
     ].join('\n'),
->>>>>>> 4c5f8b667dd9f76a8adfe4d2a06d0549d5af542f
   },
   {
     question: "How does Azawire work?",

@@ -148,21 +148,22 @@ const BusinessProducts = () => {
       {/* Eight Card */}
       <div className="flex flex-col items-center bg-white rounded-lg p-2 lg:w-[32%] md:[40%] w-full">
         <img
-          src={products[5].image}
-          alt={products[5].title}
+          src={products[7].image}
+          alt={products[7].title}
           className="rounded-lg mb-4"
         />
         <div className="flex gap-4">
           <div className="bg-primary p-4 md:h-[5.3rem] md:w-[5.3rem] h-[4.5rem] w-[4.5rem] aspect-square rounded-full text-white text-[2.2rem] flex items-center justify-center">
             <GoArrowUpRight />
           </div>
-
           <div>
-            <h3 className="text-md font-normal md:text-[1.4rem] text-xl leading-5 tracking-tight pb-3">
-              {products[5].title}
-            </h3>
-            <p className="text-sm text-gray-600">{products[5].description}</p>
-          </div>
+        <h3 className="text-md font-normal md:text-[1.4rem] text-xl leading-5 tracking-tight pb-3">
+          {products[7].title}
+        </h3>
+        <p className="text-sm text-gray-600 pe-[40%]">
+          {products[7].description}
+        </p>
+      </div>
         </div>
       </div>
     </div>

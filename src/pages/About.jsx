@@ -176,53 +176,49 @@ const About = () => {
             </div>
             <div className="flex-grow lg:text-left text-center md:ml-8 lg:w-[75%]">
               <h3
-                className="text-3xl md:text-5xl font-sora mb-4 tracking-tight"
+                className="text-2xl md:text-5xl font-sora mb-4 tracking-tight"
                 style={{ lineHeight: 1.3 }}
               >
-                We are an exceptional <br /> Team of whatever
+                Behind Azawire is a team of innovators, fintech experts, and
+                creatives dedicated to revolutionizing digital banking
               </h3>
               <p className="text-gray-600 md:text-[1.1rem] text-[1rem] tracking-tight md:leading-8">
-                Azawire ensures that sending and receiving money—locally or
-                internationally <br /> — is effortless and cost-effective.
+                We believe in borderless banking solutions, security, and
+                seamless transactions for everyone. With a passion for financial
+                innovation, we're building the future of banking—one
+                milestone at a time.
               </p>
             </div>
           </div>
           {/* Second Row */}
-          <div className="flex flex-wrap justify-center md:gap-6 gap-2 lg:space-x-4 lg:max-w-6xl w-full mx-auto mb-12">
+          <div className="flex flex-wrap justify-center md:gap-6 gap-5 lg:space-x-4 lg:max-w-6xl w-full mx-auto mb-12">
             {teamMembers.slice(1, 5).map((member, index) => (
-              <div
-                key={index}
-                className="relative w-[125px] md:w-[40%] lg:w-[20%]"
-              >
+              <div key={index} className="relative w-full lg:w-[20%]">
                 <img
                   src={member.image}
                   alt={member.name}
                   className="w-full h-auto rounded-lg lg:grayscale hover:grayscale-0 transition duration-100"
                 />
-                <div className="absolute bottom-0 right-0 bg-secondary text-white text-center md:py-2 py-[0.2rem] w-[80%] md:rounded-tl-3xl rounded-tl-lg">
-                  <p className="font-semibold md:text-sm text-[0.5rem]">
-                    {member.name}
-                  </p>
-                  <p className="lg:text-xs text-[0.4rem]">{member.position}</p>
-                </div>
+              <div className="absolute bottom-0 right-0 bg-secondary text-white text-center py-2 w-[80%] rounded-tl-3xl">
+                <p className="font-semibold text-lg">{teamMembers[0].name}</p>
+                <p className="text-sm">{teamMembers[0].position}</p>
+              </div>
               </div>
             ))}
           </div>
 
           {/* Third Row */}
-          <div className="flex flex-wrap justify-center lg:gap-6 gap-3 max-w-6xl mx-auto mb-4 w-full">
+          <div className="flex flex-wrap justify-center lg:gap-6 gap-4 max-w-6xl mx-auto mb-4 w-full">
             {teamMembers.slice(5, 15).map((member, index) => (
-              <div key={index} className="relative w-[115px] md:w-[180px]">
+              <div key={index} className="relative w-full md:w-[180px]">
                 <img
                   src={member.image}
                   alt={member.name}
                   className="w-full h-auto rounded-xl lg:grayscale hover:grayscale-0 transition duration-100"
                 />
-                <div className="absolute bottom-0 left-0 right-0 bg-secondary text-white text-center md:py-2 py-[0.2rem]">
-                  <p className="font-semibold md:text-sm text-[0.6rem]">
-                    {member.name}
-                  </p>
-                  <p className="lg:text-xs text-[0.5rem]">{member.position}</p>
+                <div className="absolute bottom-0 left-0 right-0 bg-secondary text-white text-center md:py-2 py-2">
+                <p className="font-semibold text-lg">{teamMembers[0].name}</p>
+                <p className="text-sm">{teamMembers[0].position}</p>
                 </div>
               </div>
             ))}
