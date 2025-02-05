@@ -2,28 +2,33 @@ import React from "react";
 
 const BusinessHero = () => {
   return (
-    <section className="relative bg-privariant md:py-28 business-hero-bg"
-    style={{
-      backgroundImage: "url(/images/background-line-2.png)",
-      backgroundSize: "cover",
-      backgroundRepeat: "no-repeat",
-      backgroundPosition: "center",
-  }}
+    <section
+      className="relative bg-privariant md:py-28 business-hero-bg"
+      style={{
+        backgroundImage: "url(/images/background-line-2.png)",
+        backgroundSize: "cover",
+        backgroundRepeat: "no-repeat",
+        backgroundPosition: "center",
+      }}
     >
       <div className="max-w-screen-xl mx-auto px-4 md:py-12 py-8 flex flex-col-reverse md:flex-row items-center justify-between h-full">
         {/* Text Section */}
         <div className="md:w-[60%] md:mt-0 mt-12">
           <div className="text-left">
             <div className=" text-white">
-              <h1 className="text-3xl sm:text-5xl md:text-5xl font-semibold font-sora tracking-tight"
+              <h1
+                className="text-3xl sm:text-5xl md:text-5xl font-semibold font-sora tracking-tight"
                 style={{
                   lineHeight: 1.2,
                 }}
               >
-              Simplify your business with affordable, scalable payment solutions
+                Simplify your business with affordable, scalable payment
+                solutions
               </h1>
               <p className="md:max-w-xl mt-4 text-base sm:text-[1.3rem] text-white leading-8">
-              Azawire’s Business Solution is designed to scale with your enterprise, providing fast, secure, and cost-effective payment solutions.
+                Azawire’s Business Solution is designed to scale with your
+                enterprise, providing fast, secure, and cost-effective payment
+                solutions.
               </p>
               <div className="md:max-w-lg md:mt-16 my-8 flex flex-row justify-start md:justify-start gap-4">
                 <button className="w-1/2 flex items-center justify-center md:text-lg text-sm px-3 py-3 bg-secondary text-variant font-bold md:rounded-2xl rounded-lg transition hover:bg-secondary/80">
@@ -52,7 +57,7 @@ const BusinessHero = () => {
           <img
             src="/images/new-coins.png"
             alt="Dashboard Preview"
-            className="w-[14rem] lg:w-[36rem] max-w-none"
+            className="w-[24rem] lg:w-[36rem] max-w-none md:ms-0 ms-6"
           />
         </div>
       </div>

@@ -32,7 +32,7 @@ const HeroSection = () => {
           <img
             src="/images/new-coins.png"
             alt="3D Currency Icons"
-            className="w-[14rem] md:w-[34em] max-w-none float-start md:me-20 my-14 md:mt-8"
+            className="w-[24rem] md:w-[34em] max-w-none float-start md:me-20 md:ms-0 ms-6 md:my-14 my-2 md:mt-8"
           />
         </div>
       </div>

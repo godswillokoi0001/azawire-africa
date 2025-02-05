@@ -305,42 +305,18 @@ const Navbar = () => {
                 <ul className="pl-4 border-l">
                   <li>
                     <Link
-                      to="#"
+                      to="/productcustomer"
                       className="block px-4 py-2 hover:bg-primary/20"
                     >
-                      Virtual cards
+                      Personal
                     </Link>
                   </li>
                   <li>
                     <Link
-                      to="#"
+                      to="/productbusiness"
                       className="block px-4 py-2 hover:bg-primary/20"
                     >
-                      physical card
-                    </Link>
-                  </li>
-                  <li>
-                    <Link
-                      to="#"
-                      className="block px-4 py-2 hover:bg-primary/20"
-                    >
-                      Offline payment
-                    </Link>
-                  </li>
-                  <li>
-                    <Link
-                      to="#"
-                      className="block px-4 py-2 hover:bg-primary/20"
-                    >
-                      Multicurrency virtual account
-                    </Link>
-                  </li>
-                  <li>
-                    <Link
-                      to="#"
-                      className="block px-4 py-2 hover:bg-primary/20"
-                    >
-                      Stable coin payment
+                      Business
                     </Link>
                   </li>
                 </ul>

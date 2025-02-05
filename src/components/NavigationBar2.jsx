@@ -300,67 +300,18 @@ const NavigationBar2 = () => {
                 <ul className="pl-4 border-l">
                   <li>
                     <Link
-                      to="#"
+                      to="/productcustomer"
                       className="block px-4 py-2 hover:bg-primary/20"
                     >
-                      Virtual and physical card issuance
+                      Personal
                     </Link>
                   </li>
                   <li>
                     <Link
-                      to="#"
+                      to="/productbusiness"
                       className="block px-4 py-2 hover:bg-primary/20"
                     >
-                      Offline payment integrationProduct 2
-                    </Link>
-                  </li>
-                  <li>
-                    <Link
-                      to="#"
-                      className="block px-4 py-2 hover:bg-primary/20"
-                    >
-                      Multicurrency Account
-                    </Link>
-                  </li>
-                  <li>
-                    <Link
-                      to="#"
-                      className="block px-4 py-2 hover:bg-primary/20"
-                    >
-                      Payout
-                    </Link>
-                  </li>
-                  <li>
-                    <Link
-                      to="#"
-                      className="block px-4 py-2 hover:bg-primary/20"
-                    >
-                      Payment link
-                    </Link>
-                  </li>
-                  <li>
-                    <Link
-                      to="#"
-                      className="block px-4 py-2 hover:bg-primary/20"
-                    >
-                      {" "}
-                      Azaconnect
-                    </Link>
-                  </li>
-                  <li>
-                    <Link
-                      to="#"
-                      className="block px-4 py-2 hover:bg-primary/20"
-                    >
-                      Multichain wallet
-                    </Link>
-                  </li>
-                  <li>
-                    <Link
-                      to="#"
-                      className="block px-4 py-2 hover:bg-primary/20"
-                    >
-                      on-ramp and off-ramp payment
+                      Business
                     </Link>
                   </li>
                 </ul>
