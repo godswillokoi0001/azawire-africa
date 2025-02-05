@@ -13,7 +13,13 @@ const Navbar = () => {
   };
 
   const location = useLocation();
-  const isActive = (path) => location.pathname === path;
+  const isActive = (path) => {
+
+      return location.pathname === path || (path === "/business" && location.pathname === "/productcustomer");
+
+    
+  };
+  
 
   const handleDropdownClick = (menu) => {
     setOpenDropdown(openDropdown === menu ? null : menu);
@@ -65,9 +71,7 @@ const Navbar = () => {
               <button
                 onClick={() => handleDropdownClick("products")}
                 className={`hover:text-primary flex gap-x-1 items-center ${
-                  openDropdown === "products"
-                    ? "text-primary"
-                    : ""
+                  openDropdown === "products" ? "text-primary" : ""
                 }`}
               >
                 Products
@@ -98,7 +102,6 @@ const Navbar = () => {
                       Business
                     </Link>
                   </li>
-
                 </ul>
               )}
             </li>
@@ -158,7 +161,8 @@ const Navbar = () => {
             </li>
             <li>
               <a
-                to="https://azawire.readme.io" target="_blank"
+                to="https://azawire.readme.io"
+                target="_blank"
                 className={`hover:text-primary ${
                   isActive("#") ? "text-primary font-semibold" : ""
                 }`}
@@ -196,17 +200,18 @@ const Navbar = () => {
               className={`${
                 isActive("/business")
                   ? "bg-primary text-white"
-                  : "bg-transparent text-black border-black border hover:bg-gray-200"
+                  : "bg-transparent text-black border-black border"
               } font-clash py-2 px-6 rounded-full`}
             >
               Business
             </Link>
+
             <Link
               to="/"
               className={`${
                 isActive("/")
                   ? "bg-primary text-white"
-                  : "bg-transparent text-white border-white"
+                  : "bg-transparent text-black border-black border"
               } font-clash py-2 px-6 rounded-full hover:bg-variant`}
             >
               Personal
@@ -353,7 +358,8 @@ const Navbar = () => {
             <li>
               <a
                 href="https://azawire.readme.io"
-                className="block text-gray-700 hover:text-primary py-3 border-t" target="_blank"
+                className="block text-gray-700 hover:text-primary py-3 border-t"
+                target="_blank"
               >
                 Developers
               </a>
