@@ -4,18 +4,20 @@ import { FiPlus, FiMinus } from "react-icons/fi";
 const faqData = [
   {
     question: "What is Azawire?",
-    answer:
-      "Azawire is a next-generation banking platform integrating Web3 technology to make global payments seamless. We offer stablecoin on-ramp and off-ramp services, virtual cards, USSD payments, WhatsApp banking, and free US account numbers for ACH transfers.",
+    answer: [
+      "Azawire is a next-generation banking platform integrating Web3 technology to make global payments seamless.",
+      "We offer:",
+      "• Stablecoin on-ramp and off-ramp services",
+      "• Virtual cards",
+      "• USSD payments",
+      "• WhatsApp banking",
+      "• Free US account numbers for ACH transfers"
+    ].join('\n')
   },
-  {
-    question: "Who is Azawire for?",
+      question: "Who is Azawire for?",
 answer: `Azawire is built for:
-- Freelancers & remote workers who need smooth cross-border payments. 
-
-- Businesses looking for fast, low-cost transactions.
-
-- Everyday users who want simple and accessible banking solutions
-`,
+Freelancers & remote workers who need smooth cross-border payments. Businesses looking for fast, low-cost transactions and Everyday users who want simple and accessible banking solutions
+,
   },
   {
     question: "How does Azawire work?",
