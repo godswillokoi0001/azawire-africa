@@ -42,10 +42,10 @@ const NavigationBar2 = () => {
     setMobileDropdown(mobileDropdown === menu ? null : menu);
   };
   return (
-    <nav className="w-full fixed top-0 z-40 md:bg-transparent md:backdrop-blur-none backdrop-blur-sm bg-variant/30">
+    <nav className="w-full fixed top-0 z-40 md:bg-transparent md:backdrop-blur-none backdrop-blur-sm bg-privariant">
       <div className="max-w-7xl mx-auto flex items-center justify-between px-4 py-3">
         {/* Left Side - Logo and Navigation */}
-        <div className="lg:flex items-center space-x-4 backdrop-blur-sm md:p-4 md:bg-variant/80 bg-transparent rounded-full md:border border-primary">
+        <div className="lg:flex items-center space-x-4 backdrop-blur-sm md:p-4 md:bg-privariant/80 bg-transparent rounded-full md:border border-primary">
           {/* Logo */}
           <Link
             to="/"
