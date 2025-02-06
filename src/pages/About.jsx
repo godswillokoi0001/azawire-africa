@@ -7,72 +7,72 @@ const teamMembers = [
   {
     name: "Emmanuel Onyo",
     position: "CEO & CO-FOUNDER",
-    image: "/images/team1.png",
+    image: "/images/team/Emmanuel Onyo.png",
   },
   {
-    name: "Terry O Christopher",
+    name: "Terry Oyabrade",
     position: "CO-FOUNDER",
-    image: "/images/team1.png",
+    image: "/images/team/Terry Oyabrade.png",
   },
   {
-    name: "Emmanuel Onyo",
+    name: "Njomen Usman Jnr. Abdulahi",
     position: "CO-FOUNDER",
-    image: "/images/team1.png",
-  },
-  {
-    name: "Emmanuel Onyo",
-    position: "CO-FOUNDER",
-    image: "/images/team1.png",
+    image: "/images/team/Njomen Usman Jnr. Abdulahi.png",
   },
   {
     name: "Emmanuel Onyo",
     position: "CO-FOUNDER",
-    image: "/images/team1.png",
+    image: "/images/team/placeholder.png",
+  },
+  {
+    name: "Emmanuel Onyo",
+    position: "CO-FOUNDER",
+    image: "/images/team/placeholder.png",
   },
   {
     name: "Emmanuel Onyo",
     position: "FRONT-END DEV.",
-    image: "/images/team1.png",
+    image: "/images/team/placeholder.png",
   },
   {
     name: "Emmanuel Onyo",
     position: "FRONT-END DEV.",
-    image: "/images/team1.png",
+    image: "/images/team/placeholder.png",
   },
   {
     name: "Emmanuel Onyo",
     position: "FRONT-END DEV.",
-    image: "/images/team1.png",
+    image: "/images/team/placeholder.png",
   },
   {
     name: "Emmanuel Onyo",
     position: "FRONT-END DEV.",
-    image: "/images/team1.png",
+    image: "/images/team/placeholder.png",
   },
   {
     name: "Emmanuel Onyo",
     position: "FRONT-END DEV.",
-    image: "/images/team1.png",
+    image: "/images/team/placeholder.png",
   },
   {
     name: "Emmanuel Onyo",
     position: "FRONT-END DEV.",
-    image: "/images/team1.png",
+    image: "/images/team/placeholder.png",
   },
   {
     name: "Emmanuel Onyo",
     position: "FRONT-END DEV.",
-    image: "/images/team1.png",
+    image: "/images/team/placeholder.png",
   },
   {
     name: "Emmanuel Onyo",
     position: "FRONT-END DEV.",
-    image: "/images/team1.png",
+    image: "/images/team/placeholder.png",
   },
   {
     name: "Emmanuel Onyo",
     position: "FRONT-END DEV.",
-    image: "/images/team1.png",
+    image: "/images/team/placeholder.png",
   },
 ];
 
@@ -200,8 +200,8 @@ const About = () => {
                   className="w-full h-auto rounded-lg lg:grayscale hover:grayscale-0 transition duration-100"
                 />
               <div className="absolute bottom-0 right-0 bg-secondary text-white text-center md:py-1 py-2  w-[80%] rounded-tl-3xl">
-                <p className="font-semibold md:text-sm text-lg">{teamMembers[0].name}</p>
-                <p className="md:text-[0.7rem] text-sm">{teamMembers[0].position}</p>
+                <p className="font-semibold md:text-sm text-lg">{member.name}</p>
+                <p className="md:text-[0.7rem] text-sm">{member.position}</p>
               </div>
               </div>
             ))}

@@ -16,10 +16,7 @@ const Navbar = () => {
   const isActive = (path) => {
 
       return location.pathname === path || (path === "/business" && location.pathname === "/productcustomer");
-
-    
   };
-  
 
   const handleDropdownClick = (menu) => {
     setOpenDropdown(openDropdown === menu ? null : menu);
