@@ -5,7 +5,7 @@ const BusinessHero = () => {
     <section
       className="relative bg-privariant md:py-28 business-hero-bg"
       style={{
-        backgroundImage: "url(/images/background-line-2.png)",
+        backgroundImage: "url(/images/background-line-4.png)",
         backgroundSize: "cover",
         backgroundRepeat: "no-repeat",
         backgroundPosition: "center",

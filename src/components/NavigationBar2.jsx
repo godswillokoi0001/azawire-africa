@@ -153,8 +153,8 @@ const NavigationBar2 = () => {
             </li>
             <li>
               <a
-                to="https://azawire.readme.io" target="_blank"
-                className={`hover:text-primary ${
+                href="https://azawire.readme.io" target="_blank"
+                className={`hover:text-primary cursor-pointer ${
                   isActive("#") ? "text-primary font-semibold" : ""
                 }`}
               >
@@ -347,8 +347,8 @@ const NavigationBar2 = () => {
             </li>
             <li>
               <a
-                to="https://azawire.readme.io" target="_blank"
-                className="block text-gray-700 hover:text-primary py-3 border-t"
+                href="https://azawire.readme.io" target="_blank"
+                className="block text-gray-700 hover:text-primary py-3 border-t cursor-pointer"
               >
                 Developers
               </a>
