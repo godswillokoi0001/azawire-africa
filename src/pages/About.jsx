@@ -15,17 +15,17 @@ const teamMembers = [
     image: "/images/team/Terry Oyabrade.png",
   },
   {
-    name: "Usman Njomen",
+    name: "Njomen U. J. Abdulahi",
     position: "CO-FOUNDER",
     image: "/images/team/Njomen Usman Jnr. Abdulahi.png",
   },
   {
-    name: "Emmanuel Onyo",
+    name: "Ikechukwu Okechukwu",
     position: "CO-FOUNDER",
     image: "/images/team/placeholder.png",
   },
   {
-    name: "Emmanuel Onyo",
+    name: "Daniel Tamunotonye",
     position: "CO-FOUNDER",
     image: "/images/team/placeholder.png",
   },
