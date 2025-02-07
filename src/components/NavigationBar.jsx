@@ -158,9 +158,9 @@ const Navbar = () => {
             </li>
             <li>
               <a
-                to="https://azawire.readme.io"
-                target="_blank"
-                className={`hover:text-primary ${
+                href="https://azawire.readme.io" target="_blank"
+            
+                className={`hover:text-primary cursor-pointer ${
                   isActive("#") ? "text-primary font-semibold" : ""
                 }`}
               >
