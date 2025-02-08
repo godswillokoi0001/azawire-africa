@@ -275,7 +275,7 @@ const NavigationBar2 = () => {
           <ul className="font-semibold">
             <li>
               <Link
-                to="/personal"
+                to="/"
                 className="block text-gray-700 hover:text-primary py-3 border-t"
               >
                 Personal
