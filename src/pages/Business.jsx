@@ -107,10 +107,10 @@ const Business = () => {
 
               <div>
                 <h3 className="text-md font-normal md:text-[1.4rem] text-xl leading-5 tracking-tight pb-3">
-                  {products[0].title}
+                  {products[2].title}
                 </h3>
                 <p className="text-sm text-gray-600">
-                  {products[0].description}
+                  {products[2].description}
                 </p>
               </div>
             </div>
