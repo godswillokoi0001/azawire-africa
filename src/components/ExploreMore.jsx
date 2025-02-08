@@ -19,9 +19,9 @@ const ExploreMore = () => {
         <div className="bg-white md:p-8 p-4 sm:p-12 rounded-3xl w-full">
           {/* Heading and Button */}
           <div className="mb-12">
-            <h2 className="mb-6 font-normal font-poppins md:text-[2.6rem] text-[1.2rem] text-[#252C34] md:leading-[3.5rem] tracking-tighter">
-              Build your portfolio from a single app, <br />
-              designed for the forward-thinking investor.
+            <h2 className="mb-6 font-normal font-poppins md:text-[2.6rem] text-[1.2rem] text-[#252C34] md:leading-[3.5rem] tracking-tighter md:pe-0 pe-12">
+              Your all-in-one app to spend, save, <br className="md:block hidden" /> and manage multiple
+              currencies effortlessly.
             </h2>
             <button className="bg-secondary px-8 py-4 rounded-lg font-poppins text-[1.1rem] text-white transition-all">
               Explore more
