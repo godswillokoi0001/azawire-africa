@@ -241,17 +241,17 @@ const NavigationBar2 = () => {
 
         {/* Right Side - Sign In and Language Selector */}
         <div className="hidden lg:flex items-center space-x-3 backdrop-blur-sm p-4 bg-variant/80 rounded-full border border-primary">
-          <a
-            href="#"
+          <Link
+            to="/waitlist"
             className="bg-primary font-clash text-white py-2 px-3 rounded-full flex items-center space-x-2 transition-all"
           >
-            <span>Sign In</span>
+            <span>Get Started</span>
             <img
               src="/images/icons/Arrow right.svg"
               alt="Arrow Right"
               className="w-4 h-4"
             />
-          </a>
+          </Link>
           <div className="relative flex items-center space-x-2 bg-white py-2 px-2 rounded-full cursor-pointer">
             <img
               src="/images/Frame 1000004490.png"
@@ -372,9 +372,12 @@ const NavigationBar2 = () => {
             </li>
           </ul>
           <div className="mt-6 flex flex-col space-y-4">
+            <Link to="/waitlist">
+            
             <button className="w-full bg-variant font-clash text-white py-3 rounded-md hover:bg-variant transition">
               Join Waitlist
             </button>
+            </Link>
           </div>
         </div>
       )}

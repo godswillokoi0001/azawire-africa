@@ -1,9 +1,16 @@
 import { HiMiniArrowRight } from "react-icons/hi2";
 
 import React from "react";
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 
 const Footer = () => {
+  const navigate = useNavigate();
+
+  const handleCareerClick = (e) => {
+    e.preventDefault();
+    navigate('/about', { state: { scrollTo: 'team' } });
+  };
+
   return (
     <footer className="bg-lightblue text-dark ">
       <div className="max-w-screen-xl mx-auto py-10 px-6">
@@ -103,9 +110,9 @@ const Footer = () => {
               <h3 className="font-bold mb-4">Company</h3>
               <ul className="space-y-2 text-gray-600">
                 <li>
-                  <Link to="" className="hover:underline">
+                  <a href="#" onClick={handleCareerClick} className="hover:underline">
                     Careers
-                  </Link>
+                  </a>
                 </li>
                 <li>
                   <Link to="/about" className="hover:underline">
@@ -134,7 +141,7 @@ const Footer = () => {
                 </span>
               </form>
               <p className="md:text-md text-[1rem] text-gray-600 leading-6">
-                I confirm that I have read Azawire’s Privacy policy and agree
+                I confirm that I have read Azawire's Privacy policy and agree
                 with it.
               </p>
 

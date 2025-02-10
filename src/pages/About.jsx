@@ -1,7 +1,8 @@
-import React from "react";
+import React, { useEffect, useRef } from "react";
 import NavigationBar2 from "../components/NavigationBar2";
 import Footer from "../components/Footer";
 import JoinOurTeam from "../components/JoinOurTeam";
+import { useLocation } from 'react-router-dom';
 
 const teamMembers = [
   {
@@ -77,6 +78,15 @@ const teamMembers = [
 ];
 
 const About = () => {
+  const location = useLocation();
+  const teamRef = useRef(null);
+
+  useEffect(() => {
+    if (location.state?.scrollTo === 'team' && teamRef.current) {
+      teamRef.current.scrollIntoView({ behavior: 'smooth' });
+    }
+  }, [location]);
+
   return (
     <>
       <header className="bg-privariant min:h-screen">
@@ -132,8 +142,8 @@ const About = () => {
                 </p>
                 <p>
                   With Azawire, banking is no longer limited by borders,
-                  platforms, or banking hours. It’s instant, inclusive, and
-                  built for the digital economy.
+                  platforms, or banking hours. It's instant, inclusive, and
+                  built for the digital economy.
                 </p>
               </div>
             </div>
@@ -149,7 +159,7 @@ const About = () => {
         </div>
       </section>
 
-      <section>
+      <section ref={teamRef} id="team">
         <div className="py-16 px-6 bg-white font-sora">
           {/* Title Section */}
           <div className="text-center mb-12">
@@ -186,7 +196,7 @@ const About = () => {
                 We believe in borderless banking solutions, security, and
                 seamless transactions for everyone. With a passion for financial
                 innovation, we're building the future of banking—one
-                milestone at a time.
+                milestone at a time.
               </p>
             </div>
           </div>
@@ -199,33 +209,41 @@ const About = () => {
                   alt={member.name}
                   className="w-full h-auto rounded-lg lg:grayscale hover:grayscale-0 transition duration-100"
                 />
-              <div className="absolute bottom-0 right-0 bg-secondary text-white text-center md:py-1 py-2  w-[80%] rounded-tl-3xl">
-                <p className="font-semibold md:text-sm text-lg">{member.name}</p>
-                <p className="md:text-[0.7rem] text-sm">{member.position}</p>
-              </div>
+                <div className="absolute bottom-0 right-0 bg-secondary text-white text-center md:py-1 py-2  w-[80%] rounded-tl-3xl">
+                  <p className="font-semibold md:text-sm text-lg">
+                    {member.name}
+                  </p>
+                  <p className="md:text-[0.7rem] text-sm">{member.position}</p>
+                </div>
               </div>
             ))}
           </div>
 
-{/* Third Row */}
-<div className="max-w-6xl mx-auto mb-4 w-full">
-  <div className="flex lg:flex-wrap flex-nowrap overflow-x-auto scrollbar-hide justify-start md:justify-center lg:gap-6 gap-4">
-    {teamMembers.slice(5, 15).map((member, index) => (
-      <div key={index} className="relative w-[70%] sm:w-[50%] md:w-[180px] flex-shrink-0 snap-start">
-        <img
-          src={member.image}
-          alt={member.name}
-          className="w-full h-auto rounded-xl lg:grayscale hover:grayscale-0 transition duration-100"
-        />
-        <div className="absolute bottom-0 left-0 right-0 bg-secondary text-white text-center md:py-1 py-2">
-          <p className="font-semibold md:text-sm text-lg">{member.name}</p>
-          <p className="md:text-[0.7rem] text-sm">{member.position}</p>
-        </div>
-      </div>
-    ))}
-  </div>
-</div>
-
+          {/* Third Row */}
+          <div className="max-w-6xl mx-auto mb-4 w-full">
+            <div className="flex lg:flex-wrap flex-nowrap overflow-x-auto scrollbar-hide justify-start md:justify-center lg:gap-6 gap-4">
+              {teamMembers.slice(5, 15).map((member, index) => (
+                <div
+                  key={index}
+                  className="relative w-[70%] sm:w-[50%] md:w-[180px] flex-shrink-0 snap-start"
+                >
+                  <img
+                    src={member.image}
+                    alt={member.name}
+                    className="w-full h-auto rounded-xl lg:grayscale hover:grayscale-0 transition duration-100"
+                  />
+                  <div className="absolute bottom-0 left-0 right-0 bg-secondary text-white text-center md:py-1 py-2">
+                    <p className="font-semibold md:text-sm text-lg">
+                      {member.name}
+                    </p>
+                    <p className="md:text-[0.7rem] text-sm">
+                      {member.position}
+                    </p>
+                  </div>
+                </div>
+              ))}
+            </div>
+          </div>
 
           {/* Fourth Row */}
           {/* <div className="flex flex-wrap justify-center gap-2 max-w-6xl mx-auto content-end">

@@ -248,17 +248,17 @@ const Navbar = () => {
 
         {/* Right Side - Sign In and Language Selector */}
         <div className="hidden md:flex items-center space-x-3 backdrop-blur-sm p-4 bg-white/60 rounded-full border border-[#e5f9ff]">
-          <a
-            href="#"
+          <Link
+            to="/waitlist"
             className="bg-primary font-clash text-white py-2 px-3 rounded-full flex items-center space-x-2 hover:bg-variant transition-all"
           >
-            <span>Sign In</span>
+            <span>Get Started</span>
             <img
               src="/images/icons/Arrow right.svg"
               alt="Arrow Right"
               className="w-4 h-4"
             />
-          </a>
+          </Link>
           <div className="relative flex items-center space-x-2 bg-white py-2 px-2 rounded-full cursor-pointer">
             <img
               src="/images/Frame 1000004490.png"
@@ -380,9 +380,12 @@ const Navbar = () => {
             </li>
           </ul>
           <div className="mt-6 flex flex-col space-y-4">
+            <Link to="/waitlist">
+            
             <button className="w-full bg-variant font-clash text-white py-3 rounded-md hover:bg-variant transition">
               Join Waitlist
             </button>
+            </Link>
           </div>
         </div>
       )}
