@@ -2,7 +2,11 @@ import React, { useEffect, useRef } from "react";
 import NavigationBar2 from "../components/NavigationBar2";
 import Footer from "../components/Footer";
 import JoinOurTeam from "../components/JoinOurTeam";
-import { useLocation } from 'react-router-dom';
+import { useLocation } from "react-router-dom";
+import AnimatedSection from "../components/AnimatedSection";
+import Aos from "aos";
+Aos.init();
+
 
 const teamMembers = [
   {
@@ -82,8 +86,8 @@ const About = () => {
   const teamRef = useRef(null);
 
   useEffect(() => {
-    if (location.state?.scrollTo === 'team' && teamRef.current) {
-      teamRef.current.scrollIntoView({ behavior: 'smooth' });
+    if (location.state?.scrollTo === "team" && teamRef.current) {
+      teamRef.current.scrollIntoView({ behavior: "smooth" });
     }
   }, [location]);
 
@@ -127,7 +131,7 @@ const About = () => {
         <div className="max-w-screen-xl mx-auto px-6 lg:px-4 md:py-20 py-12">
           <div className="flex flex-col-reverse md:flex-row justify-between items-center gap-6">
             {/* Left Section */}
-            <div className="w-full md:w-[60%] md:pb-24">
+            <div className="w-full md:w-[60%] md:pb-24 " data-aos="fade-right" data-aos-duration="2000">
               <h1
                 className="text-2xl md:text-4xl font-normal text-gray-800 font-poppins tracking-tighter leading-snug pb-4"
                 style={{ lineHeight: 1.5 }}
@@ -148,7 +152,7 @@ const About = () => {
               </div>
             </div>
             {/* Right Section */}
-            <div className="w-full md:w-[40%]">
+            <div className="w-full md:w-[40%]" data-aos="fade-left" data-aos-duration="2000">
               <img
                 src="/images/Group 1000001760.png"
                 alt="3D Currency Icons"
@@ -172,42 +176,46 @@ const About = () => {
             </p>
           </div>
           {/* First Row */}
-          <div className="flex flex-col md:flex-row items-center gap-6 max-w-6xl mx-auto mb-12">
-            <div className="relative group flex-grow lg:w-[35%]">
-              <img
-                src={teamMembers[0].image}
-                alt={teamMembers[0].name}
-                className="w-full h-auto rounded-[1.8rem] lg:grayscale group-hover:grayscale-0 transition duration-100"
-              />
-              <div className="absolute bottom-0 right-0 bg-secondary text-white text-center py-2 w-[80%] rounded-tl-3xl">
-                <p className="font-semibold text-lg">{teamMembers[0].name}</p>
-                <p className="text-sm">{teamMembers[0].position}</p>
+          <AnimatedSection className="bg-gray-50" data-aos="fade-up" data-aos-duration="1000">
+            <div className="flex flex-col md:flex-row items-center gap-6 max-w-6xl mx-auto mb-12">
+              <div className="relative group flex-grow lg:w-[35%]" data-aos="fade-right" data-aos-delay="200">
+                <img
+                  src={teamMembers[0].image}
+                  alt={teamMembers[0].name}
+                  className="w-full h-auto rounded-[1.8rem] lg:grayscale-0 group-hover:grayscale transition duration-100 hover:scale-105 transform"
+                />
+                <div className="absolute bottom-0 right-0 bg-secondary text-white text-center py-2 w-[80%] rounded-tl-3xl">
+                  <p className="font-semibold text-lg">{teamMembers[0].name}</p>
+                  <p className="text-sm">{teamMembers[0].position}</p>
+                </div>
+              </div>
+              <div className="flex-grow lg:text-left text-center md:ml-8 lg:w-[75%]" data-aos="fade-left" data-aos-delay="400">
+                <h3
+                  className="text-2xl md:text-5xl font-sora mb-4 tracking-tight"
+                  style={{ lineHeight: 1.2 }}
+                >
+                  Behind Azawire is a team of innovators, fintech experts, and
+                  creatives dedicated to revolutionizing digital banking
+                </h3>
+                <p className="text-gray-600 md:text-[1.3rem] text-[1rem] tracking-tight md:leading-8">
+                  We believe in borderless banking solutions, security, and
+                  seamless transactions for everyone. With a passion for
+                  financial innovation, we're building the future of banking—one
+                  milestone at a time.
+                </p>
               </div>
             </div>
-            <div className="flex-grow lg:text-left text-center md:ml-8 lg:w-[75%]">
-              <h3
-                className="text-2xl md:text-5xl font-sora mb-4 tracking-tight"
-                style={{ lineHeight: 1.2 }}
-              >
-                Behind Azawire is a team of innovators, fintech experts, and
-                creatives dedicated to revolutionizing digital banking
-              </h3>
-              <p className="text-gray-600 md:text-[1.3rem] text-[1rem] tracking-tight md:leading-8">
-                We believe in borderless banking solutions, security, and
-                seamless transactions for everyone. With a passion for financial
-                innovation, we're building the future of banking—one
-                milestone at a time.
-              </p>
-            </div>
-          </div>
+          </AnimatedSection>
           {/* Second Row */}
+          <AnimatedSection className="bg-gray-50" data-aos="fade-up" data-aos-duration="1000">
+          
           <div className="flex flex-wrap justify-center md:gap-6 gap-5 lg:space-x-4 lg:max-w-6xl w-full mx-auto mb-12 ">
             {teamMembers.slice(1, 5).map((member, index) => (
-              <div key={index} className="relative w-full lg:w-[20%]">
+              <div key={index} className="relative w-full lg:w-[20%]" data-aos="zoom-in" data-aos-delay={200 + (index * 100)}>
                 <img
                   src={member.image}
                   alt={member.name}
-                  className="w-full h-auto rounded-lg lg:grayscale hover:grayscale-0 transition duration-100"
+                  className="w-full h-auto rounded-lg lg:grayscale-0 hover:grayscale transition duration-100"
                 />
                 <div className="absolute bottom-0 right-0 bg-secondary text-white text-center md:py-1 py-2  w-[80%] rounded-tl-3xl">
                   <p className="font-semibold md:text-sm text-lg">
@@ -218,14 +226,19 @@ const About = () => {
               </div>
             ))}
           </div>
+          </AnimatedSection>
 
           {/* Third Row */}
-          <div className="max-w-6xl mx-auto mb-4 w-full">
+          <AnimatedSection className="bg-gray-50" data-aos="fade-up" data-aos-duration="1000">
+            <div className="max-w-6xl mx-auto mb-4 w-full">
+
             <div className="flex lg:flex-wrap flex-nowrap overflow-x-auto scrollbar-hide justify-start md:justify-center lg:gap-6 gap-4">
               {teamMembers.slice(5, 15).map((member, index) => (
                 <div
                   key={index}
                   className="relative w-[70%] sm:w-[50%] md:w-[180px] flex-shrink-0 snap-start"
+                  data-aos="zoom-in" 
+                  data-aos-delay={200 + (index * 100)}
                 >
                   <img
                     src={member.image}
@@ -243,9 +256,11 @@ const About = () => {
                 </div>
               ))}
             </div>
-          </div>
+            </div>
+          </AnimatedSection>
 
           {/* Fourth Row */}
+
           {/* <div className="flex flex-wrap justify-center gap-2 max-w-6xl mx-auto content-end">
             {teamMembers.slice(10).map((member, index) => (
               <div key={index} className="relative w-[125px] md:w-[180px]">

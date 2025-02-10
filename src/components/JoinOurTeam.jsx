@@ -5,7 +5,7 @@ import { FiMapPin, FiClock } from "react-icons/fi";
 const JoinOurTeam = () => {
   return (
     <div className="bg-blue-900 text-white md:py-36 py-12 px-6 md:px-16 font-sora">
-      <div className="max-w-5xl mx-auto text-center">
+      <div className="max-w-5xl mx-auto text-center" >
         <h2 className="md:text-6xl text-4xl font-normal mb-4">Join our Team</h2>
         <p className="md:text-xl text-md text-gray-300 mb-12">
           Azawire ensures that sending and receiving money—locally <br /> or internationally—is effortless and cost-effective.
@@ -16,7 +16,7 @@ const JoinOurTeam = () => {
               key={item}
               className="flex flex-col md:flex-row justify-between bg-white text-gray-900 p-8 py-8 rounded-lg text-left"
             >
-              <div>
+              <div >
                 <h3 className="text-[1.8rem] font-bold mb-3">Financial Analyst</h3>
                 <p className="text-gray-600 mb-4 text-lg">
                   We are looking for a mid-level financial analyst to join our team.
