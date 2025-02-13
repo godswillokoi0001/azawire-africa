@@ -15,7 +15,7 @@ const Navbar = () => {
   const location = useLocation();
   const isActive = (path) => {
 
-      return location.pathname === path || (path === "/business" && location.pathname === "/productcustomer");
+      return location.pathname === path || (path === "/business" && location.pathname === "/productcustomer" );
   };
 
   const handleDropdownClick = (menu) => {
@@ -148,7 +148,7 @@ const Navbar = () => {
             </li>
             <li>
               <Link
-                to="#"
+                to="/pricing"
                 className={`hover:text-primary ${
                   isActive("/pricing") ? "text-primary font-semibold" : ""
                 }`}
@@ -208,7 +208,7 @@ const Navbar = () => {
               className={`${
                 isActive("/")
                   ? "bg-primary text-white"
-                  : "bg-transparent text-black border-black border"
+                  : "bg-transparent hover:text-white text-black border-black border"
               } font-clash py-2 px-6 rounded-full hover:bg-variant`}
             >
               Personal

@@ -14,7 +14,7 @@ import WaitlistPage from "./pages/WaitlistPage";
 import WaitlistSuccessPage from "./pages/WaitlistListSuccessPage";
 import ProductCustomer from "./pages/ProductCustomer";
 import ProductBusiness from "./pages/ProductBusiness";
-// import Pricing from "./pages/Pricing";
+import Pricing from "./pages/Pricing";
 
 function App() {
   return (
@@ -35,7 +35,7 @@ function App() {
         <Route path="/success" element={<WaitlistSuccessPage />} />
         <Route path="/productcustomer" element={<ProductCustomer />} />
         <Route path="/productbusiness" element={<ProductBusiness />} />
-        {/* <Route path="/pricing" element={<Pricing /> } /> */}
+        <Route path="/pricing" element={<Pricing />} />
       </Routes>
     </Router>
 );

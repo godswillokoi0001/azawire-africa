@@ -143,7 +143,7 @@ const NavigationBar2 = () => {
             </li>
             <li>
               <Link
-                to="#"
+                to="/pricing"
                 className={`hover:text-primary ${
                   isActive("/pricing") ? "text-primary font-semibold" : ""
                 }`}
