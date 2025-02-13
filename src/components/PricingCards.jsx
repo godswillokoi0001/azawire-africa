@@ -6,11 +6,10 @@ const PricingCards = () => {
         <span className="bg-secondary text-white px-6 py-2 rounded-lg text-[1.9rem] font-medium ">
           Pricing
         </span>
-        <h2 className="text-6xl font-bold mt-4 text-gray-900">
+        <h2 className="md:text-6xl text-4xl font-bold mt-4 text-gray-900">
           Transparent, fair pricing
         </h2>
       </div>
-    
     <div className="flex flex-col md:flex-row gap-8 justify-center items-start max-w-6xl mx-auto px-4">
       {/* Blue Card */}
       <div className="bg-privariant text-white rounded-3xl p-8 w-full max-w-md">

@@ -141,7 +141,7 @@ const NavigationBar2 = () => {
                 </ul>
               )}
             </li>
-            <li>
+            {/* <li>
               <Link
                 to="/pricing"
                 className={`hover:text-primary ${
@@ -150,7 +150,7 @@ const NavigationBar2 = () => {
               >
                 Pricing
               </Link>
-            </li>
+            </li> */}
             <li>
               <a
                 href="https://azawire.readme.io" target="_blank"
