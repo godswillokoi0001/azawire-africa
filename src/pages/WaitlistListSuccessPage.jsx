@@ -38,7 +38,7 @@ const WaitlistSuccessPage = () => {
             <br />
             <div className="flex justify-center md:flex-row flex-col gap-3">
               <a
-                href="https://t.me/azawireio"
+                href="https://t.me/azawireio" target="_blank" rel="noreferrer"
                 className="inline-flex justify-center items-center bg-primary hover:bg-blue-600 px-8 py-4 rounded-lg font-poppins text-sm text-white md:text-lg transition-all duration-300"
               >
                 Join Telegram
