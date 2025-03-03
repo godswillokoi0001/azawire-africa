@@ -9,6 +9,7 @@ import Footer from "../components/Footer";
 import HeroSection from "../components/HeroSection";
 import NavigationBar from "../components/NavigationBar";
 import ValueProposition from "../components/ValueProposition";
+import PaymentCards from "../components/PaymentCards";
 // import { offeringsData } from "/src/components/offeringsData.jsx";
 import TrustedPartners from "../components/TrustedPartners";
 import products from "../components/customerProductData";
@@ -158,6 +159,7 @@ const Personal = () => {
               </div>
             </div>
           </section>
+          <PaymentCards />
           <ValueProposition />
           <DownloadAppSection />
           <Footer />
