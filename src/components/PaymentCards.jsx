@@ -1,108 +1,79 @@
-import "aos/dist/aos.css";
-import { PiApertureThin } from "react-icons/pi";
-import { SlArrowRightCircle } from "react-icons/sl";
-import { IoBusinessOutline } from "react-icons/io5";
-import { Link, useLocation } from "react-router-dom";
+import React from "react";
 
-const ExploreMore = () => {
-  const location = useLocation();
-  const isPersonalPage = location.pathname === "/";
-  const isBusinessPage = location.pathname === "/business";
-
+const PaymentCard = () => {
   return (
-    <section className="py-16">
-      <div
-        className="mx-auto px-4 max-w-screen-xl"
-        data-aos="fade-up"
-        data-aos-duration="1000"
-      >
-        <div className="bg-white md:p-8 p-4 sm:p-12 rounded-3xl w-full">
-          {/* Heading and Button */}
-          <div className="mb-12">
-            <h2 className="mb-6 font-normal font-poppins md:text-[2.6rem] text-[1.2rem] text-[#252C34] md:leading-[3.5rem] tracking-tighter md:pe-0 pe-12">
-              Your all-in-one app to spend, save, <br className="md:block hidden" /> and manage multiple
-              currencies effortlessly.
-            </h2>
-            <button className="bg-secondary px-8 py-4 rounded-lg font-poppins text-[1.1rem] text-white transition-all">
-              Explore more
-            </button>
-          </div>
-
-          {/* Cards Section */}
-          <div
-            className="flex md:flex-row flex-col gap-10"
-            data-aos="fade-up"
-            data-aos-delay="200"
-            data-aos-duration="1200"
-          >
-            {/* Individual Card */}
+    <section className="px-6 py-4 md:py-8 bg-privariant overflow-hidden font-poppins mt-12"
+      style={{
+        backgroundImage: "url('/images/background-line-5.png')",
+        backgroundSize: "70%",
+        backgroundPosition: "right",
+        backgroundRepeat: "no-repeat",
+      }}
+    >
+      <div className="max-w-screen-xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div className="w-full">
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
+            {/* Text Content */}
             <div
-              className={`group flex flex-col space-y-3 border border-gray-200 md:p-10 p-4 rounded-[1.1rem] 
-    ${
-      isPersonalPage
-        ? "bg-black text-white"
-        : "bg-white text-gray-700 hover:bg-black hover:text-white"
-    }`}
-              data-aos="zoom-in"
-              data-aos-delay="400"
+              className="space-y-6"
+              data-aos="fade-right"
+              data-aos-duration="1200"
             >
-              <div className="flex items-center justify-between">
-                {/* Individual Icon - Adjust color properly */}
-                <PiApertureThin
-                  className={`text-[52px]
-        ${isPersonalPage ? "text-white" : "text-black group-hover:text-white"}`}
-                />
+              <h2 className="text-2xl sm:text-3xl lg:text-4xl xl:text-5xl font-normal tracking-tight text-white pb-8 leading-8">
+                Virtual and Physical Card for designed for you
+              </h2>
+              <ul className="space-y-4 text-base sm:text-lg">
+                <li className="flex items-start">
+                  <span className="flex-shrink-0 h-6 w-6 mr-4">
+                    <img
+                      src="/images/icons/Group 1000001745.svg"
+                      alt="Check icon"
+                      className="h-full w-full"
+                    />
+                  </span>
+                  <p className="text-white">
+                    <span className="font-semibold">Faster Transaction:</span>  Powered by Web3 technology for instant payment
+                  </p>
+                </li>
+                <li className="flex items-start">
+                  <span className="flex-shrink-0 h-6 w-6 mr-4">
+                    <img
+                      src="/images/icons/Group 1000001745.svg"
+                      alt="Check icon"
+                      className="h-full w-full"
+                    />
+                  </span>
+                  <p className="text-white">
+                    <span className="font-semibold">Faster Transaction:</span>  Powered by Web3 technology for instant payment
 
-                {/* Hide arrow if on Personal Page */}
-                {!isPersonalPage && (
-                  <Link to="/">
-                    <SlArrowRightCircle className="text-[42px] text-black group-hover:text-white" />
-                  </Link>
-                )}
-              </div>
-              <h3 className="pb-6 font-sora md:text-[1.6rem] text-xl">
-                For Individuals
-              </h3>
-              <p className="font-poppins md:text-lg text-sm leading-relaxed">
-                Maximize earnings, minimize fees, and grow your financial
-                portfolio with stablecoin-backed accounts offering personal
-                wallet management, secure savings, and instant, low-cost global
-                transfers.
-              </p>
+                  </p>
+                </li>
+                <li className="flex items-start">
+                  <span className="flex-shrink-0 h-6 w-6 mr-4">
+                    <img
+                      src="/images/icons/Group 1000001745.svg"
+                      alt="Check icon"
+                      className="h-full w-full"
+                    />
+                  </span>
+                  <p className="text-white">
+                    <span className="font-semibold">Faster Transaction:</span>  Powered by Web3 technology for instant payment
+                  </p>
+                </li>
+              </ul>
             </div>
 
-            {/* Business Card */}
+            {/* Image */}
             <div
-              className={`group flex flex-col space-y-3 border border-gray-200 md:p-10 p-4 rounded-[1.1rem]
-    ${
-      isBusinessPage
-        ? "bg-black text-white"
-        : "bg-white text-gray-700 hover:bg-black hover:text-white"
-    }`}
-              data-aos="zoom-in"
-              data-aos-delay="600"
+              className="relative flex justify-center items-center"
+              data-aos="fade-left"
+              data-aos-duration="1200"
             >
-              <div className="flex items-center justify-between">
-                {/* Business Icon - Ensuring correct hover effect */}
-                <IoBusinessOutline
-                  className={`text-[52px]
-        ${isBusinessPage ? "text-white" : "text-black group-hover:text-white"}`}
-                />
-
-                {/* Hide arrow if on Business Page */}
-                {!isBusinessPage && (
-                  <Link to="/business">
-                    <SlArrowRightCircle className="text-[42px] text-black group-hover:text-white" />
-                  </Link>
-                )}
-              </div>
-              <h3 className="pb-6 md:text-[1.6rem] text-xl">For Businesses</h3>
-              <p className="font-poppins md:text-lg text-sm leading-relaxed">
-                Empower your business with Azawire’s scalable, cost-effective
-                payment solutions, featuring cross-border payments,
-                multi-currency support for seamless transactions, and scalable
-                APIs for easy integration.
-              </p>
+              <img
+                src="/images/Aza v1 1.png"
+                alt="Credit card illustration"
+                className="w-full drop-shadow-lg "
+              />
             </div>
           </div>
         </div>
@@ -111,4 +82,4 @@ const ExploreMore = () => {
   );
 };
 
-export default ExploreMore;
+export default PaymentCard;
