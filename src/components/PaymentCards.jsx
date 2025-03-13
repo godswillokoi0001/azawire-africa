@@ -96,19 +96,6 @@ const PaymentCard = () => {
                     Get assistance whenever you need it
                   </p>
                 </li>
-                <li className="flex items-start">
-                  <span className="flex-shrink-0 h-6 w-6 mr-4">
-                    <img
-                      src="/images/icons/Group 1000001745.svg"
-                      alt="Check icon"
-                      className="h-full w-full"
-                    />
-                  </span>
-                  <p className="text-white">
-                    <span className="font-semibold">Enhanced Security:</span>{" "}
-                    Built-in encryption and fraud protection
-                  </p>
-                </li>
               </ul>
             </div>
             {/* Image */}
