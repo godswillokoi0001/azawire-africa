@@ -37,7 +37,7 @@ const teamMembers = [
   {
     name: "Rukayat Mustapha",
     position: "Project Manager",
-    image: "/images/team/placeholder.png",
+    image: "/images/team/Rukayat Mustapha .jpg",
   },
   {
     name: "Victor Udoh",
@@ -52,12 +52,12 @@ const teamMembers = [
   {
     name: "Johnson L. Onaji",
     position: " Product Designer ",
-    image: "/images/team/placeholder.png",
+    image: "/images/team/Johnson Lawrence.jpg",
   },
   {
     name: "Godswill Okoi",
     position: "Frontend Developer",
-    image: "/images/team/placeholder.png",
+    image: "/images/team/Godswill Okoi.png",
   },
   {
     name: "Olawale Hameed",
@@ -67,7 +67,7 @@ const teamMembers = [
   {
     name: "Jesse Mathias",
     position: "Marketing Manager",
-    image: "/images/team/placeholder.png",
+    image: "/images/team/Jesse Mathias.jpg",
   },
   {
     name: "Tega Claire",
@@ -77,7 +77,7 @@ const teamMembers = [
   {
     name: "Raaboni Innocent",
     position: "Graphics Designer",
-    image: "/images/team/placeholder.png",
+    image: "/images/team/Raaboni Innocent.jpg",
   },
 ];
 
