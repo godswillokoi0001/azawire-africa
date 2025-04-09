@@ -59,11 +59,11 @@ const teamMembers = [
     position: "Frontend Developer",
     image: "/images/team/Godswill Okoi.png",
   },
-  {
-    name: "Olawale Hameed",
-    position: "Backend Developer",
-    image: "/images/team/placeholder.png",
-  },
+  // {
+  //   name: "Olawale Hameed",
+  //   position: "Backend Developer",
+  //   image: "/images/team/placeholder.png",
+  // },
   {
     name: "Jesse Mathias",
     position: "Marketing Manager",
@@ -78,6 +78,11 @@ const teamMembers = [
     name: "Raaboni Innocent",
     position: "Graphics Designer",
     image: "/images/team/Raaboni Innocent.jpg",
+  },
+  {
+    name: "Grace Arua.jpg",
+    position: "Social media manager",
+    image: "/images/team/Grace Arua.jpg",
   },
 ];
 
@@ -243,7 +248,7 @@ const About = () => {
                   <img
                     src={member.image}
                     alt={member.name}
-                    className="w-full h-auto rounded-xl lg:grayscale hover:grayscale-0 transition duration-100"
+                    className="w-full h-auto rounded-xl lg:grayscale-0 hover:grayscale transition duration-100"
                   />
                   <div className="absolute bottom-0 left-0 right-0 bg-secondary text-white text-center md:py-1 py-2">
                     <p className="font-semibold md:text-sm text-lg">
