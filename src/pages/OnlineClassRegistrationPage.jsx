@@ -5,7 +5,7 @@ import Footer from "../components/Footer";
 const OnlineClassRegistrationPage = () => {
   return (
     <>
-    <div className="max-w-screen-xl mx-auto w-full mb-24">
+    <div className="max-w-screen-xl mx-auto w-full mb-8">
 
     
       <NavigationBar />
