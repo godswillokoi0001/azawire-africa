@@ -15,6 +15,8 @@ import WaitlistSuccessPage from "./pages/WaitlistListSuccessPage";
 import ProductCustomer from "./pages/ProductCustomer";
 import ProductBusiness from "./pages/ProductBusiness";
 import Pricing from "./pages/Pricing";
+import OnlineClassLandingPage from "./pages/OnlineClassLandingPage";
+import OnlineClassRegistrationPage from "./pages/OnlineClassRegistrationPage"; // Import the new page
 
 function App() {
   return (
@@ -32,10 +34,13 @@ function App() {
         <Route path="/amlcftpolicy" element={<AMLCFTPolicy />} />
         <Route path="/termsofuse" element={<TermsOfUse />} />
         <Route path="/waitlist" element={<WaitlistPage />} />
+        <Route path="/online-class-registration" element={<OnlineClassRegistrationPage />} />
         <Route path="/success" element={<WaitlistSuccessPage />} />
         <Route path="/productcustomer" element={<ProductCustomer />} />
         <Route path="/productbusiness" element={<ProductBusiness />} />
         <Route path="/pricing" element={<Pricing />} />
+        <Route path="/online-class" element={<OnlineClassLandingPage />} />
+        <Route path="*" element={<Personal />} /> {/* Redirect to Personal page for any unknown routes */}
       </Routes>
     </Router>
 );

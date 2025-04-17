@@ -12,7 +12,7 @@ const Footer = () => {
   };
 
   return (
-    <footer className="bg-lightblue text-dark ">
+    <footer className="bg-lightblue text-dark font-sora">
       <div className="max-w-screen-xl mx-auto py-10 px-6">
         <div className="flex flex-wrap md:flex-nowrap">
           {/* Logo Section */}

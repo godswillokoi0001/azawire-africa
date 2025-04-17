@@ -5,12 +5,15 @@ import Footer from "../components/Footer";
 const WaitlistPage = () => {
   return (
     <>
-    <NavigationBar2 />
-    <div>
-    <iframe src="/WaitlistPage.html" title="Waitlist Page" style={{ width: "100%", height: "100vh", border: "none"}}></iframe>
-    </div>
-     
-    <Footer />
+      <NavigationBar2 />
+      <div>
+        <iframe
+          src="/WaitlistPage.html"
+          title="Waitlist Page"
+          style={{ width: "100%", height: "100vh", border: "none" }}
+        ></iframe>
+      </div>
+      <Footer />
     </>
   );
 };
