@@ -5,15 +5,15 @@ import Footer from "../components/Footer";
 const OnlineClassRegistrationPage = () => {
   return (
     <>
-    <div className="max-w-screen-xl mx-auto w-full mb-8">
+    <div className="max-w-screen-xl mx-auto w-full mb-4">
 
     
       <NavigationBar />
-      <div className="w-full h-screen"> 
+      <div className="w-full"> 
         <iframe
           src="/OnlineClassRegistrationPage.html"
           title="OnlineClassRegistration"
-          style={{ width: "100%", height: "100vh", border: "none" }}
+          style={{ width: "100%", height: "830px", border: "none" }}
           className="bg-[#ffffff] pt-28 px-4" 
         ></iframe>
       </div>

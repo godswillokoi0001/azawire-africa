@@ -3,22 +3,20 @@ import { Link } from "react-router-dom";
 
 const DigitalFinanceHero = () => {
   return (
-    <section className="p-4 relative overflow-hidden">
-      <div className="max-w-screen-xl bg-privariant py-8 px-6 font-sora rounded-3xl mx-auto flex flex-col md:flex-row items-center justify-between">
+    <section className="md:p-8 p-4 relative overflow-hidden">
+      <div className="max-w-screen-xl bg-privariant py-8 md:px-6 font-sora rounded-3xl mx-auto flex flex-col md:flex-row items-center justify-between">
         {/* Left Content Section */}
-        <div className="md:w-[65%] z-10 px-6">
+        <div className="md:w-[65%] w-full z-10 px-6">
           <div className="inline-block border border-white rounded-full px-6 py-2 mb-6">
             <p className="text-white font-medium">A FREE 3-Day Training</p>
           </div>
-          
           <div className="mb-4">
             <h1 className="font-bold leading-9">
-              <div className="text-secondary text-4xl md:text-6xl mb-2">The Future of Finance:</div>
-              <div className="text-white text-4xl md:text-6xl mb-2">Digital Finance &</div>
-              <div className="text-white text-4xl md:text-6xl">Stablecoins!</div>
+              <div className="text-secondary text-3xl md:text-6xl mb-2">The Future of Finance:</div>
+              <div className="text-white text-3xl md:text-6xl mb-2">Digital Finance &</div>
+              <div className="text-white text-3xl md:text-6xl">Stablecoins!</div>
             </h1>
           </div>
-          
           <p className="text-white text-lg mb-8 md:max-w-xl">
             The world of finance is changing fast, with new 
             opportunities to earn, save, and transact globally.
@@ -32,7 +30,7 @@ const DigitalFinanceHero = () => {
         </div>
         
         {/* Right Image Section - Stacked Images */}
-        <div className="md:w-[65%]">
+        <div className="md:w-[65%] w-full hidden md:block z-0 relative">
           {/* Background images - coins and circular elements */}
           <div className="w-full">
             <img 
