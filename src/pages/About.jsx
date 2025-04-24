@@ -12,7 +12,7 @@ const teamMembers = [
   {
     name: "Emmanuel Onyo",
     position: "CEO & CO-FOUNDER",
-    image: "/images/team/Emmanuel Onyo.png",
+    image: "/images/team/Emmanuel Onyo.jpg",
   },
   {
     name: "Terry Oyabrade",
@@ -47,7 +47,7 @@ const teamMembers = [
   {
     name: "Silas Idowu",
     position: "Mobile Developer",
-    image: "/images/team/placeholder.png",
+    image: "/images/team/Idowu Silas.jpg",
   },
   {
     name: "Johnson L. Onaji",
