@@ -44,8 +44,8 @@ const OnlineClassLandingPage = () => {
           <div className="max-w-screen-xl px-4 mx-auto flex flex-col md:flex-row justify-between">
             {/* Left column */}
             <div className="md:w-1/2 mb-8 md:mb-0">
-              <div className="inline-block border-2 border-white rounded-full px-8 py-3 mb-8">
-                <h2 className="md:text-xl font-semibold">
+              <div className="inline-block border-2 border-white rounded-full md:px-8 px-6  py-3 mb-8">
+                <h2 className="md:text-xl text-[0.9rem] font-semibold">
                   This Training is Perfect For:
                 </h2>
               </div>
@@ -84,8 +84,8 @@ const OnlineClassLandingPage = () => {
                 WhatsApp, you can use stablecoins. We’ll break everything down —
                 step by step.
               </p>
-              <div className="inline-block border border-white rounded-full px-8 py-3 my-8">
-                <h2 className="md:text-xl font-normal">
+              <div className="inline-block border border-white rounded-full md:px-8 px-6 py-3 my-8">
+                <h2 className="md:text-xl font-normal text-[0.9rem]">
                   Why You Should Join Now:
                 </h2>
               </div>
