@@ -12,7 +12,7 @@ const OnlineClassLandingPage = () => {
           <Navbar />
         </div>
         <OnlineClassHero />
-
+        <OnlineClassRegistrationPage />
         <div className=" font-sora">
           <div className="flex flex-col md:flex-row gap-8 py-8 px-4 max-w-screen-xl mx-auto">
             {/* Left Column */}
@@ -38,7 +38,6 @@ const OnlineClassLandingPage = () => {
             </div>
           </div>
         </div>
-        <OnlineClassRegistrationPage />
         <WhatYoullLearn />
         <div className="bg-privariant text-white pt-16 pb-4 px-6 font-sora">
           <div className="max-w-screen-xl px-4 mx-auto flex flex-col md:flex-row justify-between">
@@ -52,19 +51,24 @@ const OnlineClassLandingPage = () => {
 
               <ul className="space-y-4 mb-12 md:text-[1.2rem]">
                 <li className="flex items-start">
-                  <span className="mr-2">✅</span>  Freelancers & remote workers tired of payment delays
+                  <span className="mr-2">✅</span> Freelancers & remote workers
+                  tired of payment delays
                 </li>
                 <li className="flex items-start">
-                  <span className="mr-2">✅</span>  Online shoppers struggling with blocked cards
+                  <span className="mr-2">✅</span> Online shoppers struggling
+                  with blocked cards
                 </li>
                 <li className="flex items-start">
-                  <span className="mr-2">✅</span>  Small business owners receiving money from abroad
+                  <span className="mr-2">✅</span> Small business owners
+                  receiving money from abroad
                 </li>
                 <li className="flex items-start">
-                  <span className="mr-2">✅</span>  Anyone curious about crypto but not sure where to start
+                  <span className="mr-2">✅</span> Anyone curious about crypto
+                  but not sure where to start
                 </li>
                 <li className="flex items-start">
-                  <span className="mr-2">✅</span>  Gen Z & Millennials who want smart financial tools
+                  <span className="mr-2">✅</span> Gen Z & Millennials who want
+                  smart financial tools
                 </li>
                 <li className="flex items-start text-gray-300 pt-3 text-[1rem]">
                   No Experience Needed This training is 100% beginner-friendly.
