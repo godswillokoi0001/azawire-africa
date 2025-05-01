@@ -50,7 +50,6 @@ const DigitalFinanceHero = () => {
             </svg>
           </button>  */}
         </div>
-
         {/* Right Image Section - Stacked Images */}
         <div className="md:w-[65%] w-full hidden md:block z-0 relative">
           {/* Background images - coins and circular elements */}
