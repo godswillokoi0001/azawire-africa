@@ -101,7 +101,7 @@ export default function TermsOfUse() {
           <h3 className="text-lg mt-2">Unauthorized Transactions</h3>
           <ul className="list-disc pl-6 text-lg mt-2">
             <li>
-              Report unauthorized activity within 48 hours via the Azawire app
+              Report unauthorized activity within 48 hours via the Azawire app
               or email. Failure may void reimbursement rights.
             </li>
             <li>
@@ -112,7 +112,7 @@ export default function TermsOfUse() {
           <h3 className="text-lg mt-2">Account Closure</h3>
           <ul className="list-disc pl-6 text-lg mt-2">
             <li>
-              Request closure via hello@azawire.africa. Balances will be
+              Request closure via hello@azawire.africa. Balances will be
               refunded within 30 days.
             </li>
             <li>
@@ -125,7 +125,7 @@ export default function TermsOfUse() {
         <div>
           <h2 className="text-[1.6rem] font-semibold">5. Data Privacy</h2>
           <p className="text-lg mt-2">
-            We collect and process data per our Privacy Policy, complying with
+            We collect and process data per our Privacy Policy, complying with
             Nigeria’s NDPR, Kenya’s Data Protection Act, and other African
             regulations.
           </p>

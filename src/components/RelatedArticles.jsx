@@ -1,4 +1,3 @@
-import React from "react";
 import RelatedArticleCard from "./RelatedArticleCard";
 
 const relatedArticles = [

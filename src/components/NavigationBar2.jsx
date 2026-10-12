@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from "react";
+import { useState, useEffect } from "react";
 
 import { Link, useLocation } from "react-router-dom";
 import { FiMenu, FiX } from "react-icons/fi";
@@ -23,7 +23,7 @@ const NavigationBar2 = () => {
   // Close dropdown when clicking outside
   useEffect(() => {
     const handleClickOutside = (event) => {
-      if (openDropdown && !event.target.closest(".dropdown-menu")) {
+      if (!event.target.closest(".dropdown")) {
         setOpenDropdown(null);
       }
     };
@@ -33,10 +33,6 @@ const NavigationBar2 = () => {
       document.removeEventListener("click", handleClickOutside);
     };
   }, []);
-
-  const handleMouseLeave = () => {
-    setOpenDropdown(null);
-  };
 
   const toggleMobileDropdown = (menu) => {
     setMobileDropdown(mobileDropdown === menu ? null : menu);
@@ -61,9 +57,21 @@ const NavigationBar2 = () => {
           {/* Desktop Navigation Links */}
           <ul className="hidden lg:flex space-x-7 text-sm text-accent font-clash">
             {/* Products Dropdown */}
-            <li className="relative dropdown">
+            <li
+              className="relative dropdown"
+              onMouseEnter={() => setOpenDropdown("products")}
+              onMouseLeave={() => setOpenDropdown(null)}
+              onFocus={() => setOpenDropdown("products")}
+              onBlur={(event) => {
+                if (!event.currentTarget.contains(event.relatedTarget)) {
+                  setOpenDropdown(null);
+                }
+              }}
+            >
               <button
                 onClick={() => handleDropdownClick("products")}
+                aria-expanded={openDropdown === "products"}
+                aria-haspopup="true"
                 className={`hover:text-primary flex gap-x-1 items-center ${
                   openDropdown === "products"
                     ? "text-primary"
@@ -80,13 +88,13 @@ const NavigationBar2 = () => {
 
               {openDropdown === "products" && (
                 <ul
-                  className="absolute left-0 mt-2 w-48 bg-privariant border border-white shadow-lg rounded-lg dropdown-menu "
-                  onMouseLeave={handleMouseLeave}
+                  className="dropdown-menu absolute left-0 top-full z-50 w-56 rounded-xl border border-white/15 bg-privariant p-2 pt-3 text-white shadow-xl shadow-black/30 ring-1 ring-white/10"
                 >
                   <li>
                     <Link
                       to="/productcustomer"
-                      className="block px-4 py-2 hover:bg-primary/20 border-b-2 border-white/5"
+                      onClick={() => setOpenDropdown(null)}
+                      className="block rounded-lg px-4 py-3 transition-colors hover:bg-white/10 hover:text-white focus-visible:bg-white/10 focus-visible:outline-none"
                     >
                       Personal
                     </Link>
@@ -94,7 +102,8 @@ const NavigationBar2 = () => {
                   <li>
                     <Link
                       to="/productbusiness"
-                      className="block px-4 py-2 hover:bg-primary/20 border-b-2 border-white/5"
+                      onClick={() => setOpenDropdown(null)}
+                      className="block rounded-lg px-4 py-3 transition-colors hover:bg-white/10 hover:text-white focus-visible:bg-white/10 focus-visible:outline-none"
                     >
                       Business
                     </Link>
@@ -103,9 +112,21 @@ const NavigationBar2 = () => {
               )}
             </li>
             {/* Company Dropdown */}
-            <li className="relative dropdown">
+            <li
+              className="relative dropdown"
+              onMouseEnter={() => setOpenDropdown("company")}
+              onMouseLeave={() => setOpenDropdown(null)}
+              onFocus={() => setOpenDropdown("company")}
+              onBlur={(event) => {
+                if (!event.currentTarget.contains(event.relatedTarget)) {
+                  setOpenDropdown(null);
+                }
+              }}
+            >
               <button
                 onClick={() => handleDropdownClick("company")}
+                aria-expanded={openDropdown === "company"}
+                aria-haspopup="true"
                 className={`hover:text-primary  flex items-center gap-x-1 ${
                   openDropdown === "company" ? "text-primary" : ""
                 }`}
@@ -118,14 +139,12 @@ const NavigationBar2 = () => {
                 />
               </button>
               {openDropdown === "company" && (
-                <ul
-                  className="absolute left-0 mt-2 w-48 bg-privariant border border-white shadow-lg rounded-lg dropdown-menu"
-                  onMouseLeave={handleMouseLeave}
-                >
+                <ul className="dropdown-menu absolute left-0 top-full z-50 w-56 rounded-xl border border-white/15 bg-privariant p-2 pt-3 text-white shadow-xl shadow-black/30 ring-1 ring-white/10">
                   <li>
                     <Link
                       to="/about"
-                      className="block px-4 py-2 hover:bg-primary/20 border-b-2 border-white/5"
+                      onClick={() => setOpenDropdown(null)}
+                      className="block rounded-lg px-4 py-3 transition-colors hover:bg-white/10 hover:text-white focus-visible:bg-white/10 focus-visible:outline-none"
                     >
                       About Us
                     </Link>
@@ -133,7 +152,8 @@ const NavigationBar2 = () => {
                   <li>
                     <Link
                       to="#"
-                      className="block px-4 py-2 hover:bg-primary/20 border-b-2 border-white/5"
+                      onClick={() => setOpenDropdown(null)}
+                      className="block rounded-lg px-4 py-3 transition-colors hover:bg-white/10 hover:text-white focus-visible:bg-white/10 focus-visible:outline-none"
                     >
                       Career
                     </Link>
@@ -213,7 +233,7 @@ const NavigationBar2 = () => {
           {/* Language Selector */}
           <div className="md:hidden relative flex items-center space-x-2 bg-white py-2 px-2 rounded-full cursor-pointer">
             <img
-              src="/images/Frame 1000004490.png"
+              src="/images/icons/nigeria-flag.svg"
               alt="Nigeria Flag"
               className="w-7 rounded-full"
             />
@@ -252,11 +272,11 @@ const NavigationBar2 = () => {
               className="w-4 h-4"
             />
           </Link>
-          <div className="relative flex items-center space-x-2 bg-white py-2 px-2 rounded-full cursor-pointer">
+          <div className="relative flex h-10 items-center space-x-2 bg-white px-2 rounded-full cursor-pointer">
             <img
-              src="/images/Frame 1000004490.png"
+              src="/images/icons/nigeria-flag.svg"
               alt="Nigeria Flag"
-              className="w-6 rounded-full"
+              className="h-6 w-9 rounded-full object-cover"
             />
             <button className="flex items-center space-x-1 text-gray-700 hover:text-primary transition-all">
               <img

@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from "react";
+import { useState, useEffect } from "react";
 import { Link, useLocation } from "react-router-dom";
 import { FiMenu, FiX } from "react-icons/fi";
 import { BiSolidDownArrow } from "react-icons/bi";
@@ -25,7 +25,7 @@ const Navbar = () => {
   // Close dropdown when clicking outside
   useEffect(() => {
     const handleClickOutside = (event) => {
-      if (openDropdown && !event.target.closest(".dropdown-menu")) {
+      if (!event.target.closest(".dropdown")) {
         setOpenDropdown(null);
       }
     };
@@ -35,10 +35,6 @@ const Navbar = () => {
       document.removeEventListener("click", handleClickOutside);
     };
   }, []);
-
-  const handleMouseLeave = () => {
-    setOpenDropdown(null);
-  };
 
   const toggleMobileDropdown = (menu) => {
     setMobileDropdown(mobileDropdown === menu ? null : menu);
@@ -64,9 +60,21 @@ const Navbar = () => {
           {/* Desktop Navigation Links */}
           <ul className="hidden lg:flex space-x-7 text-sm text-black font-clash">
             {/* Products Dropdown */}
-            <li className="relative dropdown">
+            <li
+              className="relative dropdown"
+              onMouseEnter={() => setOpenDropdown("products")}
+              onMouseLeave={() => setOpenDropdown(null)}
+              onFocus={() => setOpenDropdown("products")}
+              onBlur={(event) => {
+                if (!event.currentTarget.contains(event.relatedTarget)) {
+                  setOpenDropdown(null);
+                }
+              }}
+            >
               <button
                 onClick={() => handleDropdownClick("products")}
+                aria-expanded={openDropdown === "products"}
+                aria-haspopup="true"
                 className={`hover:text-primary flex gap-x-1 items-center ${
                   openDropdown === "products" ? "text-primary" : ""
                 }`}
@@ -80,13 +88,13 @@ const Navbar = () => {
               </button>
               {openDropdown === "products" && (
                 <ul
-                  className="absolute left-0 mt-2 w-48 bg-accent border shadow-lg rounded-lg dropdown-menu "
-                  onMouseLeave={handleMouseLeave}
+                  className="dropdown-menu absolute left-0 top-full z-50 w-56 rounded-xl border border-slate-200 bg-white p-2 pt-3 text-slate-700 shadow-xl shadow-slate-900/10 ring-1 ring-black/5"
                 >
                   <li>
                     <Link
                       to="/productcustomer"
-                      className="block px-4 py-2 hover:bg-primary/10 border-b-2 border-black/10"
+                      onClick={() => setOpenDropdown(null)}
+                      className="block rounded-lg px-4 py-3 transition-colors hover:bg-blue-50 hover:text-primary focus-visible:bg-blue-50 focus-visible:outline-none"
                     >
                       Personal
                     </Link>
@@ -94,7 +102,8 @@ const Navbar = () => {
                   <li>
                     <Link
                       to="/productbusiness"
-                      className="block px-4 py-2 hover:bg-primary/10 border-b-2 border-black/10"
+                      onClick={() => setOpenDropdown(null)}
+                      className="block rounded-lg px-4 py-3 transition-colors hover:bg-blue-50 hover:text-primary focus-visible:bg-blue-50 focus-visible:outline-none"
                     >
                       Business
                     </Link>
@@ -103,9 +112,21 @@ const Navbar = () => {
               )}
             </li>
             {/* Company Dropdown */}
-            <li className="relative dropdown">
+            <li
+              className="relative dropdown"
+              onMouseEnter={() => setOpenDropdown("company")}
+              onMouseLeave={() => setOpenDropdown(null)}
+              onFocus={() => setOpenDropdown("company")}
+              onBlur={(event) => {
+                if (!event.currentTarget.contains(event.relatedTarget)) {
+                  setOpenDropdown(null);
+                }
+              }}
+            >
               <button
                 onClick={() => handleDropdownClick("company")}
+                aria-expanded={openDropdown === "company"}
+                aria-haspopup="true"
                 className={`hover:text-primary flex items-center gap-x-1 transition-all ${
                   openDropdown === "company" ? "text-primary" : ""
                 }`}
@@ -118,33 +139,28 @@ const Navbar = () => {
                 />
               </button>
 
-              {/* Prevent layout shifts using absolute positioning */}
-              <ul
-                className={`absolute left-0 mt-2 w-48 bg-accent border border-white shadow-lg rounded-lg dropdown-menu 
-              transition-opacity duration-300 ease-in-out transform ${
-                openDropdown === "company"
-                  ? "opacity-100 scale-100 visible"
-                  : "opacity-0 scale-95 invisible"
-              }`}
-                onMouseLeave={handleMouseLeave}
-              >
-                <li>
-                  <Link
-                    to="/about"
-                    className="block px-4 py-2 hover:bg-primary/10 border-b-2 border-black/10"
-                  >
-                    About Us
-                  </Link>
-                </li>
-                <li>
-                  <Link
-                    to="#"
-                    className="block px-4 py-2 hover:bg-primary/10 border-b-2 border-black/10"
-                  >
-                    Career
-                  </Link>
-                </li>
-              </ul>
+              {openDropdown === "company" && (
+                <ul className="dropdown-menu absolute left-0 top-full z-50 w-56 rounded-xl border border-slate-200 bg-white p-2 pt-3 text-slate-700 shadow-xl shadow-slate-900/10 ring-1 ring-black/5">
+                  <li>
+                    <Link
+                      to="/about"
+                      onClick={() => setOpenDropdown(null)}
+                      className="block rounded-lg px-4 py-3 transition-colors hover:bg-blue-50 hover:text-primary focus-visible:bg-blue-50 focus-visible:outline-none"
+                    >
+                      About Us
+                    </Link>
+                  </li>
+                  <li>
+                    <Link
+                      to="#"
+                      onClick={() => setOpenDropdown(null)}
+                      className="block rounded-lg px-4 py-3 transition-colors hover:bg-blue-50 hover:text-primary focus-visible:bg-blue-50 focus-visible:outline-none"
+                    >
+                      Career
+                    </Link>
+                  </li>
+                </ul>
+              )}
             </li>
             {/* <li>
               <Link
@@ -220,7 +236,7 @@ const Navbar = () => {
           {/* Language Selector */}
           <div className="md:hidden relative flex items-center space-x-2 bg-white py-2 px-2 rounded-full cursor-pointer">
             <img
-              src="/images/Frame 1000004490.png"
+              src="/images/icons/nigeria-flag.svg"
               alt="Nigeria Flag"
               className="w-7 rounded-full"
             />
@@ -259,11 +275,11 @@ const Navbar = () => {
               className="w-4 h-4"
             />
           </Link>
-          <div className="relative flex items-center space-x-2 bg-white py-2 px-2 rounded-full cursor-pointer">
+          <div className="relative flex h-10 items-center space-x-2 bg-white px-2 rounded-full cursor-pointer">
             <img
-              src="/images/Frame 1000004490.png"
+              src="/images/icons/nigeria-flag.svg"
               alt="Nigeria Flag"
-              className="w-6 rounded-full"
+              className="h-6 w-9 rounded-full object-cover"
             />
             <button className="flex items-center space-x-1 text-gray-700 hover:text-primary transition-all">
               <img

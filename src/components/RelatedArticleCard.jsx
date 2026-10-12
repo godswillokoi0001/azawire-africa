@@ -1,4 +1,4 @@
-import React from "react";
+import PropTypes from "prop-types";
 
 const RelatedArticleCard = ({ title, category, date, readTime, image }) => {
   return (
@@ -25,6 +25,14 @@ const RelatedArticleCard = ({ title, category, date, readTime, image }) => {
       </div>
     </div>
   );
+};
+
+RelatedArticleCard.propTypes = {
+  title: PropTypes.string,
+  category: PropTypes.string,
+  date: PropTypes.string,
+  readTime: PropTypes.string,
+  image: PropTypes.string,
 };
 
 export default RelatedArticleCard;

@@ -1,4 +1,5 @@
-import React, { useState } from "react";
+import { useState } from "react";
+import PropTypes from "prop-types";
 
 const Modal = ({ isOpen, onClose }) => {
   const [formData, setFormData] = useState({ name: "", email: "" });
@@ -31,7 +32,7 @@ const Modal = ({ isOpen, onClose }) => {
         <div className="text-center md:py-5 md:px-6">
           {/* Title */}
           <h1 className="text-4xl font-medium mb-6 py-8">
-            Bank Without Borders with Azawire's <br /> Web3 Solution
+            Bank Without Borders with Azawire&apos;s <br /> Web3 Solution
           </h1>
           <div className="flex justify-center">
             {/* Form */}
@@ -94,6 +95,11 @@ const Modal = ({ isOpen, onClose }) => {
       </div>
     </div>
   );
+};
+
+Modal.propTypes = {
+  isOpen: PropTypes.bool,
+  onClose: PropTypes.func,
 };
 
 export default Modal;

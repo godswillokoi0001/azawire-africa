@@ -1,7 +1,7 @@
-import React from "react";
 import { Link } from "react-router-dom";
+import PropTypes from "prop-types";
 
-const BlogCard = ({ id, title, categories, date, image }) => {
+const BlogCard = ({ id, title, date, image }) => {
   return (
     <div className="text-white rounded-[1.2rem]">
       {/* Image Section */}
@@ -27,6 +27,13 @@ const BlogCard = ({ id, title, categories, date, image }) => {
       </Link>
     </div>
   );
+};
+
+BlogCard.propTypes = {
+  id: PropTypes.oneOfType([PropTypes.string, PropTypes.number]),
+  title: PropTypes.string,
+  date: PropTypes.string,
+  image: PropTypes.string,
 };
 
 export default BlogCard;

@@ -1,6 +1,7 @@
 import "aos/dist/aos.css";
 
-import React, { useRef } from "react";
+import { useRef } from "react";
+import PropTypes from "prop-types";
 
 const CoreOfferings = ({ title, offerings }) => {
   const scrollRef = useRef(null);
@@ -84,6 +85,18 @@ const CoreOfferings = ({ title, offerings }) => {
       </div>
     </div>
   );
+};
+
+CoreOfferings.propTypes = {
+  title: PropTypes.string,
+  offerings: PropTypes.arrayOf(
+    PropTypes.shape({
+      title: PropTypes.string,
+      description: PropTypes.string,
+      icon: PropTypes.string,
+      bgColor: PropTypes.string,
+    })
+  ),
 };
 
 export default CoreOfferings;

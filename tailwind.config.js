@@ -1,4 +1,4 @@
-module.exports = {
+export default {
   content: [
     "./src/**/*.{js,jsx,ts,tsx}" // Include all files in the `src` directory
   ],

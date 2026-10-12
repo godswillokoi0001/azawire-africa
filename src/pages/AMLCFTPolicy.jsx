@@ -1,4 +1,3 @@
-import React from "react";
 import NavigationBar2 from "../components/NavigationBar2";
 import Footer from "../components/Footer";
 
@@ -201,16 +200,16 @@ const AMLCFTPolicy = () => {
             2.11 Record Retention            </h3>
             <ul className="list-disc pl-6 text-lg mb-6">
               <li>
-              Customer records retained for 7 years post-account closure.              </li>
+              Customer records retained for 7 years post-account closure.              </li>
               <li>
-              Transaction records stored for 7 years from execution date
+              Transaction records stored for 7 years from execution date
               </li>
             </ul>
             <h3 className="text-[1.5rem] font-medium mb-4">
             2.12 Data Protection            </h3>
             <ul className="list-disc pl-6 text-lg mb-6">
               <li>
-              Compliance with the African Union Convention on Cyber Security and Personal Data Protection and local laws (e.g., Nigeria’s NDPR, Kenya’s Data Protection Act).
+              Compliance with the African Union Convention on Cyber Security and Personal Data Protection and local laws (e.g., Nigeria’s NDPR, Kenya’s Data Protection Act).
               </li>
               <li>
               Encryption and access controls for sensitive customer data

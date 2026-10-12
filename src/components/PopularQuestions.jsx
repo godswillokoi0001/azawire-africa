@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import { useState } from "react";
 import { FiPlus, FiMinus } from "react-icons/fi";
 
 const faqData = [
@@ -117,4 +117,4 @@ const FAQPage = () => {
   );
 };
 
-export default FAQPage;
+export default FAQPage;

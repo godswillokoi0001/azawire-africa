@@ -1,6 +1,7 @@
 import { motion } from 'framer-motion';
 import { useInView } from 'framer-motion';
 import { useRef } from 'react';
+import PropTypes from 'prop-types';
 
 const AnimatedSection = ({ children, className }) => {
   const ref = useRef(null);
@@ -17,6 +18,11 @@ const AnimatedSection = ({ children, className }) => {
       {children}
     </motion.section>
   );
+};
+
+AnimatedSection.propTypes = {
+  children: PropTypes.node,
+  className: PropTypes.string,
 };
 
 export default AnimatedSection; 

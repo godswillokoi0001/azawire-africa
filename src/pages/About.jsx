@@ -1,4 +1,4 @@
-import React, { useEffect, useRef } from "react";
+import { useEffect, useRef } from "react";
 import NavigationBar2 from "../components/NavigationBar2";
 import Footer from "../components/Footer";
 import JoinOurTeam from "../components/JoinOurTeam";
@@ -141,7 +141,7 @@ const About = () => {
                 className="text-2xl md:text-4xl font-normal text-gray-800 font-poppins tracking-tighter leading-snug pb-4"
                 style={{ lineHeight: 1.5 }}
               >
-                Whether you're a freelancer, remote worker, business owner, or
+                Whether you&apos;re a freelancer, remote worker, business owner, or
                 an individual looking for seamless banking solutions
               </h1>
               <div className="leading-8 tracking-tighter text-gray-600 text-lg md:text-[1.5rem] font-normal md:pr-10">
@@ -151,7 +151,7 @@ const About = () => {
                 </p>
                 <p>
                   With Azawire, banking is no longer limited by borders,
-                  platforms, or banking hours. It's instant, inclusive, and
+                  platforms, or banking hours. It&apos;s instant, inclusive, and
                   built for the digital economy.
                 </p>
               </div>
@@ -205,7 +205,7 @@ const About = () => {
                 <p className="text-gray-600 md:text-[1.3rem] text-[1rem] tracking-tight md:leading-8">
                   We believe in borderless banking solutions, security, and
                   seamless transactions for everyone. With a passion for
-                  financial innovation, we're building the future of banking—one
+                  financial innovation, we&apos;re building the future of banking—one
                   milestone at a time.
                 </p>
               </div>

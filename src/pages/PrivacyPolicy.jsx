@@ -1,4 +1,3 @@
-import React from "react";
 import NavigationBar2 from "../components/NavigationBar2";
 import Footer from "../components/Footer";
 
@@ -36,7 +35,7 @@ const PrivacyPolicy = () => {
                 1. Introduction
               </h2>
               <p>
-                Azawire Africa ("Azawire," "we," "us," or "our") is committed to
+                Azawire Africa (&quot;Azawire,&quot; &quot;we,&quot; &quot;us,&quot; or &quot;our&quot;) is committed to
                 protecting the privacy and security of your personal
                 information. This Privacy Policy explains how we collect, use,
                 disclose, and safeguard your data when you use our financial

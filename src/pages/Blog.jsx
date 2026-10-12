@@ -1,4 +1,3 @@
-import React from 'react';
 import NavigationBar2 from "../components/NavigationBar2";
 import BlogHero from '../components/BlogHero';
 import BlogSection from '../components/BlogSection';

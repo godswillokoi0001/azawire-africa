@@ -22,7 +22,7 @@ const OnlineClassLandingPage = () => {
               </h1>
               <p className="text-gray-700">
                 yet many still struggle to understand how it works. Scammers are
-                everywhere, preying on those who don't know how to navigate this
+                everywhere, preying on those who don&apos;t know how to navigate this
                 space safely. Without proper knowledge, you risk losing your
                 hard-earned money instead of growing it.
               </p>
@@ -103,13 +103,12 @@ const OnlineClassLandingPage = () => {
                     <span>▫️</span> It’s practical
                   </li>
                 </span>
-
                 <li className="flex items-start">
                   <span>▫️</span> It’s short and beginner-safe
                 </li>
                 <li className="flex items-start">
                   <span>▫️</span> It will open your eyes to how money should
-                  move in 2025 and beyond
+                  move in 2025 and beyond
                 </li>
               </ul>
             </div>

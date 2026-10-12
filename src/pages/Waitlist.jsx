@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from "react";
+import { useState, useEffect } from "react";
 import Select from "react-select";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import {
@@ -6,13 +6,12 @@ import {
   faEnvelope,
   faArrowRight,
 } from "@fortawesome/free-solid-svg-icons";
-import { faWhatsapp } from "@fortawesome/free-brands-svg-icons";
 import Footer from "../components/Footer";
 import NavigationBar2 from "../components/NavigationBar2";
 
 const JoinWaitlist = () => {
   const [whatsAppNumber, setWhatsAppNumber] = useState("");
-  const [isPhoneError, setPhoneError] = useState(false);
+  const [, setPhoneError] = useState(false);
   const [formErrors, setFormErrors] = useState([]);
   const [countries, setCountries] = useState([]);
   const [selectedCountry, setSelectedCountry] = useState(null);
@@ -100,7 +99,6 @@ const JoinWaitlist = () => {
 
   return (
     <section>
-      <iframe src="" frameborder="0"></iframe>
       <div className="h-screen flex flex-col justify-center items-center bg-[#02122d] text-white pt-[100rem]">
         <NavigationBar2 />
         <div className="w-full max-w-lg p-6">

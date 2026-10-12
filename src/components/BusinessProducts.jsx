@@ -1,4 +1,3 @@
-import React from "react";
 import { GoArrowUpRight } from "react-icons/go";
 import products from "./businessProductData";
 import Aos from "aos";

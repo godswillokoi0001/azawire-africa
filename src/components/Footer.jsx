@@ -1,6 +1,5 @@
 import { HiMiniArrowRight } from "react-icons/hi2";
 
-import React from "react";
 import { Link, useNavigate } from "react-router-dom";
 
 const Footer = () => {
@@ -141,7 +140,7 @@ const Footer = () => {
                 </span>
               </form>
               <p className="md:text-md text-[1rem] text-gray-600 leading-6">
-                I confirm that I have read Azawire's Privacy policy and agree
+                I confirm that I have read Azawire&apos;s Privacy policy and agree
                 with it.
               </p>
 

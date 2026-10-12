@@ -1,4 +1,3 @@
-import React from "react";
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import ScrollToTop from "./components/ScrollToTop";
 import Personal from "./pages/Personal";
@@ -17,6 +16,7 @@ import ProductBusiness from "./pages/ProductBusiness";
 import Pricing from "./pages/Pricing";
 import OnlineClassLandingPage from "./pages/OnlineClassLandingPage";
 import OnlineClassRegistrationPage from "./pages/OnlineClassRegistrationPage"; // Import the new page
+import B2BSignup from "./pages/business/B2BSignup";
 
 function App() {
   return (
@@ -41,6 +41,7 @@ function App() {
         <Route path="/pricing" element={<Pricing />} />
         <Route path="/online-class" element={<OnlineClassLandingPage />} />
         <Route path="*" element={<Personal />} /> {/* Redirect to Personal page for any unknown routes */}
+        <Route path="/b2b-signup" element={<B2BSignup />} />
       </Routes>
     </Router>
 );

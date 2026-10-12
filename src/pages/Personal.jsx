@@ -1,4 +1,3 @@
-import React from "react";
 // Uncomment if modal is needed
 // import Modal from "../components/Modal";
 
@@ -14,7 +13,7 @@ import PaymentCards from "../components/PaymentCards";
 import TrustedPartners from "../components/TrustedPartners";
 import products from "../components/customerProductData";
 import { GoArrowUpRight } from "react-icons/go";
-import { Link, useLocation } from "react-router-dom";
+import { Link } from "react-router-dom";
 
 const Personal = () => {
   // Uncomment if modal is needed
@@ -48,20 +47,7 @@ const Personal = () => {
         {/* <Modal isOpen={isModalOpen} onClose={closeModal} className="z-50" /> */}
 
         <div className="bg-gradient-to-r from-[#f9feff] to-[#e5f9ff]">
-          <header className="w-full">
-            <div className="hidden md:inline max-w-screen-xl">
-              {/* Ensure the image paths are correct */}
-              <img
-                src="/images/hero elements.png"
-                alt="Hero Elements"
-                className="absolute w-[16rem] right-0 top-14 z-40"
-              />
-              <img
-                src="/images/Line.png"
-                alt="Line Decoration"
-                className="absolute w-[36rem] right-0 top-8 z-20"
-              />
-            </div>
+          <header className="relative isolate w-full overflow-hidden">
             <div className="max-w-screen-xl mx-auto">
               <NavigationBar />
               <HeroSection />

@@ -1,4 +1,3 @@
-import React from 'react';
 
 export default function WhatYoullLearn() {
   const cards = [
@@ -21,7 +20,7 @@ export default function WhatYoullLearn() {
 
   return (
     <div className="max-w-screen-xl mx-auto px-4 mb-16 font-sora">
-      <h2 className="text-5xl font-bold text-gray-800 mb-8">What You'll Learn:</h2>
+      <h2 className="text-5xl font-bold text-gray-800 mb-8">What You&apos;ll Learn:</h2>
       
       <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
         {cards.map((card, index) => (

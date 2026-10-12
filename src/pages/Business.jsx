@@ -9,7 +9,7 @@ import NavigationBar2 from "../components/NavigationBar2";
 import TrustedPartners from "../components/TrustedPartners";
 import products from "../components/businessProductData";
 import { GoArrowUpRight } from "react-icons/go";
-import { Link, useLocation } from "react-router-dom";
+import { Link } from "react-router-dom";
 
 const Business = () => {
   return (

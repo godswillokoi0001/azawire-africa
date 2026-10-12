@@ -1,16 +1,6 @@
-import React, { useRef } from "react";
 // import { Link } from "react-router-dom";
 
 const DigitalFinanceHero = () => {
-  const registrationRef = useRef(null);
-
-  const scrollToRegistration = () => {
-    const registrationSection = document.querySelector('#online-class-registration');
-    if (registrationSection) {
-      registrationSection.scrollIntoView({ behavior: 'smooth' });
-    }
-  };
-
   return (
     <section className="p-4 md:mt-24 mt-16 relative overflow-hidden">
       <div className="max-w-screen-xl bg-privariant py-8 md:px-14 px-8 font-sora rounded-3xl mx-auto flex flex-col md:flex-row items-center justify-between">
